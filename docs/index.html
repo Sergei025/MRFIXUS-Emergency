@@ -1,0 +1,1551 @@
+<!DOCTYPE html>
+<html lang="en" class="preload">
+
+<head>
+	<title>HomePage</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+
+	<!-- Ускорение загрузки шрифтов -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap&_v=20251207100615" rel="stylesheet">
+	<!-- Подключить шрифты. Можно 1 раз загрузить через cnd google fonts а потом скопировать font face в pagespeed и вставить сюда -->
+	<style>
+		/* @font-face {
+			font-family: 'Jost';
+			font-style: normal;
+			font-weight: 300;
+			font-display: swap;
+			src: url(https://fonts.gstatic.com/s/jost/v19/92zatBhPNqw73oDd4jQmfxIC7w.woff2) format('woff2');
+			unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+		} */
+	</style>
+	<!-- Дефолтные стили -->
+	<style>
+		[class*=__container] {
+			max-width: 91rem;
+			margin: 0 auto;
+			padding: 0 1.5rem;
+		}
+
+		input,
+		textarea {
+			width: 100%;
+		}
+
+		label {
+			display: inline-block;
+		}
+
+		button,
+		select,
+		option {
+			cursor: pointer;
+		}
+
+		a {
+			display: inline-block;
+			color: inherit;
+			text-decoration: none;
+		}
+
+		ul li {
+			list-style: none;
+		}
+
+		img {
+			vertical-align: top;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-weight: inherit;
+			font-size: inherit;
+		}
+	</style>
+	<!-- Стили для первого блока -->
+	<style>
+	</style>
+
+	<link rel="preload" href="css/style.min.css?_v=20251207100615" as="style" onload="this.rel='stylesheet'">
+
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header bg-[#1D1D1D] py-2 md:py-3 z-50 fixed w-full">
+			<div class="header__container flex justify-between items-center">
+				<a href="#"><img alt="MrFixus Mobile Loksmith service Logo" class="z-10 h-6 md:h-8" src="img/header/mrfixus-logo.svg"></a>
+				<div class="menu flex min-[1316px]:items-center">
+					<nav class="menu__body max-[1316px]:w-full">
+						<ul class="header__menu flex max-[1316px]:flex-col leading-[140%] text-white gap-5 max-[1316px]:pt-12 max-[1316px]:text-lg max-[1316px]:uppercase">
+							<li data-goto=".problems" class="max-[1316px]:border-b  max-[1316px]:border-[#FFFFFF1A] max-[1316px]:pb-4 cursor-pointer hover:text-[#FFBB29] transition-all ease-in-out duration-300">Problems we fix</li>
+							<li data-goto=".service" class="max-[1316px]:border-b  max-[1316px]:border-[#FFFFFF1A] max-[1316px]:pb-4 cursor-pointer hover:text-[#FFBB29] transition-all ease-in-out duration-300">Service area</li>
+							<li data-goto=".workflow" class="max-[1316px]:border-b  max-[1316px]:border-[#FFFFFF1A] max-[1316px]:pb-4 cursor-pointer hover:text-[#FFBB29] transition-all ease-in-out duration-300">How it works</li>
+							<li data-goto=".stats" class="max-[1316px]:border-b  max-[1316px]:border-[#FFFFFF1A] max-[1316px]:pb-4 cursor-pointer hover:text-[#FFBB29] transition-all ease-in-out duration-300">Why us</li>
+							<li data-goto=".trust" class="max-[1316px]:border-b  max-[1316px]:border-[#FFFFFF1A] max-[1316px]:pb-4 cursor-pointer hover:text-[#FFBB29] transition-all ease-in-out duration-300">What we do</li>
+							<li data-goto=".prices" class="max-[1316px]:border-b  max-[1316px]:border-[#FFFFFF1A] max-[1316px]:pb-4 cursor-pointer hover:text-[#FFBB29] transition-all ease-in-out duration-300">Prices</li>
+							<li data-goto=".discount-policy" class="max-[1316px]:border-b  max-[1316px]:border-[#FFFFFF1A] max-[1316px]:pb-4 cursor-pointer hover:text-[#FFBB29] transition-all ease-in-out duration-300">Discounts</li>
+							<li data-goto=".warranty" class="max-[1316px]:border-b  max-[1316px]:border-[#FFFFFF1A] max-[1316px]:pb-4 cursor-pointer hover:text-[#FFBB29] transition-all ease-in-out duration-300">Guarantees</li>
+							<li data-goto=".cases" class="max-[1316px]:border-b  max-[1316px]:border-[#FFFFFF1A] max-[1316px]:pb-4 cursor-pointer hover:text-[#FFBB29] transition-all ease-in-out duration-300">Cases</li>
+							<li data-goto=".contact-us" class="max-[1316px]:border-b  max-[1316px]:border-[#FFFFFF1A] max-[1316px]:pb-4 cursor-pointer hover:text-[#FFBB29] transition-all ease-in-out duration-300">Contact us</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="flex max-[1316px]:gap-4 z-10">
+					<a href="tel:4633201080" class="header-call-button bg-[#FFBB29] flex py-2 px-2 md:px-6 rounded-lg w-fit gap-2 transition-all ease-in-out duration-300 hover:bg-[#D9961A]">
+						<img src="img/header/call.svg">
+						<span class="max-md:hidden">Call now</span>
+					</a>
+					<button class="header__burger-menu icon-menu !flex flex-col gap-[5px] items-center justify-center" id="burger" aria-label="Меню">
+						<span class="block"></span>
+					</button>
+				</div>
+			</div>
+		</header>
+		<main class="page pt-14 md:pt-16">
+			<section class="emergency md:bg-[url('img/emergency-bg.webp')] bg-cover bg-center pt-[30px] pb-[60px] md:pt-[92px] md:pb-[104px] relative">
+				<div id="background"></div>
+				<div class="absolute inset-0 bg-[#1d1d1d]/85 backdrop-blur-[1px] md:backdrop-blur-[3px]"></div>
+				<div class="emergency__container">
+					<div class="emergency__content flex flex-col items-center gap-10 md:gap-16 w-fit m-auto relative">
+						<div class="emergency__info">
+							<h1 class="emergency__title font-semibold text-[28px] md:text-5xl text-white max-w-[564px] text-center pb-6 md:pb-16 !leading-[120%]">Emergency mobile locksmith in Indianapolis & nearby areas</h1>
+							<div class="emergency__description">
+								<p class="text-white pb-2 md:pb-4 md:text-xl leading-[140%] text-center">We unlock cars and doors, cut and program keys, and fix locks.</p>
+								<div class="flex gap-6 md:gap-8 w-fit m-auto">
+									<div data-goto=".cars" class="bg-[#FFFFFF26] p-3 rounded-lg md:rounded-xl cursor-pointer transition-transform duration-300 ease-out hover:scale-[1.2]"><img class="max-md:w-6" src="img/emergency_car-icon.svg"></div>
+									<div data-goto=".residential" class="bg-[#FFFFFF26] p-3 rounded-lg md:rounded-xl cursor-pointer transition-transform duration-300 ease-out hover:scale-[1.2]"><img class="max-md:w-6" src="img/emergency_home-icon.svg"></div>
+									<div data-goto=".commercial" class="bg-[#FFFFFF26] p-3 rounded-lg md:rounded-xl cursor-pointer transition-transform duration-300 ease-out hover:scale-[1.2]"><img class="max-md:w-6" src="img/emergency_shop-icon.svg"></div>
+									<div data-goto=".warranty" class="bg-[#FFFFFF26] p-3 rounded-lg md:rounded-xl cursor-pointer transition-transform duration-300 ease-out hover:scale-[1.2]"><img class="max-md:w-6" src="img/emergency_check-icon.svg"></div>
+								</div>
+							</div>
+						</div>
+						<div class="emergency__certificates flex max-md:flex-col gap-6 md:gap-8 max-md:w-full">
+							<div class="emergency__certificate flex gap-4 items-center">
+								<img class="max-md:w-16" src="img/emergency-time.svg" alt="certificate">
+								<p class="font-semibold text-xl md:text-2xl text-[#FFBB29]">Arrival time 30-45 min</p>
+							</div>
+							<div class="emergency__certificate flex gap-4 items-center">
+								<img class="max-md:w-16" src="img/emergency-warranty.svg" alt="certificate">
+								<p class="font-semibold text-xl md:text-2xl text-[#FFBB29]">1-Year Warranty</p>
+							</div>
+						</div>
+						<div class="emergency__feedback">
+							<div class="emergency__feedback-content flex max-md:flex-col gap-4 md:gap-8 max-w-[688px] w-full pb-6 md:pb-16 md:m-auto">
+								<a href="tel:4633201080" class="emergency__call bg-[#FFBB29] flex items-center justify-center py-[14px] px-6 rounded-lg w-full gap-2 font-semibold md:text-xl leading-[140%] transition-all ease-in-out duration-300 hover:bg-[#D9961A]">
+									<img src="img/header/call.svg">
+									Call now: (463) 320-1080
+								</a>
+								<a href class="emergency__whatsapp font-semibold md:text-xl text-white flex justify-center items-center py-[14px] px-6 rounded-lg w-full gap-2 leading-[140%] border border-white transition-all ease-in-out duration-300 hover:text-black hover:bg-white">
+									<img src="img/whatsapp.svg">
+									WhatsApp
+								</a>
+							</div>
+							<p class="text-white leading-[140%] text-center max-md:text-xs">Serving Indianapolis and suburbs within ~45 miles. Typical ETA: 30–45 min in Indianapolis, 45–60 min in surrounding areas.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="special-offer md:bg-[linear-gradient(90deg,_#FFBB29_34.12%,_#FFFFFF_51.13%)]">
+				<div class="special-offer_container flex items-center max-md:flex-col">
+					<div class="special-offer__left w-full max-md:bg-[#FFBB29] py-4 md:py-5 pl-6 max-md:pr-6">
+						<div class="w-fit min-[992px]:float-right min-[992px]:mr-[132px] max-[992px]:m-auto">
+							<div class="leading-[140%] md:text-xl text-white text-center">Special Offer</div>
+							<div class="font-extrabold text-[28px] leading-[87%] text-center">10% OFF<br> First responders</div>
+						</div>
+					</div>
+					<div class="special-offer__right flex flex-col gap-2 w-full py-4 md:py-5 pr-6 max-md:pl-6">
+						<div class="md:max-w-[327px] w-full min-[992px]:ml-[132px] max-[992px]:m-auto">
+							<div class="special-offer__right-content flex justify-center gap-5 pb-4 md:pb-2 font-semibold md:text-2xl leading-[140%]">
+								<div class="flex items-center gap-1"><img src="img/user.svg">100+</div>
+								<div class="flex items-center gap-1"><img src="img/star.svg">4.9</div>
+							</div>
+							<a data-goto=".testimonials" class="special-offer__right-button leading-[140%] cursor-pointer font-semibold py-3 w-full flex justify-center gap-2 items-center border border-[#1D1D1D] rounded-lg transition-all ease-in-out duration-300 hover:bg-[#1D1D1D] hover:text-white">
+								<img src="img/google-icon.svg">
+								Reviews ↓
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="problems bg-[#F3F3F3] py-[60px] md:py-20">
+				<div class="problems__container">
+					<div class="problems__info pb-6 md:pb-8">
+						<div class="problems__subtitle text-sm leading-[140%] uppercase pb-1 md:pb-2">
+							problems we fix
+						</div>
+						<h2 class="problems__title font-semibold text-[28px] md:text-[40px] leading-[140%] pb-4">
+							What happened?
+						</h2>
+						<div class="problems__description md:text-xl leading-[140%]">
+							What do you need help with?
+						</div>
+					</div>
+					<div class="problems__blocks grid grid-cols md:grid-cols-2 gap-6 md:gap-8">
+						<div class="problems__block p-4 md:p-6 bg-white rounded-lg flex flex-col gap-4">
+							<div class="problems__block-icon bg-[#FFF5DF] rounded-lg p-2 w-fit"><img width="24" src="img/emergency_car-icon.svg"></div>
+							<div class="problems__block-title font-semibold text-xl md:text-2xl leading-[140%]">Locked out of your car or lost your keys?</div>
+							<div class="problems__block-subtitle leading-[140%] md:text-xl">Car lockout, lost keys, smart keys.</div>
+							<div class="problems__block-price-call flex justify-between mt-auto">
+								<div class="problems__block-price font-semibold leading-[140%]">From $79</div>
+								<a href="tel:4633201080" class="problems__block-call flex items-center gap-1 font-semibold leading-[140%] text-[#F6A50E] underline underline-offset-[3px] hover:text-black transition-all ease-in-out duration-300">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M7.82888 16.171C5.67828 14.0163 4.02439 11.4177 2.98288 8.55702C2.40988 6.99302 2.93488 5.27502 4.11288 4.09702L4.84188 3.36902C5.03786 3.17264 5.27066 3.01684 5.52693 2.91053C5.78321 2.80423 6.05793 2.74951 6.33538 2.74951C6.61282 2.74951 6.88755 2.80423 7.14382 2.91053C7.4001 3.01684 7.63289 3.17264 7.82888 3.36902L9.53588 5.07602C9.73226 5.27201 9.88806 5.5048 9.99437 5.76108C10.1007 6.01735 10.1554 6.29208 10.1554 6.56952C10.1554 6.84697 10.1007 7.12169 9.99437 7.37797C9.88806 7.63424 9.73226 7.86704 9.53588 8.06302L9.11588 8.48302C8.94776 8.6511 8.8144 8.85065 8.72342 9.07028C8.63243 9.2899 8.5856 9.5253 8.5856 9.76302C8.5856 10.0007 8.63243 10.2361 8.72342 10.4558C8.8144 10.6754 8.94776 10.8749 9.11588 11.043L12.9559 14.884C13.124 15.0521 13.3235 15.1855 13.5431 15.2765C13.7628 15.3675 13.9982 15.4143 14.2359 15.4143C14.4736 15.4143 14.709 15.3675 14.9286 15.2765C15.1482 15.1855 15.3478 15.0521 15.5159 14.884L15.9369 14.464C16.1329 14.2676 16.3657 14.1118 16.6219 14.0055C16.8782 13.8992 17.1529 13.8445 17.4304 13.8445C17.7078 13.8445 17.9825 13.8992 18.2388 14.0055C18.4951 14.1118 18.7279 14.2676 18.9239 14.464L20.6309 16.171C20.8273 16.367 20.9831 16.5998 21.0894 16.8561C21.1957 17.1124 21.2504 17.3871 21.2504 17.6645C21.2504 17.942 21.1957 18.2167 21.0894 18.473C20.9831 18.7292 20.8273 18.962 20.6309 19.158L19.9029 19.886C18.7249 21.065 17.0069 21.59 15.4429 21.017C12.5822 19.9755 9.98364 18.3216 7.82888 16.171Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+									</svg>
+									Call now
+								</a>
+							</div>
+						</div>
+						<div class="problems__block p-4 md:p-6 bg-white rounded-lg flex flex-col gap-4">
+							<div class="problems__block-icon bg-[#FFF5DF] rounded-lg p-2 w-fit"><img width="24" src="img/emergency_home-icon.svg"></div>
+							<div class="problems__block-title font-semibold text-xl md:text-2xl leading-[140%]">Can’t get into your house or apartment?</div>
+							<div class="problems__block-subtitle leading-[140%] md:text-xl">House lockout, rekey, lock replacement.</div>
+							<div class="problems__block-price-call flex justify-between mt-auto">
+								<div class="problems__block-price font-semibold leading-[140%]">From $79</div>
+								<a href="tel:4633201080" class="problems__block-call flex items-center gap-1 font-semibold leading-[140%] text-[#F6A50E] underline underline-offset-[3px] hover:text-black transition-all ease-in-out duration-300">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M7.82888 16.171C5.67828 14.0163 4.02439 11.4177 2.98288 8.55702C2.40988 6.99302 2.93488 5.27502 4.11288 4.09702L4.84188 3.36902C5.03786 3.17264 5.27066 3.01684 5.52693 2.91053C5.78321 2.80423 6.05793 2.74951 6.33538 2.74951C6.61282 2.74951 6.88755 2.80423 7.14382 2.91053C7.4001 3.01684 7.63289 3.17264 7.82888 3.36902L9.53588 5.07602C9.73226 5.27201 9.88806 5.5048 9.99437 5.76108C10.1007 6.01735 10.1554 6.29208 10.1554 6.56952C10.1554 6.84697 10.1007 7.12169 9.99437 7.37797C9.88806 7.63424 9.73226 7.86704 9.53588 8.06302L9.11588 8.48302C8.94776 8.6511 8.8144 8.85065 8.72342 9.07028C8.63243 9.2899 8.5856 9.5253 8.5856 9.76302C8.5856 10.0007 8.63243 10.2361 8.72342 10.4558C8.8144 10.6754 8.94776 10.8749 9.11588 11.043L12.9559 14.884C13.124 15.0521 13.3235 15.1855 13.5431 15.2765C13.7628 15.3675 13.9982 15.4143 14.2359 15.4143C14.4736 15.4143 14.709 15.3675 14.9286 15.2765C15.1482 15.1855 15.3478 15.0521 15.5159 14.884L15.9369 14.464C16.1329 14.2676 16.3657 14.1118 16.6219 14.0055C16.8782 13.8992 17.1529 13.8445 17.4304 13.8445C17.7078 13.8445 17.9825 13.8992 18.2388 14.0055C18.4951 14.1118 18.7279 14.2676 18.9239 14.464L20.6309 16.171C20.8273 16.367 20.9831 16.5998 21.0894 16.8561C21.1957 17.1124 21.2504 17.3871 21.2504 17.6645C21.2504 17.942 21.1957 18.2167 21.0894 18.473C20.9831 18.7292 20.8273 18.962 20.6309 19.158L19.9029 19.886C18.7249 21.065 17.0069 21.59 15.4429 21.017C12.5822 19.9755 9.98364 18.3216 7.82888 16.171Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+									</svg>
+									Call now
+								</a>
+							</div>
+						</div>
+						<div class="problems__block p-4 md:p-6 bg-white rounded-lg flex flex-col gap-4">
+							<div class="problems__block-icon bg-[#FFF5DF] rounded-lg p-2 w-fit"><img width="24" src="img/emergency_shop-icon.svg"></div>
+							<div class="problems__block-title font-semibold text-xl md:text-2xl leading-[140%]">Door stuck at your office, shop, or warehouse?</div>
+							<div class="problems__block-subtitle leading-[140%] md:text-xl">Doors, master key systems, access control.</div>
+							<div class="problems__block-price-call flex justify-between mt-auto">
+								<div class="problems__block-price font-semibold leading-[140%]">Same-day service</div>
+								<a href="tel:4633201080" class="problems__block-call flex items-center gap-1 font-semibold leading-[140%] text-[#F6A50E] underline underline-offset-[3px] hover:text-black transition-all ease-in-out duration-300">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M7.82888 16.171C5.67828 14.0163 4.02439 11.4177 2.98288 8.55702C2.40988 6.99302 2.93488 5.27502 4.11288 4.09702L4.84188 3.36902C5.03786 3.17264 5.27066 3.01684 5.52693 2.91053C5.78321 2.80423 6.05793 2.74951 6.33538 2.74951C6.61282 2.74951 6.88755 2.80423 7.14382 2.91053C7.4001 3.01684 7.63289 3.17264 7.82888 3.36902L9.53588 5.07602C9.73226 5.27201 9.88806 5.5048 9.99437 5.76108C10.1007 6.01735 10.1554 6.29208 10.1554 6.56952C10.1554 6.84697 10.1007 7.12169 9.99437 7.37797C9.88806 7.63424 9.73226 7.86704 9.53588 8.06302L9.11588 8.48302C8.94776 8.6511 8.8144 8.85065 8.72342 9.07028C8.63243 9.2899 8.5856 9.5253 8.5856 9.76302C8.5856 10.0007 8.63243 10.2361 8.72342 10.4558C8.8144 10.6754 8.94776 10.8749 9.11588 11.043L12.9559 14.884C13.124 15.0521 13.3235 15.1855 13.5431 15.2765C13.7628 15.3675 13.9982 15.4143 14.2359 15.4143C14.4736 15.4143 14.709 15.3675 14.9286 15.2765C15.1482 15.1855 15.3478 15.0521 15.5159 14.884L15.9369 14.464C16.1329 14.2676 16.3657 14.1118 16.6219 14.0055C16.8782 13.8992 17.1529 13.8445 17.4304 13.8445C17.7078 13.8445 17.9825 13.8992 18.2388 14.0055C18.4951 14.1118 18.7279 14.2676 18.9239 14.464L20.6309 16.171C20.8273 16.367 20.9831 16.5998 21.0894 16.8561C21.1957 17.1124 21.2504 17.3871 21.2504 17.6645C21.2504 17.942 21.1957 18.2167 21.0894 18.473C20.9831 18.7292 20.8273 18.962 20.6309 19.158L19.9029 19.886C18.7249 21.065 17.0069 21.59 15.4429 21.017C12.5822 19.9755 9.98364 18.3216 7.82888 16.171Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+									</svg>
+									Call now
+								</a>
+							</div>
+						</div>
+						<div class="problems__block p-4 md:p-6 bg-white rounded-lg flex flex-col gap-4">
+							<div class="problems__block-icon bg-[#FFF5DF] rounded-lg p-2 w-fit"><img src="img/safe.svg"></div>
+							<div class="problems__block-title font-semibold text-xl md:text-2xl leading-[140%]">Safe, mailbox, garage, padlock?</div>
+							<div class="problems__block-subtitle leading-[140%] md:text-xl">Tell us what happened — we’ll advise you on the call.</div>
+							<div class="problems__block-price-call flex justify-between mt-auto">
+								<div class="problems__block-price font-semibold leading-[140%]">Quote by phone</div>
+								<a href="tel:4633201080" class="problems__block-call flex items-center gap-1 font-semibold leading-[140%] text-[#F6A50E] underline underline-offset-[3px] hover:text-black transition-all ease-in-out duration-300">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M7.82888 16.171C5.67828 14.0163 4.02439 11.4177 2.98288 8.55702C2.40988 6.99302 2.93488 5.27502 4.11288 4.09702L4.84188 3.36902C5.03786 3.17264 5.27066 3.01684 5.52693 2.91053C5.78321 2.80423 6.05793 2.74951 6.33538 2.74951C6.61282 2.74951 6.88755 2.80423 7.14382 2.91053C7.4001 3.01684 7.63289 3.17264 7.82888 3.36902L9.53588 5.07602C9.73226 5.27201 9.88806 5.5048 9.99437 5.76108C10.1007 6.01735 10.1554 6.29208 10.1554 6.56952C10.1554 6.84697 10.1007 7.12169 9.99437 7.37797C9.88806 7.63424 9.73226 7.86704 9.53588 8.06302L9.11588 8.48302C8.94776 8.6511 8.8144 8.85065 8.72342 9.07028C8.63243 9.2899 8.5856 9.5253 8.5856 9.76302C8.5856 10.0007 8.63243 10.2361 8.72342 10.4558C8.8144 10.6754 8.94776 10.8749 9.11588 11.043L12.9559 14.884C13.124 15.0521 13.3235 15.1855 13.5431 15.2765C13.7628 15.3675 13.9982 15.4143 14.2359 15.4143C14.4736 15.4143 14.709 15.3675 14.9286 15.2765C15.1482 15.1855 15.3478 15.0521 15.5159 14.884L15.9369 14.464C16.1329 14.2676 16.3657 14.1118 16.6219 14.0055C16.8782 13.8992 17.1529 13.8445 17.4304 13.8445C17.7078 13.8445 17.9825 13.8992 18.2388 14.0055C18.4951 14.1118 18.7279 14.2676 18.9239 14.464L20.6309 16.171C20.8273 16.367 20.9831 16.5998 21.0894 16.8561C21.1957 17.1124 21.2504 17.3871 21.2504 17.6645C21.2504 17.942 21.1957 18.2167 21.0894 18.473C20.9831 18.7292 20.8273 18.962 20.6309 19.158L19.9029 19.886C18.7249 21.065 17.0069 21.59 15.4429 21.017C12.5822 19.9755 9.98364 18.3216 7.82888 16.171Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+									</svg>
+									Call now
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="service py-[60px] md:py-20">
+				<div class="service__container">
+					<div class="service__info pb-6 md:pb-8">
+						<div class="service__subtitle text-sm leading-[140%] uppercase pb-1 md:pb-2">
+							service area
+						</div>
+						<h2 class="service__title font-semibold text-[28px] md:text-[40px] leading-[140%]">
+							How fast we arrive and where we work
+						</h2>
+					</div>
+					<div class="service__features flex max-md:flex-col gap-4 md:gap-8 pb-6 md:pb-8">
+						<div class="service__features-worktime w-full border-b border-[#A5A5A5] pb-4">
+							<div class="service__features-title font-semibold text-xl md:text-2xl leading-[140%] text-[#F6A50E] pb-2">24/7 work</div>
+							<div class="service__features-subtitle leading-[140%] md:text-xl">We are a fully mobile locksmith service</div>
+						</div>
+						<div class="service__features-indianapolis w-full border-b border-[#A5A5A5] pb-4">
+							<div class="service__features-title font-semibold text-xl md:text-2xl leading-[140%] text-[#F6A50E] pb-2">Indianapolis arrival 30-45min</div>
+							<div class="service__features-subtitle leading-[140%] md:text-xl">depends on traffic</div>
+						</div>
+						<div class="service__features-suburbs w-full border-b border-[#A5A5A5] pb-4">
+							<div class="service__features-title font-semibold text-xl md:text-2xl leading-[140%] text-[#F6A50E] pb-2">Suburbs arrival 45-60 min</div>
+							<div class="service__features-subtitle leading-[140%] md:text-xl">depends on distance.</div>
+						</div>
+					</div>
+					<div class="service__map flex flex-col">
+						<iframe class="w-full h-[327px] md:h-[480px] max-md:order-2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d196237.1863908697!2d-86.29790153304621!3d39.779931327951296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886b50ffa7796a03%3A0xd68e9df640b9ea7c!2z0JjQvdC00LjQsNC90LDQv9C-0LvQuNGBLCDQmNC90LTQuNCw0L3QsCwg0KHQqNCQ!5e0!3m2!1sru!2suk!4v1764757820667!5m2!1sru!2suk" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						<div class="service__checkaria md:pt-4 m-auto max-md:w-full max-md:order-1">
+							<div class="service__checkaria-subtitle text-[#616161] text-xs leading-[140%] pb-1 md:text-center">Check your aria / district</div>
+							<div class="relative w-full md:w-[274px]">
+								<button class="service__checkaria-button group border border-[#1D1D1D] rounded-lg font-semibold leading-[140%] px-4 md:px-8 py-3 w-full cursor-pointer flex justify-between items-center bg-white max-md:mb-4">
+									<span id="mapSelectedLabel" class="transition-all duration-300 ease-in-out">Indianapolis</span>
+									<svg id="mapSelectBtn" class="group-hover:text-[#F6A50E] md:rotate-180 transition-all ease-in-out duration-300" width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_329_302)">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M11.2889 9.38912L5.63186 3.73212L7.04586 2.31812L11.9959 7.26812L16.9459 2.31812L18.3599 3.73212L12.7029 9.38912C12.5153 9.57659 12.261 9.6819 11.9959 9.6819C11.7307 9.6819 11.4764 9.57659 11.2889 9.38912Z" fill="currentColor" />
+										</g>
+										<defs>
+											<clipPath id="clip0_329_302">
+												<rect width="12" height="24" fill="none" transform="translate(24 1.04907e-06) rotate(90)" />
+											</clipPath>
+										</defs>
+									</svg>
+								</button>
+
+								<ul id="mapDropdown" class="service__checkaria-list md:-top-[512px] absolute left-0 right-0 border border-[#1D1D1D] rounded-lg px-4 py-3 md:px-8 bg-white shadow font-semibold leading-[140%]">
+									<li class="border-b border-[#A5A5A5] pb-2 mb-2 flex justify-between cursor-pointer items-center">
+										<span data-city="Indianapolis" class="option transition-all duration-300 ease-in-out hover:text-[#F6A50E]">
+											Indianapolis
+										</span>
+										<svg class="map-close-inside max-md:rotate-180 hover:text-[#F6A50E] transition-all ease-in-out duration-300" width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<g clip-path="url(#clip0_329_302)">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M11.2889 9.38912L5.63186 3.73212L7.04586 2.31812L11.9959 7.26812L16.9459 2.31812L18.3599 3.73212L12.7029 9.38912C12.5153 9.57659 12.261 9.6819 11.9959 9.6819C11.7307 9.6819 11.4764 9.57659 11.2889 9.38912Z" fill="currentColor" />
+											</g>
+											<defs>
+												<clipPath id="clip0_329_302">
+													<rect width="12" height="24" fill="none" transform="translate(24 1.04907e-06) rotate(90)" />
+												</clipPath>
+											</defs>
+										</svg>
+									</li>
+									<li data-city="Carmel" class="transition-all ease-in-out duration-300 hover:text-[#F6A50E] option border-b border-[#A5A5A5] pb-2 mb-2 cursor-pointer">Carmel</li>
+									<li data-city="Fishers" class="transition-all ease-in-out duration-300 hover:text-[#F6A50E] option border-b border-[#A5A5A5] pb-2 mb-2 cursor-pointer">Fishers</li>
+									<li data-city="Lawrence" class="transition-all ease-in-out duration-300 hover:text-[#F6A50E] option border-b border-[#A5A5A5] pb-2 mb-2 cursor-pointer">Lawrence</li>
+									<li data-city="Beech Grove" class="transition-all ease-in-out duration-300 hover:text-[#F6A50E] option border-b border-[#A5A5A5] pb-2 mb-2 cursor-pointer">Beech Grove</li>
+									<li data-city="Speedway" class="transition-all ease-in-out duration-300 hover:text-[#F6A50E] option border-b border-[#A5A5A5] pb-2 mb-2 cursor-pointer">Speedway</li>
+									<li data-city="Greenwood" class="transition-all ease-in-out duration-300 hover:text-[#F6A50E] option border-b border-[#A5A5A5] pb-2 mb-2 cursor-pointer">Greenwood</li>
+									<li data-city="Zionsville" class="transition-all ease-in-out duration-300 hover:text-[#F6A50E] option border-b border-[#A5A5A5] pb-2 mb-2 cursor-pointer">Zionsville</li>
+									<li data-city="Avon" class="transition-all ease-in-out duration-300 hover:text-[#F6A50E] option border-b border-[#A5A5A5] pb-2 mb-2 cursor-pointer">Avon</li>
+									<li data-city="Brownsburg" class="transition-all ease-in-out duration-300 hover:text-[#F6A50E] option border-b border-[#A5A5A5] pb-2 mb-2 cursor-pointer">Brownsburg</li>
+									<li data-city="McCordsville" class="transition-all ease-in-out duration-300 hover:text-[#F6A50E] option border-b border-[#A5A5A5] pb-2 mb-2 cursor-pointer">McCordsville</li>
+									<li data-city="Cumberland" class="transition-all ease-in-out duration-300 hover:text-[#F6A50E] option border-b border-[#A5A5A5] pb-2 mb-2 cursor-pointer">Cumberland</li>
+									<li data-city="Southport" class="transition-all ease-in-out duration-300 hover:text-[#F6A50E] option border-b border-[#A5A5A5] pb-2 mb-2 cursor-pointer">Southport</li>
+									<li data-city="Whitestown" class="transition-all ease-in-out duration-300 hover:text-[#F6A50E] option cursor-pointer">Whitestown</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="workflow pb-[60px] md:py-20">
+				<div class="workflow__container">
+					<div class="workflow__info pb-6 md:pb-8">
+						<div class="workflow__subtitle text-sm leading-[140%] uppercase pb-1 md:pb-2">
+							workflow
+						</div>
+						<h2 class="workflow__title font-semibold text-[28px] md:text-[40px] leading-[140%] pb-4">
+							How it works
+						</h2>
+						<div class="workflow__description md:text-xl leading-[140%]">
+							Simple 5-step process so you know what will happen before you call.
+						</div>
+					</div>
+					<div class="steps-wrapper relative md:pl-5">
+						<div class="line">
+							<div class="line-fill"></div>
+						</div>
+						<div class="steps flex flex-col gap-6 md:gap-8">
+							<div class="step bg-[#F3F3F3] p-4 md:p-6 rounded-lg relative">
+								<span class="dot absolute -left-5 top-1/2 transform -translate-y-1/2"></span>
+								<div class="font-semibold text-xl md:text-2xl leading-[140%] pb-4">1. You call or text us</div>
+								<p class="md:text-xl leading-[140%]">Tell us what happened. You can also send a photo of the lock or key.</p>
+							</div>
+							<div class="step bg-[#F3F3F3] p-4 md:p-6 rounded-lg relative">
+								<span class="dot absolute -left-5 top-1/2 transform -translate-y-1/2"></span>
+								<div class="font-semibold text-xl md:text-2xl leading-[140%] pb-4">2. We give you an estimate and ETA</div>
+								<p class="md:text-xl leading-[140%]">We ask a few questions, confirm a price range, and tell you when the technician can arrive. If you don’t like the price or timing, you don’t book the job.</p>
+							</div>
+							<div class="step bg-[#F3F3F3] p-4 md:p-6 rounded-lg relative">
+								<span class="dot absolute -left-5 top-1/2 transform -translate-y-1/2"></span>
+								<div class="font-semibold text-xl md:text-2xl leading-[140%] pb-4">3. Technician drives to you and checks ID</div>
+								<p class="md:text-xl leading-[140%]">We call when we are on the way, arrive on site, and verify your ID (and registration for cars) before we touch the vehicle or door.</p>
+							</div>
+							<div class="step bg-[#F3F3F3] p-4 md:p-6 rounded-lg relative">
+								<span class="dot absolute -left-5 top-1/2 transform -translate-y-1/2"></span>
+								<div class="font-semibold text-xl md:text-2xl leading-[140%] pb-4">4. We do the work — starting with non-destructive methods</div>
+								<p class="md:text-xl leading-[140%]">We try to open and fix without drilling. If drilling or extra parts are needed, we explain the options and final price before you approve.</p>
+							</div>
+							<div class="step bg-[#F3F3F3] p-4 md:p-6 rounded-lg relative">
+								<span class="dot absolute -left-5 top-1/2 transform -translate-y-1/2"></span>
+								<div class="font-semibold text-xl md:text-2xl leading-[140%] pb-4">5. Payment, receipt, and warranty</div>
+								<p class="md:text-xl leading-[140%]">You pay the agreed amount, receive confirmation, and your 1-year workmanship warranty (and 1-month battery warranty for remotes) starts from the job date.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="stats bg-[#F3F3F3] py-[60px] md:py-20">
+				<div class="stats__container">
+					<div class="stats__info pb-6 md:pb-8">
+						<div class="stats__subtitle text-sm leading-[140%] uppercase pb-1 md:pb-2">
+							stats
+						</div>
+						<h2 class="stats__title font-semibold text-[28px] md:text-[40px] leading-[140%]">
+							Experience in numbers
+						</h2>
+					</div>
+					<div class="stats__content flex md:justify-between md:items-center relative md:bg-white rounded-[60px] xl:px-[88px] lg:px-12 md:px-7 md:h-[120px] xl:my-[164px] lg:my-[144px] md:my-[100px] max-md:flex-col max-md:w-fit max-md:m-auto">
+						<div class="stats__jobs flex gap-2 font-semibold md:text-xl leading-[140%] max-md:order-2 max-md:pl-5 max-md:pb-4"><img width="24" src="img/check.svg">3–5 emergency jobs every day</div>
+						<div class="stats__img max-md:order-1"><img src="img/speed.webp"></div>
+						<div class="stats__around flex gap-2 font-semibold md:text-xl leading-[140%] max-md:order-3 max-md:pl-5"><img width="24" src="img/check.svg">Around 1,200 car lockouts per year.</div>
+					</div>
+				</div>
+			</section>
+			<section class="trust py-[60px] md:py-20">
+				<div class="trust__container">
+					<div class="trust__info pb-6 md:pb-8">
+						<div class="trust__subtitle text-sm leading-[140%] uppercase pb-1 md:pb-2">
+							Trust
+						</div>
+						<h2 class="trust__title font-semibold text-[28px] md:text-[40px] leading-[140%] pb-4">
+							Why people in Indianapolis trust MRFIXUS
+						</h2>
+						<div class="trust__description md:text-xl leading-[140%]">
+							We work officially, show clear pricing before we start, and back every job with a real warranty.
+						</div>
+					</div>
+					<div class="trust__content">
+						<div class="trust__list flex gap-6 md:gap-8 pb-8 max-[992px]:flex-col">
+							<div class="trust__item border-b border-[#A5A5A5] pb-4 w-full">
+								<div class="trust__icon bg-[#E3F9E0] rounded-lg p-2 w-fit mb-4"><img src="img/trust_check.svg"></div>
+								<div class="trust__text font-semibold leading-[140%] md:text-xl">Google LSA Verified locksmith service</div>
+							</div>
+							<div class="trust__item border-b border-[#A5A5A5] pb-4 w-full">
+								<div class="trust__icon bg-[#E3F9E0] rounded-lg p-2 w-fit mb-4"><img src="img/trust_star.svg"></div>
+								<div class="trust__text font-semibold leading-[140%] md:text-xl">Profiles and reviews on Google, Yelp, Thumbtack, BBB</div>
+							</div>
+							<div class="trust__item border-b border-[#A5A5A5] pb-4 w-full">
+								<div class="trust__icon bg-[#E3F9E0] rounded-lg p-2 w-fit mb-4"><img src="img/trust_warranty.svg"></div>
+								<div class="trust__text font-semibold leading-[140%] md:text-xl">1-year workmanship warranty on all jobs</div>
+							</div>
+						</div>
+						<div class="trust__list flex gap-6 md:gap-8 max-[992px]:flex-col">
+							<div class="trust__item border-b border-[#A5A5A5] pb-4 w-full">
+								<div class="trust__icon bg-[#E3F9E0] rounded-lg p-2 w-fit mb-4"><img src="img/trust_money.svg"></div>
+								<div class="trust__text font-semibold leading-[140%] md:text-xl">No hidden fees — full estimate before any work</div>
+							</div>
+							<div class="trust__item border-b border-[#A5A5A5] pb-4 w-full">
+								<div class="trust__icon bg-[#E3F9E0] rounded-lg p-2 w-fit mb-4"><img src="img/trust_id.svg"></div>
+								<div class="trust__text font-semibold leading-[140%] md:text-xl">ID check and proof of access required — we work only for owners and authorized people</div>
+							</div>
+							<div class="trust__item border-b border-[#A5A5A5] pb-4 w-full">
+								<div class="trust__icon bg-[#E3F9E0] rounded-lg p-2 w-fit mb-4"><img src="img/trust_car.svg"></div>
+								<div class="trust__text font-semibold leading-[140%] md:text-xl">Strong focus on European cars and smart keys</div>
+							</div>
+						</div>
+					</div>
+					<div class="trust__partners leading-[140%] md:m-auto md:w-fit md:text-center pt-6 md:pt-8">
+						Trusted by:
+						<div class="partners__icons flex max-[600px]:justify-between min-[600px]:gap-16 pt-2 md:pt-4">
+							<img src="img/google-logo.svg">
+							<img src="img/yelp-logo.svg">
+							<img src="img/Better_Business_Bureau-logo.svg">
+							<img src="img/thumbtack-logo.svg">
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="cars pb-[60px] md:py-20">
+				<div class="cars__container">
+					<div class="cars__info pb-6 md:pb-8">
+						<div class="trust__subtitle text-sm leading-[140%] uppercase pb-1 md:pb-2">
+							cars
+						</div>
+						<h2 class="trust__title font-semibold text-[28px] md:text-[40px] leading-[140%] pb-4">
+							Automotive Emergency
+						</h2>
+						<div class="trust__description md:text-xl leading-[140%]">
+							Car: locked out, lost keys, or need a new key?
+						</div>
+					</div>
+					<div class="cars__content flex gap-8 max-lg:flex-col">
+						<div class="cars__left w-full max-lg:order-2">
+							<div class="cars__left-title font-semibold text-xl md:text-[28px] leading-[140%] pb-4">What we do</div>
+							<div class="cars__left-list grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+								<div class="cars__left-item border-b border-[#A5A5A5] pb-4">
+									<div class="cars__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img width="24" src="img/emergency_car-icon.svg"></div>
+									<div class="cars__left-item-title font-semibold md:text-xl leading-[140%]">Car Lockouts</div>
+									<div class="cars__left-item-subtitle md:text-xl leading-[140%]">Non-destructive car lockouts whenever possible</div>
+								</div>
+								<div class="cars__left-item border-b border-[#A5A5A5] pb-4">
+									<div class="cars__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img src="img/cars_key.svg"></div>
+									<div class="cars__left-item-title font-semibold md:text-xl leading-[140%]">Lost-All-Keys</div>
+									<div class="cars__left-item-subtitle md:text-xl leading-[140%]">Cut and program new keys when all keys are lost (lost-all-keys)</div>
+								</div>
+								<div class="cars__left-item border-b border-[#A5A5A5] pb-4">
+									<div class="cars__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img src="img/cars_key.svg"></div>
+									<div class="cars__left-item-title font-semibold md:text-xl leading-[140%]">Key Duplication</div>
+									<div class="cars__left-item-subtitle md:text-xl leading-[140%]">Duplicate original and aftermarket keys and remotes</div>
+								</div>
+								<div class="cars__left-item border-b border-[#A5A5A5] pb-4">
+									<div class="cars__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img src="img/cars_key.svg"></div>
+									<div class="cars__left-item-title font-semibold md:text-xl leading-[140%]">Smart Keys</div>
+									<div class="cars__left-item-subtitle md:text-xl leading-[140%]">Program smart / proximity / push-to-start keys</div>
+								</div>
+								<div class="cars__left-item border-b border-[#A5A5A5] pb-4">
+									<div class="cars__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img src="img/cars_lock.svg"></div>
+									<div class="cars__left-item-title font-semibold md:text-xl leading-[140%]">Lock Repair</div>
+									<div class="cars__left-item-subtitle md:text-xl leading-[140%]">Ignition and door lock repair or replacement</div>
+								</div>
+								<div class="cars__left-item border-b border-[#A5A5A5] pb-4">
+									<div class="cars__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img width="24" src="img/emergency_check-icon.svg"></div>
+									<div class="cars__left-item-title font-semibold md:text-xl leading-[140%]">Immobilizer</div>
+									<div class="cars__left-item-subtitle md:text-xl leading-[140%]">Immobilizer-related key programming where supported by our tools</div>
+								</div>
+							</div>
+							<div class="cars__left-item border-b border-[#A5A5A5] pb-4 pt-4 md:pt-8">
+								<div class="cars__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img src="img/cars_wrench.svg"></div>
+								<div class="cars__left-item-title font-semibold md:text-2xl leading-[140%]">On-Hand Stock</div>
+								<div class="cars__left-item-subtitle md:text-xl leading-[140%]">Large stock of keys, chips, and remotes in the van</div>
+							</div>
+						</div>
+						<div class="cars__right w-full max-lg:order-1">
+							<div class="cars__right-car w-fit m-auto">
+								<img class="lg:mb-5 hidden lg:block" src="img/cars-right-car.webp">
+								<img class="lg:hidden" src="img/cars-right-car-mobile.webp">
+							</div>
+							<div class="cars__right-info rounded-lg hidden lg:block">
+								<div class="cars__right-title font-semibold text-2xl leading-[140%] pb-4">Pricing (car)</div>
+								<div class="cars__right-price bg-[#F3F3F3] rounded-lg p-4 text-[#616161]">
+									<div class="cars__right-item border-b border-[#A5A5A5] pb-4 flex justify-between text-xl leading-[140%] mb-4">
+										Car lockout
+										<span class="text-[#FFBB29] font-semibold">from $79</span>
+									</div>
+									<div class="cars__right-item border-b border-[#A5A5A5] pb-4 flex justify-between items-center text-xl leading-[140%] mb-4">
+										<div>
+											<span class="pb-2">Car key duplicate<br></span>
+											<span class="pb-2">All keys lost<br></span>
+											<span>Smart / prox key</span>
+										</div>
+										<span class="text-[#FFBB29] font-semibold">from $120</span>
+									</div>
+									<div class="cars__right-item pb-2 flex justify-between text-xl leading-[140%]">
+										Ignition repair
+										<span class="text-[#FFBB29] font-semibold">from $190</span>
+									</div>
+								</div>
+								<div class="cars__right-subtitle text-xs md:text-sm leading-[140%] float-right pt-4">*The final price will be confirmed by the technician on site.</div>
+							</div>
+						</div>
+						<div class="cars__right-info rounded-lg order-3 lg:hidden">
+							<div class="cars__right-title font-semibold text-xl md:text-2xl leading-[140%] pb-4">Pricing (car)</div>
+							<div class="cars__right-price bg-[#F3F3F3] rounded-lg p-4 text-[#616161]">
+								<div class="cars__right-item border-b border-[#A5A5A5] pb-2 md:pb-4 flex justify-between md:text-xl leading-[140%] mb-4">
+									Car lockout
+									<span class="text-[#FFBB29] font-semibold">from $79</span>
+								</div>
+								<div class="cars__right-item border-b border-[#A5A5A5] pb-2 md:pb-4 flex justify-between items-center md:text-xl leading-[140%] mb-4">
+									<div>
+										<span class="pb-2">Car key duplicate<br></span>
+										<span class="pb-2">All keys lost<br></span>
+										<span>Smart / prox key</span>
+									</div>
+									<span class="text-[#FFBB29] font-semibold">from $120</span>
+								</div>
+								<div class="cars__right-item flex justify-between md:text-xl leading-[140%]">
+									Ignition repair
+									<span class="text-[#FFBB29] font-semibold">from $190</span>
+								</div>
+							</div>
+							<div class="cars__right-subtitle text-xs md:text-sm leading-[140%] float-right pt-4">*The final price will be confirmed by the technician on site.</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="car-brands bg-[#F3F3F3] py-[60px] md:py-20">
+				<div class="car-brands__container">
+					<div class="car-brands__info pb-6 md:pb-8">
+						<div class="car-brands__subtitle text-sm leading-[140%] uppercase pb-1 md:pb-2">
+							car brands
+						</div>
+						<h2 class="car-brands__title font-semibold text-[28px] md:text-[40px] leading-[140%] pb-4">
+							Supported brands and years
+						</h2>
+						<div class="car-brands__description md:text-xl leading-[140%]">
+							We focus on modern vehicles and on the brands and model years our tools fully support.
+						</div>
+					</div>
+					<div class="car-brands__content flex justify-between max-[1310px]:flex-col">
+						<div class="car-brands__right min-[1310px]:max-w-[927px]">
+							<div class="car-brands__right-subtitle font-semibold text-xl leading-[140%] md:text-2xl pb-4">European brands</div>
+							<div class="car-brands__right-list flex gap-8 max-[992px]:flex-col">
+								<div class="car-brands__right-item w-full border-b border-[#A5A5A5] pb-4">
+									<div class="car-brands__right-icon mb-4"><img src="img/bmw-logo.svg"></div>
+									<div class="car-brands__right-text leading-[140%] md:text-xl">BMW – most models up to about 2018–2020, depending on platform</div>
+								</div>
+								<div class="car-brands__right-item w-full border-b border-[#A5A5A5] pb-4">
+									<div class="car-brands__right-icon mb-4"><img src="img/mercedes-logo.svg"></div>
+									<div class="car-brands__right-text leading-[140%] md:text-xl">Mercedes-Benz – roughly 2000–2014<br><span class="text-[#616161]">(models after 2014 are not supported with current equipment)</span></div>
+								</div>
+								<div class="car-brands__right-item w-full min-[992px]:border-b min-[992px]:border-[#A5A5A5] min-[992px]:pb-4">
+									<div class="car-brands__right-icon mb-4 flex gap-4">
+										<img src="img/volkswagen-logo.svg">
+										<img src="img/audi-logo.svg">
+										<img src="img/skoda-logo.svg">
+										<img src="img/seat-logo.svg">
+									</div>
+									<div class="car-brands__right-text leading-[140%] md:text-xl">VAG group: Volkswagen, Audi, Skoda, SEAT – most models, including push-to-start systems</div>
+								</div>
+							</div>
+							<div class="car-brands__right-subtitle font-semibold text-xl leading-[140%] md:text-2xl pb-4 pt-6 md:pt-8">US and Asian brands</div>
+							<div class="car-brands__right-list flex gap-6 md:gap-16 max-[992px]:overflow-x-auto">
+								<img src="img/chevrolet-logo.svg">
+								<img src="img/jeep-logo.svg">
+								<img src="img/chrysler-logo.svg">
+								<img src="img/dodge-logo.svg">
+								<img src="img/toyota-logo.svg">
+							</div>
+							<div class="car-brands__right-text leading-[140%] md:text-xl min-[992px]:border-b min-[992px]:border-[#A5A5A5] min-[992px]:pb-4 pt-4">Chevrolet, Jeep, Chrysler, Dodge, Toyota and similar mass-market brands. We focus on 2005 and newer for these makes</div>
+						</div>
+						<div class="car-brands__left min-[1310px]:flex-[0_0_316px] max-[1310px]:pt-6">
+							<div class="car-brands__right-subtitle font-semibold text-xl leading-[140%] md:text-2xl pb-4">We do not service</div>
+							<div class="car-brands__left-list flex flex-col gap-4">
+								<div class="car-brands__left-item !leading-[140%] md:text-xl flex gap-4 items-center">
+									<div class="car-brands__left-icon bg-[#F9E0E0] p-2 rounded-lg w-fit flex-[0_0_40px]"><img src="img/warning.svg"></div>
+									Volvo, Saab
+								</div>
+								<div class="car-brands__left-item !leading-[140%] md:text-xl flex gap-4">
+									<div class="car-brands__left-icon bg-[#F9E0E0] p-2 rounded-lg w-fit h-fit flex-[0_0_40px]"><img src="img/warning.svg"></div>
+									<div>
+										Motorcycles<br>
+										<span class="text-[#616161]">(no keys, no programming, no diagnostics)</span>
+									</div>
+								</div>
+								<div class="car-brands__left-item !leading-[140%] md:text-xl flex gap-4">
+									<div class="car-brands__left-icon bg-[#F9E0E0] p-2 rounded-lg w-fit h-fit flex-[0_0_40px]"><img src="img/warning.svg"></div>
+									<div>
+										RV keys and ignition work<br>
+										<span class="text-[#616161]">(for RVs we only handle lockouts / opening the door)</span>
+									</div>
+								</div>
+								<div class="car-brands__left-item !leading-[140%] md:text-xl flex gap-4">
+									<div class="car-brands__left-icon bg-[#F9E0E0] p-2 rounded-lg w-fit h-fit flex-[0_0_40px]"><img src="img/warning.svg"></div>
+									<div>
+										Most non-European cars older than 2005<br>
+										<span class="text-[#616161]">(Chevrolet, Jeep, Chrysler, Dodge, Toyota, etc.)</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="residential py-[60px] md:py-20">
+				<div class="residential__container">
+					<div class="residential__info pb-6 md:pb-8">
+						<div class="residential__subtitle text-sm leading-[140%] uppercase pb-1 md:pb-2">
+							Residential
+						</div>
+						<h2 class="residential__title font-semibold text-[28px] md:text-[40px] leading-[140%]">
+							Home & apartment:<br> locked out or need to change locks?
+						</h2>
+					</div>
+					<div class="residential__content flex gap-6 md:gap-8 max-lg:flex-col">
+						<div class="residential__left w-full max-lg:order-2">
+							<div class="residential__left-title font-semibold text-xl md:text-2xl leading-[140%] pb-4">Services</div>
+							<div class="residential__left-list grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+								<div class="residential__left-item border-b border-[#A5A5A5] pb-4">
+									<div class="residential__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img width="24" src="img/cars_lock.svg"></div>
+									<div class="residential__left-item-title font-semibold md:text-xl leading-[140%]">Lockouts</div>
+									<div class="residential__left-item-subtitle md:text-xl leading-[140%]">Opening houses and apartments with non-destructive methods first.</div>
+								</div>
+								<div class="residential__left-item border-b border-[#A5A5A5] pb-4">
+									<div class="residential__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img src="img/cars_key.svg"></div>
+									<div class="residential__left-item-title font-semibold md:text-xl leading-[140%]">Rekeying</div>
+									<div class="residential__left-item-subtitle md:text-xl leading-[140%]">Changing lock pins after moving, tenant turnover, or when keys are lost.</div>
+								</div>
+								<div class="residential__left-item border-b border-[#A5A5A5] pb-4">
+									<div class="residential__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img width="24" src="img/emergency_check-icon.svg"></div>
+									<div class="residential__left-item-title font-semibold md:text-xl leading-[140%]">Deadbolts</div>
+									<div class="residential__left-item-subtitle md:text-xl leading-[140%]">Installing deadbolts and performing basic door reinforcement.</div>
+								</div>
+								<div class="residential__left-item border-b border-[#A5A5A5] pb-4">
+									<div class="residential__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img src="img/wifi.svg"></div>
+									<div class="residential__left-item-title font-semibold md:text-xl leading-[140%]">Smart locks</div>
+									<div class="residential__left-item-subtitle md:text-xl leading-[140%]">Installing and setting up popular Wi-Fi and Z-Wave smart lock models.</div>
+								</div>
+							</div>
+							<div class="residential__left-item border-b border-[#A5A5A5] pb-4 pt-4 md:pt-8">
+								<div class="residential__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img src="img/post.svg"></div>
+								<div class="residential__left-item-title font-semibold md:text-xl leading-[140%]">Mailbox & Garage</div>
+								<div class="residential__left-item-subtitle md:text-xl leading-[140%]">Servicing mailbox locks and certain garage door locks that use a key cylinder.</div>
+							</div>
+							<div class="residential__left-subtitle text-xs md:text-sm leading-[140%] pt-4">*We only open homes for people who can prove they live there or are authorized — ID and address check.</div>
+						</div>
+						<div class="residential__right w-full max-lg:order-1">
+							<div class="residential__right-home w-fit m-auto">
+								<img class="lg:mb-6 hidden lg:block" src="img/residential-hone.webp">
+								<img class="lg:hidden" src="img/residential-home-mobile.webp">
+							</div>
+							<div class="residential__right-info rounded-lg hidden lg:block">
+								<div class="residential__right-title font-semibold text-2xl leading-[140%] pb-4">Pricing (home)</div>
+								<div class="residential__right-price bg-[#F3F3F3] rounded-lg p-4 text-[#616161]">
+									<div class="residential__right-item border-b border-[#A5A5A5] pb-4 flex justify-between text-xl leading-[140%] mb-4">
+										House lockout
+										<span class="text-[#FFBB29] font-semibold">from $79</span>
+									</div>
+									<div class="residential__right-item flex justify-between items-center text-xl leading-[140%]">
+										<div>
+											Rekey<br>
+											<span class="text-[#A5A5A5]">per visit (exact price depends on number of cylinders)</span>
+										</div>
+										<span class="text-[#FFBB29] flex-[0_0_84px] ml-4 font-semibold">from $79</span>
+									</div>
+								</div>
+								<div class="residential__right-subtitle text-xs md:text-sm leading-[140%] float-right pt-4">*The final price will be confirmed by the technician on site.</div>
+							</div>
+						</div>
+						<div class="residential__right-info rounded-lg order-3 lg:hidden">
+							<div class="residential__right-title text-xl md:text-2xl leading-[140%] pb-4">Pricing (home)</div>
+							<div class="residential__right-price bg-[#F3F3F3] rounded-lg p-4 text-[#616161]">
+								<div class="residential__right-item border-b border-[#A5A5A5] pb-2 md:pb-4 flex justify-between md:text-xl leading-[140%] mb-4">
+									House lockout
+									<span class="text-[#FFBB29] font-semibold">from $79</span>
+								</div>
+								<div class="residential__right-item flex justify-between items-center md:text-xl leading-[140%]">
+									<div>
+										Rekey<br>
+										<span class="text-[#A5A5A5]">per visit (exact price depends on number of cylinders)</span>
+									</div>
+									<span class="text-[#FFBB29] font-semibold">from $79</span>
+								</div>
+							</div>
+							<div class="residential__right-subtitle text-xs md:text-sm leading-[140%] float-right pt-4">*The final price will be confirmed by the technician on site.</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="commercial pb-[60px] md:py-20">
+				<div class="commercial__container">
+					<div class="commercial__info pb-6 md:pb-8">
+						<div class="commercial__subtitle text-sm leading-[140%] uppercase pb-1 md:pb-2">
+							Commercial
+						</div>
+						<h2 class="commercial__title font-semibold text-[28px] md:text-[40px] leading-[140%]">
+							Business: offices, shops, warehouses
+						</h2>
+					</div>
+					<div class="commercial__content flex gap-6 md:gap-8 max-lg:flex-col">
+						<div class="commercial__left w-full max-lg:order-2">
+							<div class="commercial__left-title font-semibold text-xl md:text-2xl leading-[140%] pb-4">Services</div>
+							<div class="commercial__left-list grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+								<div class="commercial__left-item border-b border-[#A5A5A5] pb-4">
+									<div class="commercial__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img src="img/cars_lock.svg"></div>
+									<div class="commercial__left-item-title font-semibold md:text-xl leading-[140%]">Commercial access</div>
+									<div class="commercial__left-item-subtitle md:text-xl leading-[140%]">Door opening and lock service for offices, retail, warehouses, restaurants, apartments / HOA.</div>
+								</div>
+								<div class="commercial__left-item border-b border-[#A5A5A5] pb-4">
+									<div class="commercial__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img src="img/cars_key.svg"></div>
+									<div class="commercial__left-item-title font-semibold md:text-xl leading-[140%]">Master systems</div>
+									<div class="commercial__left-item-subtitle md:text-xl leading-[140%]">Master key systems and high-security cylinders</div>
+								</div>
+								<div class="commercial__left-item border-b border-[#A5A5A5] pb-4">
+									<div class="commercial__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img src="img/pin.svg"></div>
+									<div class="commercial__left-item-title font-semibold md:text-xl leading-[140%]">Access control</div>
+									<div class="commercial__left-item-subtitle md:text-xl leading-[140%]">Stand-alone access control: PIN pads,<br> card / fob readers.</div>
+								</div>
+								<div class="commercial__left-item border-b border-[#A5A5A5] pb-4">
+									<div class="commercial__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img src="img/door-open.svg"></div>
+									<div class="commercial__left-item-title font-semibold md:text-xl leading-[140%]">Door hardware</div>
+									<div class="commercial__left-item-subtitle md:text-xl leading-[140%]">Basic work with door hardware (closers, panic bars, electric strikes)</div>
+								</div>
+							</div>
+							<div class="commercial__left-item border-b border-[#A5A5A5] pb-4 pt-4 md:pt-8">
+								<div class="commercial__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img src="img/file-blank.svg"></div>
+								<div class="commercial__left-item-title font-semibold md:text-xl leading-[140%]">Business docs</div>
+								<div class="commercial__left-item-subtitle md:text-xl leading-[140%]">Invoices and COI available for business clients</div>
+							</div>
+							<div class="commercial__left-subtitle text-xs md:text-sm leading-[140%] pt-4">*For regular service or after-hours work, we can discuss simple SLA terms and scheduled coverage.</div>
+						</div>
+						<div class="commercial__right w-full max-lg:order-1">
+							<div class="commercial__right-home w-fit m-auto">
+								<img class="hidden lg:block" src="img/office.webp">
+								<img class="lg:hidden" src="img/office-mobile.webp">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="prices pb-[60px] md:py-20">
+				<div class="prices__container">
+					<div class="prices__info pb-6 md:pb-8">
+						<div class="prices__subtitle text-sm leading-[140%] uppercase pb-1 md:pb-2">
+							Prices
+						</div>
+						<h2 class="prices__title font-semibold text-[28px] md:text-[40px] leading-[140%]">
+							Pricing and transparency
+						</h2>
+					</div>
+					<div class="prices__text">
+						<div class="prices__left-title font-semibold text-xl md:text-2xl leading-[140%] pb-4">Promise</div>
+						<div class="prices__left-subtitle md:text-xl leading-[140%] pb-4">We give you a clear estimate before we start.</div>
+						<div class="prices__left-yes flex max-md:flex-col gap-4 md:gap-8 font-semibold md:text-xl leading-[140%]">
+							<div class="flex text-[#F6A50E]"><img class="pr-2" src="img/yes.svg">No hidden fees,</div>
+							<div class="flex text-[#F6A50E]"><img class="pr-2" src="img/yes.svg">No bait pricing.</div>
+						</div>
+					</div>
+					<div class="prices__content flex gap-6 md:gap-8 pt-6 md:pt-8 max-lg:flex-col">
+						<div class="prices__left w-full max-lg:order-2">
+							<div class="prices__left-title font-semibold text-xl md:text-2xl leading-[140%] pb-4">How we charge</div>
+							<div class="prices__left-item flex gap-4">
+								<div class="prices__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit h-fit flex-[0_0_40px]"><img src="img/cars_wrench.svg"></div>
+								<div>
+									<div class="prices__left-item-title font-semibold md:text-xl leading-[140%]">Approval Required</div>
+									<div class="prices__left-item-subtitle md:text-xl leading-[140%]">Any drilling or lock replacement is discussed and approved by you in advance, including the cost of parts and labor.</div>
+								</div>
+							</div>
+							<div class="prices__left-item pt-4 md:pt-8 flex gap-4">
+								<div class="prices__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit h-fit flex-[0_0_40px]"><img width="24" src="img/emergency_car-icon.svg"></div>
+								<div>
+									<div class="prices__left-item-title font-semibold md:text-xl leading-[140%]">Car Key Policy</div>
+									<div class="prices__left-item-subtitle md:text-xl leading-[140%]">We do not offer returns on car keys — once a key is programmed, it is locked to your vehicle and cannot be reused on another car.</div>
+								</div>
+							</div>
+							<div class="prices__left-item pt-4 md:pt-8 flex gap-4">
+								<div class="prices__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit h-fit flex-[0_0_40px]"><img src="img/phone-call.svg"></div>
+								<div>
+									<div class="prices__left-item-title font-semibold md:text-xl leading-[140%]">Service Call</div>
+									<div class="prices__left-item-subtitle md:text-xl leading-[140%]">If you decide not to proceed after the technician arrives and explains the price, we charge a non-refundable service call of $19–29 (depending on distance).</div>
+								</div>
+							</div>
+							<div class="prices__left-item pt-4 md:pt-8 flex gap-4">
+								<div class="prices__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit h-fit flex-[0_0_40px]"><img src="img/credit-card.svg"></div>
+								<div>
+									<div class="prices__left-item-title font-semibold md:text-xl leading-[140%]">Transparent Pricing</div>
+									<div class="prices__left-item-subtitle md:text-xl leading-[140%]">No hidden fees — you get a full estimate before any work starts.</div>
+								</div>
+							</div>
+						</div>
+						<div class="prices__right w-full max-lg:order-1">
+							<div class="cars__right-title font-semibold text-xl md:text-2xl leading-[140%] pb-4">Typical prices</div>
+							<div class="cars__right-price bg-[#F3F3F3] rounded-lg p-4 text-[#616161]">
+								<div class="cars__right-item border-b border-[#A5A5A5] pb-2 md:pb-4 flex justify-between md:text-xl leading-[140%] mb-4">
+									<div>
+										<span class="pb-2">Lockout (car or home)<br></span>
+										<span>Rekey</span>
+									</div>
+									<span class="text-[#FFBB29] font-semibold">from $79</span>
+								</div>
+								<div class="cars__right-item border-b border-[#A5A5A5] pb-2 md:pb-4 flex justify-between items-center md:text-xl leading-[140%] mb-4">
+									<div>
+										<span class="pb-2">Car key duplicate<br></span>
+										<span class="pb-2">Smart / proximity key<br></span>
+										<span>All car keys lost</span>
+									</div>
+									<span class="text-[#FFBB29] font-semibold">from $120</span>
+								</div>
+								<div class="cars__right-item flex justify-between md:text-xl leading-[140%]">
+									Ignition repair
+									<span class="text-[#FFBB29] font-semibold">from $190</span>
+								</div>
+							</div>
+							<div class="cars__right-subtitle text-xs md:text-sm leading-[140%] float-right pt-4">*The final price will be confirmed by the technician on site.</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="discount-policy bg-[#FFF5DF] py-[60px] md:py-20">
+				<div class="discount-policy__container">
+					<div class="discount-policy__info pb-6 md:pb-8">
+						<div class="discount-policy__subtitle text-sm leading-[140%] uppercase pb-1 md:pb-2">
+							Discount policy
+						</div>
+						<h2 class="discount-policy__title font-semibold text-[28px] md:text-[40px] leading-[140%]">
+							Discounts and deals
+						</h2>
+					</div>
+					<div class="discount-policy__content flex max-lg:flex-col gap-4 md:gap-8">
+						<div class="discount-policy__item p-4 md:p-6 bg-white rounded-lg w-full">
+							<div class="discount-policy__item-title font-extrabold leading-[140%] text-xl md:text-2xl pb-4 text-[#FFBB29]">10% OFF</div>
+							<div class="discount-policy__item-subtitle leading-[140%] md:text-xl">Veterans, seniors, and students</div>
+						</div>
+						<div class="discount-policy__item p-4 md:p-6 bg-white rounded-lg w-full">
+							<div class="discount-policy__item-title font-extrabold leading-[140%] text-xl md:text-2xl pb-4 text-[#FFBB29]">10% OFF</div>
+							<div class="discount-policy__item-subtitle leading-[140%] md:text-xl">First responders</div>
+						</div>
+						<div class="discount-policy__item p-4 md:p-6 bg-white rounded-lg w-full">
+							<div class="discount-policy__item-title font-extrabold leading-[140%] text-xl md:text-2xl pb-4 text-[#FFBB29]">GET $10</div>
+							<div class="discount-policy__item-subtitle leading-[140%] md:text-xl">Leave us a review — get $10 off a future service</div>
+						</div>
+						<div class="discount-policy__item p-4 md:p-6 bg-white rounded-lg w-full">
+							<div class="discount-policy__item-title font-extrabold leading-[140%] text-xl md:text-2xl pb-4 text-[#FFBB29]">50% OFF</div>
+							<div class="discount-policy__item-subtitle leading-[140%] md:text-xl">Second key (applied to the lower-priced item)</div>
+						</div>
+					</div>
+					<div class="cars__right-subtitle text-xs md:text-sm leading-[140%] pt-6 md:pt-8">*We don’t run separate “new customer” discounts. All available discounts are listed here and applied transparently.</div>
+				</div>
+			</section>
+			<section class="warranty py-[60px] md:py-20">
+				<div class="warranty__container">
+					<div class="warranty__info pb-6 md:pb-8">
+						<div class="warranty__subtitle text-sm leading-[140%] uppercase pb-1 md:pb-2">
+							warranty
+						</div>
+						<h2 class="warranty__title font-semibold text-[28px] md:text-[40px] leading-[140%]">
+							Guarantees and safety
+						</h2>
+					</div>
+					<div class="warranty__conetnt">
+						<div class="warranty__conetnt-title font-semibold text-xl md:text-2xl leading-[140%]">Guarantees</div>
+						<div class="warranty__list pt-4 grid grid-cols md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 pb-6 md:pb-8">
+							<div class="warranty__item w-full max-md:flex gap-4">
+								<div class="warranty__item-icon bg-[#E3F9E0] rounded-lg p-2 w-fit h-fit mb-4 flex-[0_0_40px]"><img src="img/check.svg"></div>
+								<div class="warranty__text">
+									<div class="warranty__item-title font-semibold leading-[140%] md:text-xl">Warranty</div>
+									<div class="warranty__item-subtitle leading-[140%] md:text-xl">1-year workmanship warranty on all jobs</div>
+								</div>
+							</div>
+							<div class="warranty__item w-full max-md:flex gap-4">
+								<div class="warranty__item-icon bg-[#E3F9E0] rounded-lg p-2 w-fit h-fit mb-4 flex-[0_0_40px]"><img src="img/check.svg"></div>
+								<div class="warranty__text">
+									<div class="warranty__item-title font-semibold leading-[140%] md:text-xl">Remote Battery</div>
+									<div class="warranty__item-subtitle leading-[140%] md:text-xl">1-month warranty on remote batteries — after that, battery replacement is a paid service call</div>
+								</div>
+							</div>
+							<div class="warranty__item w-full max-md:flex gap-4">
+								<div class="warranty__item-icon bg-[#E3F9E0] rounded-lg p-2 w-fit h-fit mb-4 flex-[0_0_40px]"><img src="img/check.svg"></div>
+								<div class="warranty__text">
+									<div class="warranty__item-title font-semibold leading-[140%] md:text-xl">Warranty Service</div>
+									<div class="warranty__item-subtitle leading-[140%] md:text-xl">If there is a valid warranty issue, we come back and fix it at our expense</div>
+								</div>
+							</div>
+							<div class="warranty__item w-full max-md:flex gap-4">
+								<div class="warranty__item-icon bg-[#E3F9E0] rounded-lg p-2 w-fit h-fit mb-4 flex-[0_0_40px]"><img src="img/check.svg"></div>
+								<div class="warranty__text">
+									<div class="warranty__item-title font-semibold leading-[140%] md:text-xl">Programmed Keys</div>
+									<div class="warranty__item-subtitle leading-[140%] md:text-xl">No returns on programmed car keys — once a key is coded to your vehicle, it belongs to that car</div>
+								</div>
+							</div>
+						</div>
+						<div class="warranty__conetnt-title font-semibold text-xl md:text-2xl leading-[140%]">Safety rules</div>
+						<div class="warranty__list pt-4 grid grid-cols md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
+							<div class="warranty__item w-full max-md:flex gap-4">
+								<div class="warranty__item-icon bg-[#E3F9E0] rounded-lg p-2 w-fit h-fit mb-4 flex-[0_0_40px]"><img src="img/trust_warranty.svg"></div>
+								<div class="warranty__text">
+									<div class="warranty__item-title font-semibold leading-[140%] md:text-xl">Non-Destructive First</div>
+									<div class="warranty__item-subtitle leading-[140%] md:text-xl">Non-destructive first: we always start with non-drilling methods</div>
+								</div>
+							</div>
+							<div class="warranty__item w-full max-md:flex gap-4">
+								<div class="warranty__item-icon bg-[#E3F9E0] rounded-lg p-2 w-fit h-fit mb-4 flex-[0_0_40px]"><img src="img/trust_warranty.svg"></div>
+								<div class="warranty__text">
+									<div class="warranty__item-title font-semibold leading-[140%] md:text-xl">Drilling Approval</div>
+									<div class="warranty__item-subtitle leading-[140%] md:text-xl">Drilling and lock replacement only with your approval, and after we explain the risks and costs</div>
+								</div>
+							</div>
+							<div class="warranty__item w-full max-md:flex gap-4">
+								<div class="warranty__item-icon bg-[#E3F9E0] rounded-lg p-2 w-fit h-fit mb-4 flex-[0_0_40px]"><img src="img/trust_warranty.svg"></div>
+								<div class="warranty__text">
+									<div class="warranty__item-title font-semibold leading-[140%] md:text-xl">ID Verification</div>
+									<div class="warranty__item-subtitle leading-[140%] md:text-xl">ID and proof of access required for cars, homes, and commercial properties</div>
+								</div>
+							</div>
+							<div class="warranty__item w-full max-md:flex gap-4">
+								<div class="warranty__item-icon bg-[#E3F9E0] rounded-lg p-2 w-fit h-fit mb-4 flex-[0_0_40px]"><img src="img/trust_warranty.svg"></div>
+								<div class="warranty__text">
+									<div class="warranty__item-title font-semibold leading-[140%] md:text-xl">Job Documentation</div>
+									<div class="warranty__item-subtitle leading-[140%] md:text-xl">We may take photos or short videos to document the job; we do not keep your ID data longer than needed to protect both you and us in case of disputes</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="cases pb-[60px] md:py-20">
+				<div class="cases__container">
+					<div class="cases__info pb-6 md:pb-8">
+						<div class="cases__subtitle text-sm leading-[140%] uppercase pb-1 md:pb-2">
+							Cases
+						</div>
+						<h2 class="cases__title font-semibold text-[28px] md:text-[40px] leading-[140%]">
+							Real jobs
+						</h2>
+					</div>
+					<div class="cases__slider swiper">
+						<div class="cases__wrapper swiper-wrapper">
+							<div class="cases__slide swiper-slide p-4 md:p-6 bg-[#FDFDFD] rounded-lg flex flex-col border border-[#1D1D1D]">
+								<!-- Оболонка слайдера -->
+								<div class="cases-img__slider swiper relative">
+									<!-- Частина слайдера, що рухається -->
+									<div class="cases-img__wrapper swiper-wrapper" data-gallery>
+										<!-- Слайд -->
+										<div class="cases-img__slide swiper-slide rounded-lg overflow-hidden w-full h-[300px] md:h-[400px]" data-src="img/cases/image1-1.webp">
+											<img class="w-full h-full object-cover object-center" src="img/cases/image1-1.webp" alt="" loading="lazy">
+										</div>
+										<div class="cases-img__slide swiper-slide rounded-lg overflow-hidden w-full h-[300px] md:h-[400px]" data-src="img/cases/image1-2.webp">
+											<img class="w-full h-full object-cover object-center" src="img/cases/image1-2.webp" alt="" loading="lazy">
+										</div>
+										<div class="cases-img__slide swiper-slide rounded-lg overflow-hidden w-full h-[300px] md:h-[400px]" data-src="img/bg-mobile__image2.webp">
+											<img class="w-full h-full object-cover object-center" src="img/bg-mobile__image2.webp" alt="" loading="lazy">
+										</div>
+									</div>
+									<!-- Якщо потрібна пагінація -->
+									<div class="swiper-pagination absolute bottom-2 flex gap-1 left-1/2 -translate-x-1/2"></div>
+								</div>
+								<h2 class="cases-slide-info__title font-semibold leading-[140%] text-xl md:text-2xl pb-2 pt-4">Broken Key Replacement (2012 Honda Odyssey)</h2>
+								<p class="cases-slide-info__description leading-[140%] md:text-xl text-[#616161] overflow-hidden">The customer’s original key snapped and could no longer be used. Our technician arrived within 25 minutes fully equipped, cut a new key on site, and programmed it to the vehicle’s immobilizer system. The customer received a complete mobile service, including parts and programming.</p>
+								<button class="toggle-btn leading-[140%] text-[#F6A50E] hover:text-[#1D1D1D] transition-all ease-in-out duration-300 pt-2 cursor-pointer w-fit hidden">Read more</button>
+							</div>
+							<div class="cases__slide swiper-slide p-4 md:p-6 bg-[#FDFDFD] rounded-lg flex flex-col border border-[#1D1D1D]">
+								<!-- Оболонка слайдера -->
+								<div class="cases-img__slider swiper relative">
+									<!-- Частина слайдера, що рухається -->
+									<div class="cases-img__wrapper swiper-wrapper" data-gallery>
+										<!-- Слайд -->
+										<div class="cases-img__slide swiper-slide rounded-lg overflow-hidden w-full h-[300px] md:h-[400px]" data-src="img/bg-mobile__image3.webp">
+											<img class="w-full h-full object-cover object-center" src="img/bg-mobile__image3.webp" alt="" loading="lazy">
+										</div>
+										<div class="cases-img__slide swiper-slide rounded-lg overflow-hidden w-full h-[300px] md:h-[400px]" data-src="img/cases/image2-2.webp">
+											<img class="w-full h-full object-cover object-center" src="img/cases/image2-2.webp" alt="" loading="lazy">
+										</div>
+										<div class="cases-img__slide swiper-slide rounded-lg overflow-hidden w-full h-[300px] md:h-[400px]" data-src="img/cases/image2-3.webp">
+											<img class="w-full h-full object-cover object-center" src="img/cases/image2-3.webp" alt="" loading="lazy">
+										</div>
+									</div>
+									<!-- Якщо потрібна пагінація -->
+									<div class="swiper-pagination absolute bottom-2 flex gap-1 left-1/2 -translate-x-1/2"></div>
+								</div>
+								<h2 class="cases-slide-info__title font-semibold leading-[140%] text-xl md:text-2xl pb-2 pt-4">Door Lock Replacement</h2>
+								<p class="cases-slide-info__description leading-[140%] md:text-xl text-[#616161] overflow-hidden">A client required the replacement of several residential door locks. We reached the location within 35 minutes and replaced the faulty locks with new, secure hardware.</p>
+								<button class="toggle-btn leading-[140%] text-[#F6A50E] hover:text-[#1D1D1D] transition-all ease-in-out duration-300 pt-2 cursor-pointer w-fit hidden">Read more</button>
+							</div>
+							<div class="cases__slide swiper-slide p-4 md:p-6 bg-[#FDFDFD] rounded-lg flex flex-col border border-[#1D1D1D]">
+								<!-- Оболонка слайдера -->
+								<div class="cases-img__slider swiper relative">
+									<!-- Частина слайдера, що рухається -->
+									<div class="cases-img__wrapper swiper-wrapper" data-gallery>
+										<!-- Слайд -->
+										<div class="cases-img__slide swiper-slide rounded-lg overflow-hidden w-full h-[300px] md:h-[400px]" data-src="img/cases/image3-1.webp">
+											<img class="w-full h-full object-cover object-center" src="img/cases/image3-1.webp" alt="" loading="lazy">
+										</div>
+										<div class="cases-img__slide swiper-slide rounded-lg overflow-hidden w-full h-[300px] md:h-[400px]" data-src="img/cases/image3-2.webp">
+											<img class="w-full h-full object-cover object-center" src="img/cases/image3-2.webp" alt="" loading="lazy">
+										</div>
+									</div>
+									<!-- Якщо потрібна пагінація -->
+									<div class="swiper-pagination absolute bottom-2 flex gap-1 left-1/2 -translate-x-1/2"></div>
+								</div>
+								<h2 class="cases-slide-info__title font-semibold leading-[140%] text-xl md:text-2xl pb-2 pt-4">Commercial Vehicle Key Service</h2>
+								<p class="cases-slide-info__description leading-[140%] md:text-xl text-[#616161] overflow-hidden">The client had lost all keys to their commercial vehicle. Our technician arrived within 30 minutes and created a new working key on site. We provided complete key-making services. (Service is available for vans, trucks, and other commercial vehicles; vehicle unlocking, when required, is quoted separately)</p>
+								<button class="toggle-btn leading-[140%] text-[#F6A50E] hover:text-[#1D1D1D] transition-all ease-in-out duration-300 pt-2 cursor-pointer w-fit hidden">Read more</button>
+							</div>
+							<div class="cases__slide swiper-slide p-4 md:p-6 bg-[#FDFDFD] rounded-lg flex flex-col border border-[#1D1D1D]">
+								<!-- Оболонка слайдера -->
+								<div class="cases-img__slider swiper relative">
+									<!-- Частина слайдера, що рухається -->
+									<div class="cases-img__wrapper swiper-wrapper" data-gallery>
+										<!-- Слайд -->
+										<div class="cases-img__slide swiper-slide rounded-lg overflow-hidden w-full h-[300px] md:h-[400px]" data-src="img/cases/image4-1.webp">
+											<img class="w-full h-full object-cover object-center" src="img/cases/image4-1.webp" alt="" loading="lazy">
+										</div>
+										<div class="cases-img__slide swiper-slide rounded-lg overflow-hidden w-full h-[300px] md:h-[400px]" data-src="img/cases/image4-2.webp">
+											<img class="w-full h-full object-cover object-center" src="img/cases/image4-2.webp" alt="" loading="lazy">
+										</div>
+									</div>
+									<!-- Якщо потрібна пагінація -->
+									<div class="swiper-pagination absolute bottom-2 flex gap-1 left-1/2 -translate-x-1/2"></div>
+								</div>
+								<h2 class="cases-slide-info__title font-semibold leading-[140%] text-xl md:text-2xl pb-2 pt-4">Full Door Exit Device System Upgrade</h2>
+								<p class="cases-slide-info__description leading-[140%] md:text-xl text-[#616161] overflow-hidden">We completely upgraded an outdated exit device (push bar) system for a commercial door. The job included installing a new mechanism, modifying the door structure, cutting new openings, and reinforcing the entire door to improve durability and reduce the risk of forced entry. The result was a fully modernized, compliant, and secure exit device system.</p>
+								<button class="toggle-btn leading-[140%] text-[#F6A50E] hover:text-[#1D1D1D] transition-all ease-in-out duration-300 pt-2 cursor-pointer w-fit hidden">Read more</button>
+							</div>
+							<div class="cases__slide swiper-slide p-4 md:p-6 bg-[#FDFDFD] rounded-lg flex flex-col border border-[#1D1D1D]">
+								<!-- Оболонка слайдера -->
+								<div class="cases-img__slider swiper relative">
+									<!-- Частина слайдера, що рухається -->
+									<div class="cases-img__wrapper swiper-wrapper" data-gallery>
+										<!-- Слайд -->
+										<div class="cases-img__slide swiper-slide rounded-lg overflow-hidden w-full h-[300px] md:h-[400px]" data-src="img/bg-mobile__image5.webp">
+											<img class="w-full h-full object-cover object-center" src="img/bg-mobile__image5.webp" alt="" loading="lazy">
+										</div>
+										<div class="cases-img__slide swiper-slide rounded-lg overflow-hidden w-full h-[300px] md:h-[400px]" data-src="img/cases/image5-2.webp">
+											<img class="w-full h-full object-cover object-center" src="img/cases/image5-2.webp" alt="" loading="lazy">
+										</div>
+									</div>
+									<!-- Якщо потрібна пагінація -->
+									<div class="swiper-pagination absolute bottom-2 flex gap-1 left-1/2 -translate-x-1/2"></div>
+								</div>
+								<h2 class="cases-slide-info__title font-semibold leading-[140%] text-xl md:text-2xl pb-2 pt-4">Commercial Lock Repair</h2>
+								<p class="cases-slide-info__description leading-[140%] md:text-xl text-[#616161] overflow-hidden">A commercial client required repair of a malfunctioning lock system. We inspected the mechanism, diagnosed the issue, and restored full functionality. The exact pricing was determined after an on-site assessment based on hardware type and complexity.</p>
+								<button class="toggle-btn leading-[140%] text-[#F6A50E] hover:text-[#1D1D1D] transition-all ease-in-out duration-300 pt-2 cursor-pointer w-fit hidden">Read more</button>
+							</div>
+							<div class="cases__slide swiper-slide p-4 md:p-6 bg-[#FDFDFD] rounded-lg flex flex-col border border-[#1D1D1D]">
+								<!-- Оболонка слайдера -->
+								<div class="cases-img__slider swiper relative">
+									<!-- Частина слайдера, що рухається -->
+									<div class="cases-img__wrapper swiper-wrapper" data-gallery>
+										<!-- Слайд -->
+										<div class="cases-img__slide swiper-slide rounded-lg overflow-hidden w-full h-[300px] md:h-[400px]" data-src="img/bg-mobile__image4.webp">
+											<img class="w-full h-full object-cover object-center" src="img/bg-mobile__image4.webp" alt="" loading="lazy">
+										</div>
+										<div class="cases-img__slide swiper-slide rounded-lg overflow-hidden w-full h-[300px] md:h-[400px]" data-src="img/cases/image6-2.webp">
+											<img class="w-full h-full object-cover object-center" src="img/cases/image6-2.webp" alt="" loading="lazy">
+										</div>
+										<div class="cases-img__slide swiper-slide rounded-lg overflow-hidden w-full h-[300px] md:h-[400px]" data-src="img/cases/image6-3.webp">
+											<img class="w-full h-full object-cover object-center" src="img/cases/image6-3.webp" alt="" loading="lazy">
+										</div>
+									</div>
+									<!-- Якщо потрібна пагінація -->
+									<div class="swiper-pagination absolute bottom-2 flex gap-1 left-1/2 -translate-x-1/2"></div>
+								</div>
+								<h2 class="cases-slide-info__title font-semibold leading-[140%] text-xl md:text-2xl pb-2 pt-4">Non-Destructive Lock Opening</h2>
+								<p class="cases-slide-info__description leading-[140%] md:text-xl text-[#616161] overflow-hidden">We performed a non-destructive opening of a locked door, ensuring the lock mechanism remained intact. Our technician arrived within 25 minutes and used professional tools to open the lock without drilling or damage. (This service is available for both vehicles and residential doors)</p>
+								<button class="toggle-btn leading-[140%] text-[#F6A50E] hover:text-[#1D1D1D] transition-all ease-in-out duration-300 pt-2 cursor-pointer w-fit hidden">Read more</button>
+							</div>
+							<div class="cases__slide swiper-slide p-4 md:p-6 bg-[#FDFDFD] rounded-lg flex flex-col border border-[#1D1D1D]">
+								<!-- Оболонка слайдера -->
+								<div class="cases-img__slider swiper relative">
+									<!-- Частина слайдера, що рухається -->
+									<div class="cases-img__wrapper swiper-wrapper" data-gallery>
+										<!-- Слайд -->
+										<div class="cases-img__slide swiper-slide rounded-lg overflow-hidden w-full h-[300px] md:h-[400px]" data-src="img/bg-mobile__image6.webp">
+											<img class="w-full h-full object-cover object-center" src="img/bg-mobile__image6.webp" alt="" loading="lazy">
+										</div>
+										<div class="cases-img__slide swiper-slide rounded-lg overflow-hidden w-full h-[300px] md:h-[400px]" data-src="img/cases/image7-2.webp">
+											<img class="w-full h-full object-cover object-center" src="img/cases/image7-2.webp" alt="" loading="lazy">
+										</div>
+										<div class="cases-img__slide swiper-slide rounded-lg overflow-hidden w-full h-[300px] md:h-[400px]" data-src="img/cases/image7-3.webp">
+											<img class="w-full h-full object-cover object-center" src="img/cases/image7-3.webp" alt="" loading="lazy">
+										</div>
+									</div>
+									<!-- Якщо потрібна пагінація -->
+									<div class="swiper-pagination absolute bottom-2 flex gap-1 left-1/2 -translate-x-1/2"></div>
+								</div>
+								<h2 class="cases-slide-info__title font-semibold leading-[140%] text-xl md:text-2xl pb-2 pt-4">Ignition Repair Service</h2>
+								<p class="cases-slide-info__description leading-[140%] md:text-xl text-[#616161] overflow-hidden">The vehicle’s ignition cylinder was jammed and wouldn’t turn at all. Our technician arrived within 20 minutes, disassembled the ignition system, and built a new ignition cylinder matched precisely to the vehicle’s original key. After reinstalling the assembly, we reprogrammed the vehicle to ensure everything worked flawlessly. </p>
+								<button class="toggle-btn leading-[140%] text-[#F6A50E] hover:text-[#1D1D1D] transition-all ease-in-out duration-300 pt-2 cursor-pointer w-fit hidden">Read more</button>
+							</div>
+						</div>
+						<div class="swiper-pagination flex gap-2 justify-center pt-4"></div>
+					</div>
+				</div>
+			</section>
+			<section class="testimonials pb-[60px] md:py-20">
+				<div class="testimonials__container">
+					<div class="testimonials__info pb-6 md:pb-8">
+						<div class="testimonials__subtitle text-sm leading-[140%] uppercase pb-1 md:pb-2">
+							Testimonials
+						</div>
+						<h2 class="testimonials__title font-semibold text-[28px] md:text-[40px] leading-[140%]">
+							Reviews
+						</h2>
+					</div>
+					<div class="testimonials-reviews">
+						<!-- Оболонка слайдера -->
+						<div class="testimonials-reviews__slider swiper">
+							<!-- Частина слайдера, що рухається -->
+							<div class="testimonials-reviews__wrapper swiper-wrapper">
+								<!-- Слайд -->
+								<div class="testimonials-reviews__slide swiper-slide bg-[#F3F3F3] rounded-lg flex flex-col gap-4 p-4 max-h-[264px] min-[992px]:max-h-[320px] min-[992px]:p-6">
+									<div class="testimonials-reviews__starblock flex justify-between">
+										<div class="flex gap-2">
+											<img src="img/star.svg">
+											<img src="img/star.svg">
+											<img src="img/star.svg">
+											<img src="img/star.svg">
+											<img src="img/star.svg">
+										</div>
+										<img alt="google icon" width="24" src="img/google-icon.svg" loading="lazy">
+									</div>
+									<div class="testimonials-reviews__info overflow-auto pr-[10px]">
+										<div class="testimonials-reviews-info__title font-semibold !leading-[120%] pb-1 md:text-xl">Varvara</div>
+										<div class="testimonials-reviews-info__description !leading-[140%] md:text-xl">I use this company — and once again, they exceeded my expectations! This time, it wasn’t just a regular car key issue. I had a serious problem with my truck — the computer had to be replaced and all the systems needed to be reprogrammed. These guys came out, replaced the car’s computer, reprogrammed everything from scratch, and made me new keys, all on the spot. He came less than 30 min. The whole process took less than 30 minutes, and the price was more than fair. Honestly, this is the best company I’ve ever dealt with. Fast, professional, and truly know what they’re doing. Highly recommend!</div>
+									</div>
+								</div>
+								<div class="testimonials-reviews__slide swiper-slide bg-[#F3F3F3] rounded-lg flex flex-col gap-4 p-4 max-h-[264px] min-[992px]:max-h-[320px] min-[992px]:p-6">
+									<div class="testimonials-reviews__starblock flex justify-between">
+										<div class="flex gap-2">
+											<img src="img/star.svg">
+											<img src="img/star.svg">
+											<img src="img/star.svg">
+											<img src="img/star.svg">
+											<img src="img/star.svg">
+										</div>
+										<img alt="google icon" width="24" src="img/google-icon.svg" loading="lazy">
+									</div>
+									<div class="testimonials-reviews__info overflow-auto pr-[10px]">
+										<div class="testimonials-reviews-info__title font-semibold !leading-[120%] pb-1 md:text-xl">Beslan Patov</div>
+										<div class="testimonials-reviews-info__description !leading-[140%] md:text-xl">I had problems with my 2004 BMW X5, the remote didn’t work correctly. He came in 25 min , to my house in Westfield, then he reprogrammed my original key , also made me extra key with great service. Total it took him 30 min to get my BMW done</div>
+									</div>
+								</div>
+								<div class="testimonials-reviews__slide swiper-slide bg-[#F3F3F3] rounded-lg flex flex-col gap-4 p-4 max-h-[264px] min-[992px]:max-h-[320px] min-[992px]:p-6">
+									<div class="testimonials-reviews__starblock flex justify-between">
+										<div class="flex gap-2">
+											<img src="img/star.svg">
+											<img src="img/star.svg">
+											<img src="img/star.svg">
+											<img src="img/star.svg">
+											<img src="img/star.svg">
+										</div>
+										<img alt="google icon" width="24" src="img/google-icon.svg" loading="lazy">
+									</div>
+									<div class="testimonials-reviews__info overflow-auto pr-[10px]">
+										<div class="testimonials-reviews-info__title font-semibold !leading-[120%] pb-1 md:text-xl">Ethan Dexter</div>
+										<div class="testimonials-reviews-info__description !leading-[140%] md:text-xl">Mrfixus was able to program a second key for my 2019 Buick Encore with ease. Overall a very pleasant experience and he was very fair on price and was the only person local that could do it. It's very nice to have the peace of mind having a second key in case I happen to lose the other. I would definitely recommend Mrfixus He came in 25 min , to my house in Westfield, then he reprogrammed my original key , also made me extra key with great service. Total it took him 30 min to get my BMW done</div>
+									</div>
+								</div>
+								<div class="testimonials-reviews__slide swiper-slide bg-[#F3F3F3] rounded-lg flex flex-col gap-4 p-4 max-h-[264px] min-[992px]:max-h-[320px] min-[992px]:p-6">
+									<div class="testimonials-reviews__starblock flex justify-between">
+										<div class="flex gap-2">
+											<img src="img/star.svg">
+											<img src="img/star.svg">
+											<img src="img/star.svg">
+											<img src="img/star.svg">
+											<img src="img/star.svg">
+										</div>
+										<img alt="google icon" width="24" src="img/google-icon.svg" loading="lazy">
+									</div>
+									<div class="testimonials-reviews__info overflow-auto pr-[10px]">
+										<div class="testimonials-reviews-info__title font-semibold !leading-[120%] pb-1 md:text-xl">Daeja Nelson</div>
+										<div class="testimonials-reviews-info__description !leading-[140%] md:text-xl">Did house lockout in Indianapolis without drama ! Thanks a lot. It was great experience.</div>
+									</div>
+								</div>
+								<div class="testimonials-reviews__slide swiper-slide bg-[#F3F3F3] rounded-lg flex flex-col gap-4 p-4 max-h-[264px] min-[992px]:max-h-[320px] min-[992px]:p-6">
+									<div class="testimonials-reviews__starblock flex justify-between">
+										<div class="flex gap-2">
+											<img src="img/star.svg">
+											<img src="img/star.svg">
+											<img src="img/star.svg">
+											<img src="img/star.svg">
+											<img src="img/star.svg">
+										</div>
+										<img alt="google icon" width="24" src="img/google-icon.svg" loading="lazy">
+									</div>
+									<div class="testimonials-reviews__info overflow-auto pr-[10px]">
+										<div class="testimonials-reviews-info__title font-semibold !leading-[120%] pb-1 md:text-xl">Bridget Houser</div>
+										<div class="testimonials-reviews-info__description !leading-[140%] md:text-xl">I was locked out of my house later in the evening, called Mrfixus, and they responded right away. Very professional, friendly and got the job done right away. Would recommend for any future locksmith needs!</div>
+									</div>
+								</div>
+								<div class="testimonials-reviews__slide swiper-slide bg-[#F3F3F3] rounded-lg flex flex-col gap-4 p-4 max-h-[264px] min-[992px]:max-h-[320px] min-[992px]:p-6">
+									<div class="testimonials-reviews__starblock flex justify-between">
+										<div class="flex gap-2">
+											<img src="img/star.svg">
+											<img src="img/star.svg">
+											<img src="img/star.svg">
+											<img src="img/star.svg">
+											<img src="img/star.svg">
+										</div>
+										<img alt="google icon" width="24" src="img/google-icon.svg" loading="lazy">
+									</div>
+									<div class="testimonials-reviews__info overflow-auto pr-[10px]">
+										<div class="testimonials-reviews-info__title font-semibold !leading-[120%] pb-1 md:text-xl">Ivan Chernoskutov</div>
+										<div class="testimonials-reviews-info__description !leading-[140%] md:text-xl">I called this company to rekey the deadbolt and make new keys for my house. They were super responsive, came quickly, and got the job done fast. Very efficient and professional. The price was fair, and I’m really happy with the service. If you ever need a locksmith — give them a call. Great experience overall!</div>
+									</div>
+								</div>
+								<div class="testimonials-reviews__slide swiper-slide bg-[#F3F3F3] rounded-lg flex flex-col gap-4 p-4 max-h-[264px] min-[992px]:max-h-[320px] min-[992px]:p-6">
+									<div class="testimonials-reviews__starblock flex justify-between">
+										<div class="flex gap-2">
+											<img src="img/star.svg">
+											<img src="img/star.svg">
+											<img src="img/star.svg">
+											<img src="img/star.svg">
+											<img src="img/star.svg">
+										</div>
+										<img alt="google icon" width="24" src="img/google-icon.svg" loading="lazy">
+									</div>
+									<div class="testimonials-reviews__info overflow-auto pr-[10px]">
+										<div class="testimonials-reviews-info__title font-semibold !leading-[120%] pb-1 md:text-xl">Sarina Riley</div>
+										<div class="testimonials-reviews-info__description !leading-[140%] md:text-xl">My key broke in half while at work, I had to pick up my son in a couple hours. I was panicked. Mr Fixus was so kind on the phone, he arrived within 30 minutes and had it fixed within 20. I’ve not had any issues with it and he kept me from having to go back to the dealership and spend an arm and a leg. So thankful for his prompt help and professionalism. Highly recommend.</div>
+									</div>
+								</div>
+							</div>
+							<!-- Якщо потрібна пагінація -->
+							<div class="swiper-pagination flex gap-4 justify-center pt-6 min-[992px]:pt-8"></div>
+						</div>
+						<a href class="special-offer__right-button leading-[140%] font-semibold py-3 m-auto mt-4 md:max-w-[327px] w-full flex justify-center gap-2 items-center border border-[#1D1D1D] rounded-lg transition-all ease-in-out duration-300 hover:bg-[#1D1D1D] hover:text-white">
+							<img src="img/google-icon.svg">
+							More reviews
+						</a>
+						<div class="trust__partners leading-[140%] md:m-auto md:w-fit md:text-center pt-6 md:pt-8">
+							Trusted by:
+							<div class="partners__icons flex max-[600px]:justify-between min-[600px]:gap-16 pt-2 md:pt-4">
+								<img src="img/google-logo.svg">
+								<img src="img/yelp-logo.svg">
+								<img src="img/Better_Business_Bureau-logo.svg">
+								<img src="img/thumbtack-logo.svg">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="contact-us bg-[#FFF5DF] py-[60px] md:py-20">
+				<div class="contact-us__container">
+					<div class="contact-us__info pb-6 md:pb-8">
+						<div class="contact-us__subtitle text-sm leading-[140%] uppercase pb-1 md:pb-2">
+							Contact us
+						</div>
+						<h2 class="contact-us__title font-semibold text-[28px] md:text-[40px] leading-[140%] pb-4">
+							Need a locksmith right now?
+						</h2>
+						<div class="contact-us__description md:text-xl leading-[140%]">
+							We work officially, show clear pricing before we start, and back every job with a real warranty.
+						</div>
+					</div>
+					<div class="contact-us__content flex gap-8 max-[992px]:flex-col">
+						<div class="contact-us__left border border-[#000000] p-4 md:p-6 rounded-lg min-[992px]:flex-[0_0_568px] max-[992px]:order-2 w-full">
+							<div class="contact-us__inputs flex gap-4 pb-4">
+								<input placeholder="Name" class="contact-us__input border border-[#000000] py-[13px] px-4 leading-[140%] rounded-lg">
+								<input placeholder="(xxx) xxx-xxxx" class="contact-us__input border border-[#000000] py-[13px] px-4 leading-[140%] rounded-lg">
+							</div>
+							<div class="contact-us__inputs flex gap-4 pb-4">
+								<div class="w-full">
+									<input placeholder="City / ZIP" class="contact-us__input border border-[#000000] py-[13px] px-4 leading-[140%] rounded-lg w-full">
+								</div>
+								<div class="relative w-full min-[992px]:flex-[0_0_252px] h-[50.39px]">
+									<button id="ContactSelectBtn" class="service__checkaria-button h-full group border border-[#1D1D1D] rounded-lg font-semibold leading-[140%] px-4 py-3 w-full cursor-pointer flex justify-between items-center max-md:mb-4">
+										<span id="ContactSelectedLabel" class="transition-all duration-300 ease-in-out">Car</span>
+										<svg class="group-hover:text-[#F6A50E] transition-all ease-in-out duration-300" width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<g clip-path="url(#clip0_329_302)">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M11.2889 9.38912L5.63186 3.73212L7.04586 2.31812L11.9959 7.26812L16.9459 2.31812L18.3599 3.73212L12.7029 9.38912C12.5153 9.57659 12.261 9.6819 11.9959 9.6819C11.7307 9.6819 11.4764 9.57659 11.2889 9.38912Z" fill="currentColor" />
+											</g>
+											<defs>
+												<clipPath id="clip0_329_302">
+													<rect width="12" height="24" fill="none" transform="translate(24 1.04907e-06) rotate(90)" />
+												</clipPath>
+											</defs>
+										</svg>
+									</button>
+									<ul id="ContactDropdown" class="service__checkaria-list top-0 absolute left-0 right-0 border bg-[#FFF5DF] border-[#1D1D1D] rounded-lg px-4 py-3 shadow font-semibold leading-[140%]">
+										<li data-city="Car" class="option border-b border-[#A5A5A5] pb-2 mb-2 flex justify-between cursor-pointer items-center">
+											<span class="transition-all duration-300 ease-in-out hover:text-[#F6A50E]">
+												Car
+											</span>
+											<svg class="rotate-180 hover:text-[#F6A50E] transition-all ease-in-out duration-300" width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g clip-path="url(#clip0_329_302)">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M11.2889 9.38912L5.63186 3.73212L7.04586 2.31812L11.9959 7.26812L16.9459 2.31812L18.3599 3.73212L12.7029 9.38912C12.5153 9.57659 12.261 9.6819 11.9959 9.6819C11.7307 9.6819 11.4764 9.57659 11.2889 9.38912Z" fill="currentColor" />
+												</g>
+												<defs>
+													<clipPath id="clip0_329_302">
+														<rect width="12" height="24" fill="none" transform="translate(24 1.04907e-06) rotate(90)" />
+													</clipPath>
+												</defs>
+											</svg>
+										</li>
+										<li data-city="Home" class="transition-all ease-in-out duration-300 hover:text-[#F6A50E] option border-b border-[#A5A5A5] pb-2 mb-2 cursor-pointer">Home</li>
+										<li data-city="Business" class="transition-all ease-in-out duration-300 hover:text-[#F6A50E] option border-b border-[#A5A5A5] pb-2 mb-2 cursor-pointer">Business</li>
+										<li data-city="Other" class="transition-all ease-in-out duration-300 hover:text-[#F6A50E] option cursor-pointer">Other</li>
+									</ul>
+								</div>
+							</div>
+							<textarea class="contact-us__textarea resize-none overflow-hidden border min-h-[68px] border-[#000000] py-[13px] px-4 leading-[140%] rounded-lg block" placeholder="Message / description"></textarea>
+							<label for="fileUpload" class="contact-us__upload group border border-[#1D1D1D] rounded-lg flex gap-2.5 py-[11px] font-semibold leading-[140%] justify-center items-center cursor-pointer transition-all ease-in-out duration-300 hover:bg-[#1d1d1d] mt-4">
+								<svg class="group-hover:text-white transition-all ease-in-out duration-300" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M11 16V7.85L8.4 10.45L7 9L12 4L17 9L15.6 10.45L13 7.85V16H11ZM6 20C5.45 20 4.97933 19.8043 4.588 19.413C4.19667 19.0217 4.00067 18.5507 4 18V15H6V18H18V15H20V18C20 18.55 19.8043 19.021 19.413 19.413C19.0217 19.805 18.5507 20.0007 18 20H6Z" fill="currentColor" />
+								</svg>
+								<span class="group-hover:text-white transition-all ease-in-out duration-300">Upload photo / video</span>
+							</label>
+							<input type="file" id="fileUpload" class="hidden">
+							<span id="fileName" class=""></span>
+							<a href class="contact-us__send bg-[#FFBB29] mt-4 py-3 h-12 px-6 rounded-lg w-full font-semibold leading-[140%] transition-all ease-in-out duration-300 hover:bg-[#D9961A] text-center">
+								Send
+							</a>
+							<div class="contact-us__subtext leading-[140%] text-xs pt-4">*We usually respond within about 10 minutes during active hours.</div>
+						</div>
+						<div class="contact-us__right max-[992px]:order-1">
+							<div class="contact-us__right-tilte font-semibold leading-[140%] text-xl">We are available 24/7</div>
+							<a href="tel:4633201080" class="contact-us__right-callbutton max-w-[327px] bg-[#FFBB29] flex items-center justify-center py-3 px-6 rounded-lg w-full gap-2 font-semibold leading-[140%] transition-all ease-in-out duration-300 hover:bg-[#D9961A] mt-2">
+								<img src="img/header/call.svg">
+								Call now: (463) 320-1080
+							</a>
+							<div class="contact-us__right-subtilte font-semibold leading-[140%] text-xl pt-8">Tell Us the Problem</div>
+							<div class="contact-us__right-text leading-[140%] text-xl max-w-[620px] pt-2">Tell us what happened. You can also send a photo of the lock or key, so we can give an accurate quote before we drive out.</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="faq py-[60px] md:py-20">
+				<div class="faq__container">
+					<div class="faq__info pb-6 md:pb-8">
+						<div class="faq__subtitle text-sm leading-[140%] uppercase pb-1 md:pb-2">
+							FAQ
+						</div>
+						<h2 class="faq__title font-semibold text-[28px] md:text-[40px] leading-[140%]">
+							Frequently asked questions
+						</h2>
+					</div>
+					<div class="faq__content">
+						<div class="faq__list flex flex-col gap-4">
+							<div class="faq__item bg-[#F7F7F7] p-6 rounded-2xl w-full">
+								<button class="faq__btn w-full flex gap-4 justify-between items-center transition-all duration-500">
+									<span class="leading-[140%] font-semibold md:text-xl text-left">Do you always try to open locks without damage?</span>
+									<img class="faq__icon transition-all duration-500 max-md:w-4" src="img/plus.svg">
+								</button>
+								<div class="faq__text max-h-0 overflow-hidden transition-all duration-500 leading-[140%] md:text-xl"></div>
+							</div>
+							<div class="faq__item bg-[#F7F7F7] p-6 rounded-2xl w-full">
+								<button class="faq__btn w-full flex gap-4 justify-between items-center transition-all duration-500">
+									<span class="leading-[140%] font-semibold md:text-xl text-left">What documents do I need for a car, home, or business service?</span>
+									<img class="faq__icon transition-all duration-500 max-md:w-4" src="img/plus.svg">
+								</button>
+								<div class="faq__text max-h-0 overflow-hidden transition-all duration-500 leading-[140%] md:text-xl"></div>
+							</div>
+							<div class="faq__item bg-[#F7F7F7] p-6 rounded-2xl w-full">
+								<button class="faq__btn w-full flex gap-4 justify-between items-center transition-all duration-500">
+									<span class="leading-[140%] font-semibold md:text-xl text-left">How long does it usually take for you to arrive and finish the job?</span>
+									<img class="faq__icon transition-all duration-500 max-md:w-4" src="img/plus.svg">
+								</button>
+								<div class="faq__text max-h-0 overflow-hidden transition-all duration-500 leading-[140%] md:text-xl"></div>
+							</div>
+							<div class="faq__item bg-[#F7F7F7] p-6 rounded-2xl w-full">
+								<button class="faq__btn w-full flex gap-4 justify-between items-center transition-all duration-500">
+									<span class="leading-[140%] font-semibold md:text-xl text-left">How are you different from a dealership or kiosks like KeyMe?</span>
+									<img class="faq__icon transition-all duration-500 max-md:w-4" src="img/plus.svg">
+								</button>
+								<div class="faq__text max-h-0 overflow-hidden transition-all duration-500 leading-[140%] md:text-xl">We come to you, so you don’t need a tow. We work faster than most dealerships and are usually cheaper, especially for European cars and smart keys. Kiosks can only copy simple keys — they cannot help with most car keys, immobilizers, or lockouts.</div>
+							</div>
+							<div class="faq__item bg-[#F7F7F7] p-6 rounded-2xl w-full">
+								<button class="faq__btn w-full flex gap-4 justify-between items-center transition-all duration-500">
+									<span class="leading-[140%] font-semibold md:text-xl text-left">What does your 1-year warranty cover?</span>
+									<img class="faq__icon transition-all duration-500 max-md:w-4" src="img/plus.svg">
+								</button>
+								<div class="faq__text max-h-0 overflow-hidden transition-all duration-500 leading-[140%] md:text-xl"></div>
+							</div>
+							<div class="faq__item bg-[#F7F7F7] p-6 rounded-2xl w-full">
+								<button class="faq__btn w-full flex gap-4 justify-between items-center transition-all duration-500">
+									<span class="leading-[140%] font-semibold md:text-xl text-left">Are there any hidden fees or extra night charges?</span>
+									<img class="faq__icon transition-all duration-500 max-md:w-4" src="img/plus.svg">
+								</button>
+								<div class="faq__text max-h-0 overflow-hidden transition-all duration-500 leading-[140%] md:text-xl"></div>
+							</div>
+							<div class="faq__item bg-[#F7F7F7] p-6 rounded-2xl w-full">
+								<button class="faq__btn w-full flex gap-4 justify-between items-center transition-all duration-500">
+									<span class="leading-[140%] font-semibold md:text-xl text-left">What payment methods do you accept?</span>
+									<img class="faq__icon transition-all duration-500 max-md:w-4" src="img/plus.svg">
+								</button>
+								<div class="faq__text max-h-0 overflow-hidden transition-all duration-500 leading-[140%] md:text-xl"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="dictionary pb-[60px] md:py-20">
+				<div class="dictionary__container">
+					<div class="dictionary__info pb-6 md:pb-8">
+						<div class="dictionary__subtitle text-sm leading-[140%] uppercase pb-1 md:pb-2">
+							dictionary
+						</div>
+						<h2 class="dictionary__title font-semibold text-[28px] md:text-[40px] leading-[140%]">
+							Mini glossary
+						</h2>
+					</div>
+					<div class="dictionary__content flex flex-col gap-2">
+						<div class="dictionary__text text-xs md:text-sm">
+							<div><span class="font-semibold">Emergency mobile locksmith</span> — a locksmith service that comes to your location instead of you going to a shop.</div>
+							<div class="text-[#A5A5A5]">Why it matters for you: you get help on-site where the problem is — no towing, no extra trips, faster resolution in emergencies.</div>
+						</div>
+						<div class="dictionary__text text-xs md:text-sm">
+							<div><span class="font-semibold">24/7 </span> — available 24 hours a day, 7 days a week, including nights and holidays.</div>
+							<div class="text-[#A5A5A5]">Why it matters for you: you get help on-site where the problem is — no towing, no extra trips, faster resolution in emergencies.</div>
+						</div>
+						<div class="dictionary__text text-xs md:text-sm">
+							<div><span class="font-semibold">ETA (Estimated Time of Arrival)</span> — the expected time it takes for the technician to reach you.</div>
+							<div class="text-[#A5A5A5]">Why it matters for you: you know roughly how long you’ll wait and can choose the service that really fits an emergency, not “maybe today”.</div>
+						</div>
+						<div class="dictionary__text text-xs md:text-sm">
+							<div><span class="font-semibold">Lockout</span> — a situation where you are locked out of your car, home, or business and cannot open the door.</div>
+							<div class="text-[#A5A5A5]">Why it matters for you: this is the core emergency service; clear naming helps you quickly see that your situation is covered.</div>
+						</div>
+						<div class="dictionary__text text-xs md:text-sm">
+							<div><span class="font-semibold">Rekey</span> — changing the internal pins of a lock so old keys stop working and new keys work, without replacing the entire lock.</div>
+							<div class="text-[#A5A5A5]">Why it matters for you: you can secure the property after a move or lost keys, often cheaper and faster than full lock replacement.</div>
+						</div>
+						<div class="dictionary__text text-xs md:text-sm">
+							<div><span class="font-semibold">Lost-all-keys</span> — all keys to the vehicle are lost, and a new key must be created and programmed from scratch.</div>
+							<div class="text-[#A5A5A5]">Why it matters for you: this is usually more complex and more expensive than a simple duplicate, so it’s important to know that the service supports it and what to expect.</div>
+						</div>
+						<div class="dictionary__text text-xs md:text-sm">
+							<div><span class="font-semibold">Smart / proximity / push-to-start key</span> — a key or fob that lets you unlock and start the car without inserting a metal key, often by keeping the fob in your pocket.</div>
+							<div class="text-[#A5A5A5]">Why it matters for you: these keys are more expensive and require special equipment; knowing they are supported saves a trip to the dealer.</div>
+						</div>
+						<div class="dictionary__text text-xs md:text-sm">
+							<div><span class="font-semibold">Immobilizer</span> — an electronic system that prevents the engine from starting unless the correct key or transponder is present.</div>
+							<div class="text-[#A5A5A5]">Why it matters for you: many modern key problems are tied to the immobilizer; a locksmith who can work with immobilizers can solve “car won’t start” issues on-site.</div>
+						</div>
+						<div class="dictionary__text text-xs md:text-sm">
+							<div><span class="font-semibold">VAG group</span> — a group of brands including Volkswagen, Audi, Skoda, and SEAT.</div>
+							<div class="text-[#A5A5A5]">Why it matters for you: if you drive one of these cars, you can instantly see that the service is equipped to handle your keys and electronics.</div>
+						</div>
+						<div class="dictionary__text text-xs md:text-sm">
+							<div><span class="font-semibold">Service call</span> — a fixed fee charged for the technician’s trip to your location, especially if you decide not to go ahead with the job.</div>
+							<div class="text-[#A5A5A5]">Why it matters for you: you understand upfront what happens if you change your mind on-site, and you’re not surprised by trip charges.</div>
+						</div>
+						<div class="dictionary__text text-xs md:text-sm">
+							<div><span class="font-semibold">Non-destructive methods</span> — techniques to open locks without drilling or breaking them, such as picking or decoding.</div>
+							<div class="text-[#A5A5A5]">Why it matters for you: this reduces the risk of damage and extra costs for replacing locks after the opening.</div>
+						</div>
+						<div class="dictionary__text text-xs md:text-sm">
+							<div><span class="font-semibold">Master key system</span> — a setup where one “master” key opens multiple locks, while other keys open only their individual doors..</div>
+							<div class="text-[#A5A5A5]">Why it matters for you: useful for businesses or multi-unit properties to balance convenience for managers with controlled access for others.</div>
+						</div>
+						<div class="dictionary__text text-xs md:text-sm">
+							<div><span class="font-semibold">High-security cylinders / locks</span> — locks designed to resist picking, drilling, and unauthorized key duplication.</div>
+							<div class="text-[#A5A5A5]">Why it matters for you: if you need stronger physical security, you know the locksmith can install and service these higher-grade systems.</div>
+						</div>
+						<div class="dictionary__text text-xs md:text-sm">
+							<div><span class="font-semibold">Access control</span> — systems that use PIN codes, cards, fobs, or electronic readers instead of or in addition to mechanical keys.</div>
+							<div class="text-[#A5A5A5]">Why it matters for you: if you want to track or control who enters a building and when, access control may be the right solution for your business.</div>
+						</div>
+						<div class="dictionary__text text-xs md:text-sm">
+							<div><span class="font-semibold">Google LSA Verified</span> — verification under Google Local Services Ads that the business has passed Google’s background and license checks for this category.</div>
+							<div class="text-[#A5A5A5]">Why it matters for you: it’s an extra trust signal that the company is vetted by a third party, not just self-claimed.</div>
+						</div>
+						<div class="dictionary__text text-xs md:text-sm">
+							<div><span class="font-semibold">Licensed & Insured</span> — the business holds the required registrations (where applicable) and carries insurance for its work.</div>
+							<div class="text-[#A5A5A5]">Why it matters for you: if something goes wrong, there is formal responsibility and insurance coverage, not just “we’ll see”.</div>
+						</div>
+						<div class="dictionary__text text-xs md:text-sm">
+							<div><span class="font-semibold">Workmanship warranty</span> — a guarantee on the quality of the work performed (for MRFIXUS, 1 year on labor and installed parts).</div>
+							<div class="text-[#A5A5A5]">Why it matters for you: if a problem appears later because of the job, you can get it fixed without paying again.</div>
+						</div>
+						<div class="dictionary__text text-xs md:text-sm">
+							<div><span class="font-semibold">COI (Certificate of Insurance)</span> — a document that proves the business has active insurance, often requested by commercial clients or property managers.</div>
+							<div class="text-[#A5A5A5]">Why it matters for you: if you manage a building or business, COI helps you meet compliance and risk requirements when hiring vendors.</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer bg-[#1D1D1D] py-[60px] md:py-20">
+			<div class="footer__container flex justify-between gap-10 md:gap-6 max-md:flex-col relative">
+				<div class="footer-list max-w-[328px] w-full">
+					<a href="#"><img class="max-md:h-8" src="img/header/mrfixus-logo.svg"></a>
+					<div class="footer-info pt-4 md:pt-8 md:pb-8">
+						<a href="tel:4633201080" class="text-white leading-[100%] flex gap-1 items-center pb-4"><img src="img/footer/phone.svg">(463) 320-1080</a>
+						<div class="text-white leading-[100%] flex gap-1 items-center"><img src="img/footer/pin-drop.svg">293 Providence Blvd, Carmel, IN 46032</div>
+					</div>
+					<div class="copyright text-[#616161] leading-[140%] max-md:hidden">Copyright © 2025 MRFIXUS Emergency</div>
+				</div>
+				<div class="footer-list__menu md:max-w-[448px] w-full">
+					<div class="footer-list__menu-subtitle uppercase leading-4 text-[#FFFFFF66] pb-8">menu</div>
+					<ul class="footer-list__menu-items uppercase text-white flex flex-wrap gap-x-6 gap-y-3">
+						<li data-goto=".problems" class="footer-list__menu-item hover:text-[#FFBB29] transition-all ease-in-out duration-300"><a href>problems we fix</a></li>
+						<li data-goto=".service" class="footer-list__menu-item hover:text-[#FFBB29] transition-all ease-in-out duration-300"><a href>service area</a></li>
+						<li data-goto=".workflow" class="footer-list__menu-item hover:text-[#FFBB29] transition-all ease-in-out duration-300"><a href>How it works</a></li>
+						<li data-goto=".stats" class="footer-list__menu-item hover:text-[#FFBB29] transition-all ease-in-out duration-300"><a href>why us</a></li>
+						<li data-goto=".trust" class="footer-list__menu-item hover:text-[#FFBB29] transition-all ease-in-out duration-300"><a href>what we do</a></li>
+						<li data-goto=".prices" class="footer-list__menu-item hover:text-[#FFBB29] transition-all ease-in-out duration-300"><a href>Prices</a></li>
+						<li data-goto=".discount-policy" class="footer-list__menu-item hover:text-[#FFBB29] transition-all ease-in-out duration-300"><a href>Discounts</a></li>
+						<li data-goto=".warranty" class="footer-list__menu-item hover:text-[#FFBB29] transition-all ease-in-out duration-300"><a href>Guarantees</a></li>
+						<li data-goto=".cases" class="footer-list__menu-item hover:text-[#FFBB29] transition-all ease-in-out duration-300"><a href>cases</a></li>
+						<li data-goto=".contact-us" class="footer-list__menu-item hover:text-[#FFBB29] transition-all ease-in-out duration-300"><a href>Contact us</a></li>
+					</ul>
+					<div class="footer-list__privacy flex gap-4 text-[#FFFFFF66] pt-10 md:pt-8">
+						<a href class="underline hover:opacity-[0.7] transition-all ease-in-out duration-300">Privacy Policy</a>
+						<a href class="underline hover:opacity-[0.7] transition-all ease-in-out duration-300">Cookie Policy</a>
+					</div>
+				</div>
+				<div class="footer-list__webdelo-logo flex justify-between items-center gap-6 md:max-w-[327px] w-full">
+					<div class="copyright text-[#616161] leading-[140%] md:hidden min-w-28">Copyright © 2025 MRFIXUS Emergency</div>
+					<a class="mt-auto max-[565px]:min-w-[150px] max-[565px]:w-[150px] float-right" href="https://webdelo.org/" target="_blank">
+						<img class="mb-2" src="img/footer/webdelo-logo.svg">
+						<span class="text-[#616161] leading-[140%]">Development and promotion</span>
+					</a>
+				</div>
+				<button id="footer__to-top" class="absolute top-0 right-6"><img src="img/footer/upload.svg"></button>
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20251207100615" defer></script>
+</body>
+
+</html>
