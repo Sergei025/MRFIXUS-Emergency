@@ -1866,8 +1866,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .md\:bg-\[linear-gradient\(90deg\2c _\#FFBB29_34\.12\%\2c _\#FFFFFF_51\.13\%\)\] {
     background-image: linear-gradient(90deg,#ffbb29 34.12%,#fff 51.13%)
   }
-  .md\:bg-\[url\(\'img\/emergency-bg\.webp\'\)\] {
-    background-image: url(img/emergency-bg.webp)
+  .md\:bg-\[url\(\'\/MRFIXUS-Emergency\/img\/emergency-bg\.webp\'\)\] {
+    background-image: url(/MRFIXUS-Emergency/img/emergency-bg.webp)
   }
   .md\:p-6 {
     padding: 1.5rem
