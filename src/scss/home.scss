@@ -1,0 +1,182 @@
+//====================================================================================================
+//====================================================================================================
+
+#mapDropdown, #ContactDropdown {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .5s ease;
+}
+
+#mapDropdown.open, #ContactDropdown.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.preload #mapDropdown, .preload #ContactDropdown {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: none !important;
+}
+
+@media (max-width: 768px) {
+  #background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.4s ease;
+  }
+  #mapDropdown {
+      top: calc(100% - 48px);
+      bottom: auto;
+      transform-origin: top;
+  }
+}
+@media (max-width: 500px) {
+    #background {
+       background-position: bottom left;
+    }
+}
+.line { 
+    position: absolute; 
+    left: 4px; 
+    top: 0; 
+    width: 4px; 
+    height: 0; 
+    background: #F3F3F3; 
+    border-radius: 2px; 
+}
+.line-fill { 
+    position: absolute; 
+    left: 0; 
+    top: 0 !important; 
+    width: 100%; 
+    height: 0; 
+    background: linear-gradient(180deg, #FFBB29 80%, rgba(255,187,41,0) 100%); 
+    border-radius: 2px; 
+    transition: height 0.1s linear; 
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #F3F3F3;
+  border: 2px solid #F3F3F3;
+  transition: background 0.3s, border-color 0.3s;
+  z-index: 2;
+}
+
+.dot.active {
+  background: #FFBB29;
+  border-color: #FFBB29;
+}
+
+.step.active {
+  opacity: 1;
+  background: #ffc63a;
+  transition: background 0.3s;
+}
+.step.active .dot {
+  background: #FFBB29;
+  border-color: #FFBB29;
+}
+
+.line.full .line-fill {
+    background: #FFBB29 !important;
+}
+
+.dot.active {
+  background: #FFBB29;
+  border-color: #FFBB29;
+  animation: pulse 0.4s ease;
+}
+
+/* ключевые кадры пульсации */
+@keyframes pulse {
+  0% {
+    transform: translateY(-50%) scale(1);
+  }
+  50% {
+    transform: translateY(-50%) scale(1.4);
+  }
+  100% {
+    transform: translateY(-50%) scale(1);
+  }
+}
+@media (max-width: 768px) {
+    .step {
+        transition: background-color 0.6s ease-out, transform 0.4s ease-out;
+    }
+    .line { 
+        width: 2px; 
+    }
+    .dot {
+        display: none !important;
+    }
+
+    .line,
+    .line-fill {
+        left: 50% !important;
+        transform: translateX(-50%);
+    }
+}
+.cases__slider .swiper-pagination .swiper-pagination-bullet, .testimonials-reviews__slider .swiper-pagination .swiper-pagination-bullet {
+  background-color: #FFEBBF;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
+.cases__slider .swiper-pagination .swiper-pagination-bullet:hover, .testimonials-reviews__slider .swiper-pagination .swiper-pagination-bullet:hover {
+  background-color: #A5A5A5;
+}
+.cases__slider .swiper-pagination .swiper-pagination-bullet-active, .testimonials-reviews__slider .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #FFBB29;
+    cursor: default;
+}
+.cases__slider .swiper-pagination .swiper-pagination-bullet-active:hover, .testimonials-reviews__slider .swiper-pagination .swiper-pagination-bullet-active:hover {
+    background-color: #FFBB29;
+}
+.cases-img__slider .swiper-pagination .swiper-pagination-bullet {
+    background-color: #FFFFFF80;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+}
+.cases-img__slider .swiper-pagination .swiper-pagination-bullet:hover {
+    background-color: #FFFFF450;
+}
+.cases-img__slider .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: white;
+    cursor: default;
+}
+.cases-img__slider .swiper-pagination .swiper-pagination-bullet-active:hover {
+    background-color: white;
+}
+.testimonials {
+  .testimonials-reviews {
+      .testimonials-reviews__slider {
+          .testimonials-reviews__wrapper {
+              .testimonials-reviews__slide {
+                  .testimonials-reviews__info::-webkit-scrollbar {
+                      width: 2px;   /* вертикальный скролл */
+                      height: 2px;  /* горизонтальный скролл */
+                  }
+                  .testimonials-reviews__info::-webkit-scrollbar-track {
+                      background: #E0E0E2; /* дорожка */
+                  }
+                  .testimonials-reviews__info::-webkit-scrollbar-thumb {
+                      background-color: #1D1D1D; /* ползунок */
+                  }
+              }
+            }
+      }
+  }
+}
