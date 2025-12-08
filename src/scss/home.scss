@@ -124,6 +124,20 @@
         transform: translateX(-50%);
     }
 }
+.needle {
+    position: absolute;
+    width: 25%;        /* подгони под размер стрелки */
+    left: 57.5%;
+    top: 36%;
+    transform-origin: 17% 85%;  /* ВАЖНО: ось вращения  */
+    transform: translate(-50%, -50%) rotate(0deg);
+    transition: transform 0.4s ease-out;
+    animation: moveNeedle 2s infinite alternate ease-in-out;
+} 
+@keyframes moveNeedle {
+    0%   { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(-26deg); }
+}
 .cases__slider .swiper-pagination .swiper-pagination-bullet, .testimonials-reviews__slider .swiper-pagination .swiper-pagination-bullet {
   background-color: #FFEBBF;
   width: 10px;
@@ -178,5 +192,15 @@
               }
             }
       }
+  }
+}
+.bg-blur {
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+}
+@media (min-width: 768px) {
+  .bg-blur {
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
   }
 }

@@ -11,9 +11,9 @@
 		width: 100%;
 		height: 100%;
 		left: -100%;
-		top: 0;
+		top: 55px;
 		overflow: auto;
-		padding: toRem(50) toRem(15) toRem(15) toRem(30);
+		padding: 0 24px 0 24px;
 		transition: left 0.3s;
 		background-color: #1D1D1D;
 		z-index: 1;
@@ -33,6 +33,9 @@
 				left: 0;
 			}
 		}
+	}
+	@media (min-width: 768px) {
+		top: 64px;
 	}
 	// .menu__list
 	&__list {
