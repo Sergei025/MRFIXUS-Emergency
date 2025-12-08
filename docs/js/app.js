@@ -4177,9 +4177,9 @@ PERFORMANCE OF THIS SOFTWARE.
         exThumbImage: "",
         isMobile: void 0,
         mobileSettings: {
-            controls: false,
-            showCloseIcon: false,
-            download: false
+            controls: true,
+            showCloseIcon: true,
+            download: true
         },
         plugins: [],
         strings: {
