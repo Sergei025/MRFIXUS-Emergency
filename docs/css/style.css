@@ -1122,6 +1122,16 @@ video {
 ._navigator-active {
   color: #ffbb29
 }
+.car-brands__right-list::-webkit-scrollbar {
+  width: 2px;
+  height: 2px
+}
+.car-brands__right-list::-webkit-scrollbar-track {
+  background: #e0e0e2
+}
+.car-brands__right-list::-webkit-scrollbar-thumb {
+  background-color: #1d1d1d
+}
 .cases__slider .swiper-pagination .swiper-pagination-bullet,
 .testimonials-reviews__slider .swiper-pagination .swiper-pagination-bullet {
   background-color: #ffebbf;

@@ -142,12 +142,21 @@
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
-
 .animate-scroll-left {
   animation: scroll-left 15s linear infinite;
 }
 ._navigator-active {
     color: #FFBB29;
+}
+.car-brands__right-list::-webkit-scrollbar {
+    width: 2px;   /* вертикальный скролл */
+    height: 2px;  /* горизонтальный скролл */
+}
+.car-brands__right-list::-webkit-scrollbar-track {
+    background: #E0E0E2; /* дорожка */
+}
+.car-brands__right-list::-webkit-scrollbar-thumb {
+    background-color: #1D1D1D; /* ползунок */
 }
 .cases__slider .swiper-pagination .swiper-pagination-bullet, .testimonials-reviews__slider .swiper-pagination .swiper-pagination-bullet {
   background-color: #FFEBBF;
