@@ -204,16 +204,20 @@ window.addEventListener("load", () => {
 	document.documentElement.classList.remove('preload')
 })
 document.addEventListener("DOMContentLoaded", () => {
+  // Проверяем, мобильное ли устройство
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+  if (!isMobile) return; // выходим, если не мобильное
+
   const bg = document.getElementById("emergency-bg");
 
-    let images = [
-        "img/bg-mobile__image1.webp",
-        "img/bg-mobile__image2.webp",
-        "img/bg-mobile__image3.webp",
-        "img/bg-mobile__image4.webp",
-        "img/bg-mobile__image5.webp",
-        "img/bg-mobile__image6.webp"
-    ];
+  let images = [
+      "img/bg-mobile__image1.webp",
+      "img/bg-mobile__image2.webp",
+      "img/bg-mobile__image3.webp",
+      "img/bg-mobile__image4.webp",
+      "img/bg-mobile__image5.webp",
+      "img/bg-mobile__image6.webp"
+  ];
 
   function shuffleArray(array) {
       for (let i = array.length - 1; i > 0; i--) {
@@ -240,11 +244,12 @@ document.addEventListener("DOMContentLoaded", () => {
               shuffleArray(images);
               index = 0;
           }
-      }, 400); // время совпадает с transition
+      }, 400); // совпадает с transition
   }
 
   setInterval(changeBackground, 5000);
 });
+
 
 window.addEventListener("load", () => {
 

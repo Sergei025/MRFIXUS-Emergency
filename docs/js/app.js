@@ -6025,6 +6025,8 @@ PERFORMANCE OF THIS SOFTWARE.
         document.documentElement.classList.remove("preload");
     }));
     document.addEventListener("DOMContentLoaded", (() => {
+        const isMobile = window.matchMedia("(max-width: 768px)").matches;
+        if (!isMobile) return;
         const bg = document.getElementById("emergency-bg");
         let images = [ "img/bg-mobile__image1.webp", "img/bg-mobile__image2.webp", "img/bg-mobile__image3.webp", "img/bg-mobile__image4.webp", "img/bg-mobile__image5.webp", "img/bg-mobile__image6.webp" ];
         function shuffleArray(array) {
