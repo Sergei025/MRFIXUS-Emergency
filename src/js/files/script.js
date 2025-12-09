@@ -250,7 +250,6 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(changeBackground, 5000);
 });
 
-
 window.addEventListener("load", () => {
 
     const swiper = document.querySelector('.cases__slider').swiper;
