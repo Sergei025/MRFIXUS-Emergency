@@ -37,6 +37,7 @@ function initSliders() {
 			// для конкретного випадку
 			modules: [ Pagination ],
 			observer: true,
+			autoHeight: true,
 			observeParents: true,
 			slidesPerView: 1,
 			spaceBetween: 24,

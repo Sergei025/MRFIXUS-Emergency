@@ -63,6 +63,11 @@
             if (window.FLS) console.log(message);
         }), 0);
     }
+    function uniqArray(array) {
+        return array.filter((function(item, index, self) {
+            return self.indexOf(item) === index;
+        }));
+    }
     let gotoblock_gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0) => {
         const targetBlockElement = document.querySelector(targetBlock);
         if (targetBlockElement) {
@@ -3924,6 +3929,7 @@
         if (document.querySelector(".cases__slider")) new swiper_core_Swiper(".cases__slider", {
             modules: [ Pagination ],
             observer: true,
+            autoHeight: true,
             observeParents: true,
             slidesPerView: 1,
             spaceBetween: 24,
@@ -3994,6 +4000,109 @@
     window.addEventListener("load", (function(e) {
         initSliders();
     }));
+    class ScrollWatcher {
+        constructor(props) {
+            let defaultConfig = {
+                logging: true
+            };
+            this.config = Object.assign(defaultConfig, props);
+            this.observer;
+            !document.documentElement.classList.contains("watcher") ? this.scrollWatcherRun() : null;
+        }
+        scrollWatcherUpdate() {
+            this.scrollWatcherRun();
+        }
+        scrollWatcherRun() {
+            document.documentElement.classList.add("watcher");
+            this.scrollWatcherConstructor(document.querySelectorAll("[data-watch]"));
+        }
+        scrollWatcherConstructor(items) {
+            if (items.length) {
+                this.scrollWatcherLogging(`Прокинувся, стежу за об'єктами (${items.length})...`);
+                let uniqParams = uniqArray(Array.from(items).map((function(item) {
+                    if (item.dataset.watch === "navigator" && !item.dataset.watchThreshold) {
+                        let valueOfThreshold;
+                        if (item.clientHeight > 2) {
+                            valueOfThreshold = window.innerHeight / 2 / (item.clientHeight - 1);
+                            if (valueOfThreshold > 1) valueOfThreshold = 1;
+                        } else valueOfThreshold = 1;
+                        item.setAttribute("data-watch-threshold", valueOfThreshold.toFixed(2));
+                    }
+                    return `${item.dataset.watchRoot ? item.dataset.watchRoot : null}|${item.dataset.watchMargin ? item.dataset.watchMargin : "0px"}|${item.dataset.watchThreshold ? item.dataset.watchThreshold : 0}`;
+                })));
+                uniqParams.forEach((uniqParam => {
+                    let uniqParamArray = uniqParam.split("|");
+                    let paramsWatch = {
+                        root: uniqParamArray[0],
+                        margin: uniqParamArray[1],
+                        threshold: uniqParamArray[2]
+                    };
+                    let groupItems = Array.from(items).filter((function(item) {
+                        let watchRoot = item.dataset.watchRoot ? item.dataset.watchRoot : null;
+                        let watchMargin = item.dataset.watchMargin ? item.dataset.watchMargin : "0px";
+                        let watchThreshold = item.dataset.watchThreshold ? item.dataset.watchThreshold : 0;
+                        if (String(watchRoot) === paramsWatch.root && String(watchMargin) === paramsWatch.margin && String(watchThreshold) === paramsWatch.threshold) return item;
+                    }));
+                    let configWatcher = this.getScrollWatcherConfig(paramsWatch);
+                    this.scrollWatcherInit(groupItems, configWatcher);
+                }));
+            } else this.scrollWatcherLogging("Сплю, немає об'єктів для стеження. ZzzZZzz");
+        }
+        getScrollWatcherConfig(paramsWatch) {
+            let configWatcher = {};
+            if (document.querySelector(paramsWatch.root)) configWatcher.root = document.querySelector(paramsWatch.root); else if (paramsWatch.root !== "null") this.scrollWatcherLogging(`Эмм... батьківського об'єкта ${paramsWatch.root} немає на сторінці`);
+            configWatcher.rootMargin = paramsWatch.margin;
+            if (paramsWatch.margin.indexOf("px") < 0 && paramsWatch.margin.indexOf("%") < 0) {
+                this.scrollWatcherLogging(`йой, налаштування data-watch-margin потрібно задавати в PX або %`);
+                return;
+            }
+            if (paramsWatch.threshold === "prx") {
+                paramsWatch.threshold = [];
+                for (let i = 0; i <= 1; i += .005) paramsWatch.threshold.push(i);
+            } else paramsWatch.threshold = paramsWatch.threshold.split(",");
+            configWatcher.threshold = paramsWatch.threshold;
+            return configWatcher;
+        }
+        scrollWatcherCreate(configWatcher) {
+            console.log(configWatcher);
+            this.observer = new IntersectionObserver(((entries, observer) => {
+                entries.forEach((entry => {
+                    this.scrollWatcherCallback(entry, observer);
+                }));
+            }), configWatcher);
+        }
+        scrollWatcherInit(items, configWatcher) {
+            this.scrollWatcherCreate(configWatcher);
+            items.forEach((item => this.observer.observe(item)));
+        }
+        scrollWatcherIntersecting(entry, targetElement) {
+            if (entry.isIntersecting) {
+                !targetElement.classList.contains("_watcher-view") ? targetElement.classList.add("_watcher-view") : null;
+                this.scrollWatcherLogging(`Я бачу ${targetElement.classList}, додав клас _watcher-view`);
+            } else {
+                targetElement.classList.contains("_watcher-view") ? targetElement.classList.remove("_watcher-view") : null;
+                this.scrollWatcherLogging(`Я не бачу ${targetElement.classList}, прибрав клас _watcher-view`);
+            }
+        }
+        scrollWatcherOff(targetElement, observer) {
+            observer.unobserve(targetElement);
+            this.scrollWatcherLogging(`Я перестав стежити за ${targetElement.classList}`);
+        }
+        scrollWatcherLogging(message) {
+            this.config.logging ? functions_FLS(`[Спостерігач]: ${message}`) : null;
+        }
+        scrollWatcherCallback(entry, observer) {
+            const targetElement = entry.target;
+            this.scrollWatcherIntersecting(entry, targetElement);
+            targetElement.hasAttribute("data-watch-once") && entry.isIntersecting ? this.scrollWatcherOff(targetElement, observer) : null;
+            document.dispatchEvent(new CustomEvent("watcherCallback", {
+                detail: {
+                    entry
+                }
+            }));
+        }
+    }
+    modules_flsModules.watcher = new ScrollWatcher({});
     let addWindowScrollEvent = false;
     function pageNavigation() {
         document.addEventListener("click", pageNavigationAction);
@@ -4021,7 +4130,7 @@
                 const entry = e.detail.entry;
                 const targetElement = entry.target;
                 if (targetElement.dataset.watch === "navigator") {
-                    document.querySelector(`[data-goto]._navigator-active`);
+                    const navigatorActiveItem = document.querySelector(`[data-goto]._navigator-active`);
                     let navigatorCurrentItem;
                     if (targetElement.id && document.querySelector(`[data-goto="#${targetElement.id}"]`)) navigatorCurrentItem = document.querySelector(`[data-goto="#${targetElement.id}"]`); else if (targetElement.classList.length) for (let index = 0; index < targetElement.classList.length; index++) {
                         const element = targetElement.classList[index];
@@ -4030,7 +4139,10 @@
                             break;
                         }
                     }
-                    if (entry.isIntersecting) navigatorCurrentItem ? navigatorCurrentItem.classList.add("_navigator-active") : null; else navigatorCurrentItem ? navigatorCurrentItem.classList.remove("_navigator-active") : null;
+                    if (entry.isIntersecting) {
+                        navigatorActiveItem ? navigatorActiveItem.classList.remove("_navigator-active") : null;
+                        navigatorCurrentItem ? navigatorCurrentItem.classList.add("_navigator-active") : null;
+                    } else navigatorCurrentItem ? navigatorCurrentItem.classList.remove("_navigator-active") : null;
                 }
             }
         }
@@ -5774,22 +5886,29 @@ PERFORMANCE OF THIS SOFTWARE.
         }));
         modules_flsModules.gallery = galleyItems;
     }
+    const menuItems = document.querySelectorAll("header .header__menu li");
+    menuItems.forEach((item => {
+        item.addEventListener("click", (() => {
+            menuItems.forEach((i => i.classList.remove("_navigator-active")));
+            item.classList.add("_navigator-active");
+        }));
+    }));
     document.addEventListener("DOMContentLoaded", (() => {
         const mapLinks = {
-            Indianapolis: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d196237.1863908697!2d-86.29790153304614!3d39.779931327951296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886b50ffa7796a03%3A0xd68e9df640b9ea7c!2z0JjQvdC00LjQsNC90LDQv9C-0LvQuNGBLCDQmNC90LTQuNCw0L3QsCwg0KHQqNCQ!5e0!3m2!1sru!2suk!4v1764763509335!5m2!1sru!2suk",
-            Carmel: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97854.7509129788!2d-86.28810236830171!3d39.964625413844644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8814ad973033fa1d%3A0x43b9095f5f7b38fc!2z0JrQsNGA0LzQtdC70YwsINCY0L3QtNC40LDQvdCwLCDQodCo0JA!5e0!3m2!1sru!2suk!4v1764763630420!5m2!1sru!2suk",
-            Fishers: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97855.58475086179!2d-86.05175554250403!3d39.96404283320921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8814b377e061fed9%3A0x5c70915098c7503b!2z0KTQuNGI0LXRgNGBLCDQmNC90LTQuNCw0L3QsCwg0KHQqNCQ!5e0!3m2!1sru!2suk!4v1764763662616!5m2!1sru!2suk",
-            Lawrence: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40244.941643805025!2d-86.02540033117837!3d39.857489744132685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886b4b9e09e776c5%3A0x70cfba96bf83e70!2z0JvQvtGA0LXQvdGBLCDQmNC90LTQuNCw0L3QsCwg0KHQqNCQ!5e0!3m2!1sru!2suk!4v1764764405113!5m2!1sru!2suk",
-            "Beech Grove": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24552.977152198728!2d-86.10333348907169!3d39.71443763476173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886b452613c9210d%3A0x12ee0dfe9badb018!2z0JHQuNGHINCT0YDQvtCyLCDQmNC90LTQuNCw0L3QsCwg0KHQqNCQ!5e0!3m2!1sru!2suk!4v1764764434070!5m2!1sru!2suk",
-            Speedway: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24526.792109244278!2d-86.27088103887328!3d39.7879436486854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886b57d0bc256bb1%3A0x70cfba96bf84d40!2z0KHQv9C40LTRg9GN0LksINCY0L3QtNC40LDQvdCwLCDQodCo0JA!5e0!3m2!1sru!2suk!4v1764764467930!5m2!1sru!2suk",
-            Greenwood: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49192.409417745475!2d-86.13994234606504!3d39.59284118672647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886b42e1c9ae07a9%3A0x1f1f701ecefcc1e3!2z0JPRgNC40L3QstGD0LQsINCY0L3QtNC40LDQvdCwLCDQodCo0JA!5e0!3m2!1sru!2suk!4v1764764493048!5m2!1sru!2suk",
-            Zionsville: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97808.16827266879!2d-86.42840549102964!3d39.99716026345761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8813557095a85b13%3A0x70cfba84ddeac50!2z0KHQuNC-0L3RgdCy0LjQu9C7LCDQmNC90LTQuNCw0L3QsCwg0KHQqNCQ!5e0!3m2!1sru!2suk!4v1764763717035!5m2!1sru!2suk",
-            Avon: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49071.95630695493!2d-86.43316789422475!3d39.76216971664817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886ca55fe577825b%3A0x4450b6ad5d787c0b!2z0K3QudCy0L7QvSwg0JjQvdC00LjQsNC90LAsINCh0KjQkA!5e0!3m2!1sru!2suk!4v1764764519152!5m2!1sru!2suk",
-            Brownsburg: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49018.78339572546!2d-86.42448734341211!3d39.83672709165885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886cae0a5dcd0327%3A0x70cfba96bf830e0!2z0JHRgNCw0YPQvdGB0LHQtdGA0LMsINCY0L3QtNC40LDQvdCwLCDQodCo0JA!5e0!3m2!1sru!2suk!4v1764764544752!5m2!1sru!2suk",
-            McCordsville: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48978.96473751774!2d-85.95106694280352!3d39.89248348553887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886b35546c2d90a9%3A0x8ce49aa6e265c635!2z0JzQsNC6LdCa0L7RgNC00YHQstC40LvQuywg0JjQvdC00LjQsNC90LAsINCh0KjQkA!5e0!3m2!1sru!2suk!4v1764764585053!5m2!1sru!2suk",
-            Cumberland: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24526.15341952323!2d-85.96350798886844!3d39.78973514780563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886b483624c777b5%3A0x7a7e62d4ac3c0323!2z0JrQsNC80LHQtdGA0LvQtdC90LQsINCY0L3QtNC40LDQvdCwLCDQodCo0JA!5e0!3m2!1sru!2suk!4v1764764607699!5m2!1sru!2suk",
-            Southport: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12286.36467206004!2d-86.12961769246184!3d39.65891456267445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886b5c982b443247%3A0xf47eae81e4ac7e9e!2z0KHQsNGD0YLQv9C-0YDRgiwg0JjQvdC00LjQsNC90LAgNDYyMjcsINCh0KjQkA!5e0!3m2!1sru!2suk!4v1764764659923!5m2!1sru!2suk",
-            Whitestown: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48922.35652122891!2d-86.4086295419381!3d39.97163805580869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x881353f00ecccec5%3A0xc2940a5d890aaa31!2z0KPQsNC50YLRgdGC0LDRg9C9LCDQmNC90LTQuNCw0L3QsCwg0KHQqNCQ!5e0!3m2!1sru!2suk!4v1764764685825!5m2!1sru!2suk"
+            Indianapolis: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d196237.1863908697!2d-86.29790153304616!3d39.779931327951296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886b50ffa7796a03%3A0xd68e9df640b9ea7c!2sIndianapolis%2C%20IN%2C%20USA!5e0!3m2!1sen!2suk!4v1765223131497!5m2!1sen!2suk",
+            Carmel: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97854.64375496245!2d-86.21495644247476!3d39.96470028182454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8814ad973033fa1d%3A0x43b9095f5f7b38fc!2sCarmel%2C%20IN%2C%20USA!5e0!3m2!1sen!2suk!4v1765223378328!5m2!1sen!2suk",
+            Fishers: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97855.58475086179!2d-86.05175554250397!3d39.96404283320921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8814b377e061fed9%3A0x5c70915098c7503b!2sFishers%2C%20IN%2C%20USA!5e0!3m2!1sen!2suk!4v1765223487620!5m2!1sen!2suk",
+            Lawrence: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48994.84303680627!2d-86.03815099304617!3d39.87025755791391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886b4b9e09e776c5%3A0x70cfba96bf83e70!2sLawrence%2C%20IN%2C%20USA!5e0!3m2!1sen!2suk!4v1765223554982!5m2!1sen!2suk",
+            "Beech Grove": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24552.977152198728!2d-86.10333348907167!3d39.71443763476173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886b452613c9210d%3A0x12ee0dfe9badb018!2sBeech%20Grove%2C%20IN%2C%20USA!5e0!3m2!1sen!2suk!4v1765223596582!5m2!1sen!2suk",
+            Speedway: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24526.792109244278!2d-86.27088103887328!3d39.7879436486854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886b57d0bc256bb1%3A0x70cfba96bf84d40!2sSpeedway%2C%20IN%2C%20USA!5e0!3m2!1sen!2suk!4v1765223642098!5m2!1sen!2suk",
+            Greenwood: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49192.409417745475!2d-86.13994234606504!3d39.59284118672647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886b42e1c9ae07a9%3A0x1f1f701ecefcc1e3!2sGreenwood%2C%20IN%2C%20USA!5e0!3m2!1sen!2suk!4v1765223680542!5m2!1sen!2suk",
+            Zionsville: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97808.16827266883!2d-86.42840549102957!3d39.99716026345759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8813557095a85b13%3A0x70cfba84ddeac50!2sZionsville%2C%20IN%2C%20USA!5e0!3m2!1sen!2suk!4v1765223709308!5m2!1sen!2suk",
+            Avon: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d98143.9564125777!2d-86.54760093184294!3d39.762138986081695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886ca55fe577825b%3A0x4450b6ad5d787c0b!2sAvon%2C%20IN%2C%20USA!5e0!3m2!1sen!2suk!4v1765223751916!5m2!1sen!2suk",
+            Brownsburg: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49018.78339572546!2d-86.42448734341215!3d39.83672709165885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886cae0a5dcd0327%3A0x70cfba96bf830e0!2sBrownsburg%2C%20IN%2C%20USA!5e0!3m2!1sen!2suk!4v1765223787317!5m2!1sen!2suk",
+            McCordsville: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48978.96473751774!2d-85.95106694280352!3d39.89248348553887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886b35546c2d90a9%3A0x8ce49aa6e265c635!2sMcCordsville%2C%20IN%2C%20USA!5e0!3m2!1sen!2suk!4v1765223823415!5m2!1sen!2suk",
+            Cumberland: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24526.15341952323!2d-85.96350798886846!3d39.78973514780562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886b483624c777b5%3A0x7a7e62d4ac3c0323!2sCumberland%2C%20IN%2C%20USA!5e0!3m2!1sen!2suk!4v1765223862879!5m2!1sen!2suk",
+            Southport: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12286.36467206004!2d-86.12961769246184!3d39.65891456267445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886b5c982b443247%3A0xf47eae81e4ac7e9e!2sSouthport%2C%20IN%2046227%2C%20USA!5e0!3m2!1sen!2suk!4v1765223892873!5m2!1sen!2suk",
+            Whitestown: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48922.35652122891!2d-86.4086295419381!3d39.97163805580869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x881353f00ecccec5%3A0xc2940a5d890aaa31!2sWhitestown%2C%20IN%2C%20USA!5e0!3m2!1sen!2suk!4v1765223920887!5m2!1sen!2suk"
         };
         const btn = document.querySelector(".service__checkaria-button");
         const dropdown = document.getElementById("mapDropdown");
@@ -5935,6 +6054,7 @@ PERFORMANCE OF THIS SOFTWARE.
         setInterval(changeBackground, 5e3);
     }));
     window.addEventListener("load", (() => {
+        const swiper = document.querySelector(".cases__slider").swiper;
         document.querySelectorAll(".cases__slide").forEach((slide => {
             const p = slide.querySelector(".cases-slide-info__description");
             const btn = slide.querySelector(".toggle-btn");
@@ -5951,6 +6071,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     p.style.maxHeight = "140px";
                     btn.textContent = "Read more";
                 }
+                swiper.updateAutoHeight();
             }));
         }));
     }));

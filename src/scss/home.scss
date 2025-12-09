@@ -130,13 +130,24 @@
     left: 57.5%;
     top: 36%;
     transform-origin: 17% 85%;  /* ВАЖНО: ось вращения  */
-    transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(4deg);
     transition: transform 0.4s ease-out;
-    animation: moveNeedle 2s infinite alternate ease-in-out;
+    animation: moveNeedle 1s infinite alternate ease-in-out;
 } 
 @keyframes moveNeedle {
-    0%   { transform: translate(-50%, -50%) rotate(0deg); }
-    100% { transform: translate(-50%, -50%) rotate(-26deg); }
+  0%   { transform: translate(-50%, -50%) rotate(4deg); }
+  100% { transform: translate(-50%, -50%) rotate(59deg); }
+}
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 15s linear infinite;
+}
+._navigator-active {
+    color: #FFBB29;
 }
 .cases__slider .swiper-pagination .swiper-pagination-bullet, .testimonials-reviews__slider .swiper-pagination .swiper-pagination-bullet {
   background-color: #FFEBBF;

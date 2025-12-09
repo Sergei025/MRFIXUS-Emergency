@@ -59,7 +59,7 @@ export function pageNavigation() {
 				}
 				if (entry.isIntersecting) {
 					// Бачимо об'єкт
-					// navigatorActiveItem ? navigatorActiveItem.classList.remove('_navigator-active') : null;
+					navigatorActiveItem ? navigatorActiveItem.classList.remove('_navigator-active') : null;
 					navigatorCurrentItem ? navigatorCurrentItem.classList.add('_navigator-active') : null;
 					//const activeItems = document.querySelectorAll('._navigator-active');
 					//activeItems.length > 1 ? chooseOne(activeItems) : null

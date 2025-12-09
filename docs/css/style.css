@@ -382,6 +382,9 @@ video {
 .ml-4 {
   margin-left: 1rem
 }
+.mr-6 {
+  margin-right: 1.5rem
+}
 .mt-2 {
   margin-top: .5rem
 }
@@ -1064,33 +1067,60 @@ video {
   top: 36%;
   -webkit-transform-origin: 17% 85%;
   transform-origin: 17% 85%;
-  -webkit-transform: translate(-50%,-50%) rotate(0);
-  transform: translate(-50%,-50%) rotate(0);
+  -webkit-transform: translate(-50%,-50%) rotate(4deg);
+  transform: translate(-50%,-50%) rotate(4deg);
   transition: -webkit-transform .4s ease-out;
   transition: transform .4s ease-out;
   transition: transform .4s ease-out,-webkit-transform .4s ease-out;
-  -webkit-animation: moveNeedle 2s infinite alternate ease-in-out;
-  animation: moveNeedle 2s infinite alternate ease-in-out
+  -webkit-animation: moveNeedle 1s infinite alternate ease-in-out;
+  animation: moveNeedle 1s infinite alternate ease-in-out
 }
 @-webkit-keyframes moveNeedle {
   0% {
-    -webkit-transform: translate(-50%,-50%) rotate(0);
-    transform: translate(-50%,-50%) rotate(0)
+    -webkit-transform: translate(-50%,-50%) rotate(4deg);
+    transform: translate(-50%,-50%) rotate(4deg)
   }
   100% {
-    -webkit-transform: translate(-50%,-50%) rotate(-26deg);
-    transform: translate(-50%,-50%) rotate(-26deg)
+    -webkit-transform: translate(-50%,-50%) rotate(59deg);
+    transform: translate(-50%,-50%) rotate(59deg)
   }
 }
 @keyframes moveNeedle {
   0% {
-    -webkit-transform: translate(-50%,-50%) rotate(0);
-    transform: translate(-50%,-50%) rotate(0)
+    -webkit-transform: translate(-50%,-50%) rotate(4deg);
+    transform: translate(-50%,-50%) rotate(4deg)
   }
   100% {
-    -webkit-transform: translate(-50%,-50%) rotate(-26deg);
-    transform: translate(-50%,-50%) rotate(-26deg)
+    -webkit-transform: translate(-50%,-50%) rotate(59deg);
+    transform: translate(-50%,-50%) rotate(59deg)
   }
+}
+@-webkit-keyframes scroll-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+  }
+  100% {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+  }
+}
+@keyframes scroll-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+  }
+  100% {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+  }
+}
+.animate-scroll-left {
+  -webkit-animation: scroll-left 15s linear infinite;
+  animation: scroll-left 15s linear infinite
+}
+._navigator-active {
+  color: #ffbb29
 }
 .cases__slider .swiper-pagination .swiper-pagination-bullet,
 .testimonials-reviews__slider .swiper-pagination .swiper-pagination-bullet {
@@ -1171,10 +1201,6 @@ video {
 .hover\:bg-white:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity))
-}
-.hover\:text-\[\#1D1D1D\]:hover {
-  --tw-text-opacity: 1;
-  color: rgb(29 29 29 / var(--tw-text-opacity))
 }
 .hover\:text-\[\#F6A50E\]:hover {
   --tw-text-opacity: 1;
@@ -1852,7 +1878,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     background-image: linear-gradient(90deg,#ffbb29 34.12%,#fff 51.13%)
   }
   .md\:bg-\[url\(\'img\/emergency-bg\.webp\'\)\] {
-    background-image: url('/img/emergency-bg.webp')
+    background-image: url(img/emergency-bg.webp)
   }
   .md\:p-6 {
     padding: 1.5rem
@@ -1935,6 +1961,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem
+  }
+  .md\:font-semibold {
+    font-weight: 600
   }
 }
 @media not all and (min-width:768px) {
@@ -2054,6 +2083,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 }
 @media (min-width:1024px) {
+  .lg\:float-right {
+    float: right
+  }
   .lg\:my-\[144px\] {
     margin-top: 144px;
     margin-bottom: 144px
@@ -2079,6 +2111,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .lg\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem
+  }
+  .lg\:hover\:text-\[\#1D1D1D\]:hover {
+    --tw-text-opacity: 1;
+    color: rgb(29 29 29 / var(--tw-text-opacity))
   }
 }
 @media (min-width:1280px) {
