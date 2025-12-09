@@ -2,11 +2,24 @@
 	<title>@@title</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-
-	<!-- Ускорение загрузки шрифтов -->
-	<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+	<!-- Preconnect -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+	<!-- Preload шрифтового CSS -->
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap">
+
+	<!-- Асинхронное подключение -->
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+		media="print"
+		onload="this.media='all'">
+
+	<!-- Фолбек для отключённого JS -->
+	<noscript>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap">
+	</noscript>
+
 	<!-- Подключить шрифты. Можно 1 раз загрузить через cnd google fonts а потом скопировать font face в pagespeed и вставить сюда -->
 	<style>
 		/* @font-face {
