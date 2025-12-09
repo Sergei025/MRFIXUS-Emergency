@@ -373,9 +373,6 @@ video {
 .m-auto {
   margin: auto
 }
-.-mt-\[96px\] {
-  margin-top: -96px
-}
 .mb-2 {
   margin-bottom: .5rem
 }
@@ -651,6 +648,12 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity))
+}
+.bg-cover {
+  background-size: cover
+}
+.bg-center {
+  background-position: center
 }
 .object-cover {
   -o-object-fit: cover;
@@ -1880,6 +1883,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
   .md\:bg-\[linear-gradient\(90deg\2c _\#FFBB29_34\.12\%\2c _\#FFFFFF_51\.13\%\)\] {
     background-image: linear-gradient(90deg,#ffbb29 34.12%,#fff 51.13%)
+  }
+  .md\:bg-\[url\(\'img\/emergency-bg\.webp\'\)\] {
+    background-image: url(img/emergency-bg.webp)
   }
   .md\:p-6 {
     padding: 1.5rem
