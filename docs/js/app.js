@@ -5917,21 +5917,32 @@ PERFORMANCE OF THIS SOFTWARE.
         const options = document.querySelectorAll("#mapDropdown .option");
         const closeInside = document.querySelector(".map-close-inside");
         if (!btn || !dropdown) return;
+        const defaultCity = "Indianapolis";
+        const defaultSrc = mapLinks[defaultCity];
+        const observer = new IntersectionObserver(((entries, obs) => {
+            entries.forEach((entry => {
+                if (entry.isIntersecting) {
+                    iframe.src = defaultSrc;
+                    obs.disconnect();
+                }
+            }));
+        }));
+        observer.observe(iframe);
         btn.addEventListener("click", (e => {
             e.stopPropagation();
             dropdown.classList.toggle("open");
         }));
-        if (closeInside) closeInside.addEventListener("click", (e => {
-            e.stopPropagation();
-            dropdown.classList.remove("open");
-        }));
         options.forEach((option => {
-            option.addEventListener("click", (e => {
+            option.addEventListener("click", (() => {
                 const city = option.dataset.city;
                 selectedLabel.textContent = city;
                 dropdown.classList.remove("open");
-                if (iframe && mapLinks[city]) iframe.src = mapLinks[city];
+                if (mapLinks[city]) iframe.src = mapLinks[city];
             }));
+        }));
+        if (closeInside) closeInside.addEventListener("click", (e => {
+            e.stopPropagation();
+            dropdown.classList.remove("open");
         }));
         document.addEventListener("click", (e => {
             if (!btn.contains(e.target) && !dropdown.contains(e.target)) dropdown.classList.remove("open");

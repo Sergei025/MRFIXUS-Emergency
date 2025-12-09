@@ -62,11 +62,11 @@
 					<div class="special-offer__right flex flex-col gap-2 w-full py-4 md:py-5 pr-6 max-md:pl-6">
 						<div class="md:max-w-[327px] w-full min-[992px]:ml-[132px] max-[992px]:m-auto">
 							<div class="special-offer__right-content flex justify-center gap-5 pb-4 md:pb-2 font-semibold md:text-2xl leading-[140%]">
-								<div class="flex items-center gap-1"><img width="24" height="24" src="@img/user.svg">100+</div>
-								<div class="flex items-center gap-1"><img width="24" height="24" src="@img/star.svg">4.9</div>
+								<div class="flex items-center gap-1"><img width="24" height="24" loading="lazy" src="@img/user.svg">100+</div>
+								<div class="flex items-center gap-1"><img width="24" height="24" loading="lazy" src="@img/star.svg">4.9</div>
 							</div>
 							<a data-goto=".testimonials" class="special-offer__right-button leading-[140%] cursor-pointer font-semibold py-3 w-full flex justify-center gap-2 items-center border border-[#1D1D1D] rounded-lg transition-all ease-in-out duration-300 hover:bg-[#1D1D1D] hover:text-white">
-								<img width="20" height="20" src="@img/google-icon.svg">
+								<img width="20" height="20" loading="lazy" src="@img/google-icon.svg">
 								Reviews ↓
 							</a>
 						</div>
@@ -88,7 +88,7 @@
 					</div>
 					<div class="problems__blocks grid grid-cols md:grid-cols-2 gap-6 md:gap-8">
 						<div class="problems__block p-4 md:p-6 bg-white rounded-lg flex flex-col gap-4">
-							<div class="problems__block-icon bg-[#FFF5DF] rounded-lg p-2 w-fit"><img width="24" height="24" src="@img/emergency_car-icon.svg"></div>
+							<div class="problems__block-icon bg-[#FFF5DF] rounded-lg p-2 w-fit"><img width="24" height="24" loading="lazy" src="@img/emergency_car-icon.svg"></div>
 							<div class="problems__block-title font-semibold text-xl md:text-2xl leading-[140%]">Locked out of your car or lost your keys?</div>
 							<div class="problems__block-subtitle leading-[140%] md:text-xl">Car lockout, lost keys, smart keys.</div>
 							<div class="problems__block-price-call flex justify-between mt-auto">
@@ -102,7 +102,7 @@
 							</div>
 						</div>
 						<div class="problems__block p-4 md:p-6 bg-white rounded-lg flex flex-col gap-4">
-							<div class="problems__block-icon bg-[#FFF5DF] rounded-lg p-2 w-fit"><img width="24" height="24" src="@img/emergency_home-icon.svg"></div>
+							<div class="problems__block-icon bg-[#FFF5DF] rounded-lg p-2 w-fit"><img width="24" height="24" loading="lazy" src="@img/emergency_home-icon.svg"></div>
 							<div class="problems__block-title font-semibold text-xl md:text-2xl leading-[140%]">Can’t get into your house or apartment?</div>
 							<div class="problems__block-subtitle leading-[140%] md:text-xl">House lockout, rekey, lock replacement.</div>
 							<div class="problems__block-price-call flex justify-between mt-auto">
@@ -116,7 +116,7 @@
 							</div>
 						</div>
 						<div class="problems__block p-4 md:p-6 bg-white rounded-lg flex flex-col gap-4">
-							<div class="problems__block-icon bg-[#FFF5DF] rounded-lg p-2 w-fit"><img width="24" height="24" src="@img/emergency_shop-icon.svg"></div>
+							<div class="problems__block-icon bg-[#FFF5DF] rounded-lg p-2 w-fit"><img width="24" height="24" loading="lazy" src="@img/emergency_shop-icon.svg"></div>
 							<div class="problems__block-title font-semibold text-xl md:text-2xl leading-[140%]">Door stuck at your office, shop, or warehouse?</div>
 							<div class="problems__block-subtitle leading-[140%] md:text-xl">Doors, master key systems, access control.</div>
 							<div class="problems__block-price-call flex justify-between mt-auto">
@@ -130,7 +130,7 @@
 							</div>
 						</div>
 						<div class="problems__block p-4 md:p-6 bg-white rounded-lg flex flex-col gap-4">
-							<div class="problems__block-icon bg-[#FFF5DF] rounded-lg p-2 w-fit"><img width="24" height="24" src="@img/safe.svg"></div>
+							<div class="problems__block-icon bg-[#FFF5DF] rounded-lg p-2 w-fit"><img width="24" height="24" loading="lazy" src="@img/safe.svg"></div>
 							<div class="problems__block-title font-semibold text-xl md:text-2xl leading-[140%]">Safe, mailbox, garage, padlock?</div>
 							<div class="problems__block-subtitle leading-[140%] md:text-xl">Tell us what happened — we’ll advise you on the call.</div>
 							<div class="problems__block-price-call flex justify-between mt-auto">
@@ -171,7 +171,14 @@
 						</div>
 					</div>
 					<div class="service__map flex flex-col">
-						<iframe class="w-full h-[327px] md:h-[480px] max-md:order-2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d196237.1863908697!2d-86.29790153304616!3d39.779931327951296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886b50ffa7796a03%3A0xd68e9df640b9ea7c!2sIndianapolis%2C%20IN%2C%20USA!5e0!3m2!1sen!2suk!4v1765223131497!5m2!1sen!2suk" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						<iframe 
+							class="w-full h-[327px] md:h-[480px] max-md:order-2"
+							src="" 
+							loading="lazy"
+							style="border:0;"
+							allowfullscreen=""
+							referrerpolicy="no-referrer-when-downgrade">
+						</iframe>
 						<div class="service__checkaria md:pt-4 m-auto max-md:w-full max-md:order-1">
 							<div class="service__checkaria-subtitle text-[#616161] text-xs leading-[140%] pb-1 md:text-center">Check your aria / district</div>
 							<div class="relative w-full md:w-[274px]">
@@ -283,12 +290,12 @@
 						</h2>
 					</div>
 					<div class="stats__content flex md:justify-between md:items-center relative md:bg-white rounded-[60px] xl:px-[88px] lg:px-12 md:px-7 md:h-[120px] xl:my-[164px] lg:my-[144px] md:my-[100px] max-md:flex-col max-md:w-fit max-md:m-auto">
-						<div class="stats__jobs flex gap-2 font-semibold md:text-xl leading-[140%] max-md:order-2 max-md:pl-5 max-md:pb-4"><img width="24" height="24" src="@img/check.svg">3–5 emergency jobs every day</div>
+						<div class="stats__jobs flex gap-2 font-semibold md:text-xl leading-[140%] max-md:order-2 max-md:pl-5 max-md:pb-4"><img width="24" height="24" loading="lazy" src="@img/check.svg">3–5 emergency jobs every day</div>
 						<div class="stats__img max-md:order-1 relative">
-							<img srcset="img/speed-637.webp 637w, img/speed-772.webp 772w, img/speed-1029.webp 1029w" sizes="(max-width: 637px) 100vw, (max-width: 1024px) 637px, 1029px" width="515" height="515" class="max-w-[515px] w-full" src="@img/speed-1029.webp">
-							<img width="129" height="217" class="needle absolute" src="@img/strelka.webp">
+							<img loading="lazy" decoding="async" srcset="img/speed-637.webp 637w, img/speed-772.webp 772w, img/speed-1029.webp 1029w" sizes="(max-width: 637px) 100vw, (max-width: 1024px) 637px, 1029px" width="515" height="515" class="max-w-[515px] w-full" src="@img/speed-1029.webp">
+							<img width="129" height="217" loading="lazy" decoding="async" class="needle absolute" src="@img/strelka.webp">
 						</div>
-						<div class="stats__around flex gap-2 font-semibold md:text-xl leading-[140%] max-md:order-3 max-md:pl-5"><img width="24" height="24" src="@img/check.svg">Around 1,200 car lockouts per year.</div>
+						<div class="stats__around flex gap-2 font-semibold md:text-xl leading-[140%] max-md:order-3 max-md:pl-5"><img width="24" height="24" loading="lazy" src="@img/check.svg">Around 1,200 car lockouts per year.</div>
 					</div>
 				</div>
 			</section>
@@ -308,29 +315,29 @@
 					<div class="trust__content">
 						<div class="trust__list flex gap-6 md:gap-8 pb-8 max-[992px]:flex-col">
 							<div class="trust__item border-b border-[#A5A5A5] pb-4 w-full">
-								<div class="trust__icon bg-[#E3F9E0] rounded-lg p-2 w-fit mb-4"><img width="24" height="24" src="@img/trust_check.svg"></div>
+								<div class="trust__icon bg-[#E3F9E0] rounded-lg p-2 w-fit mb-4"><img loading="lazy" width="24" height="24" src="@img/trust_check.svg"></div>
 								<div class="trust__text font-semibold leading-[140%] md:text-xl">Google LSA Verified locksmith service</div>
 							</div>
 							<div class="trust__item border-b border-[#A5A5A5] pb-4 w-full">
-								<div class="trust__icon bg-[#E3F9E0] rounded-lg p-2 w-fit mb-4"><img width="24" height="24" src="@img/trust_star.svg"></div>
+								<div class="trust__icon bg-[#E3F9E0] rounded-lg p-2 w-fit mb-4"><img loading="lazy" width="24" height="24" src="@img/trust_star.svg"></div>
 								<div class="trust__text font-semibold leading-[140%] md:text-xl">Profiles and reviews on Google, Yelp, Thumbtack, BBB</div>
 							</div>
 							<div class="trust__item border-b border-[#A5A5A5] pb-4 w-full">
-								<div class="trust__icon bg-[#E3F9E0] rounded-lg p-2 w-fit mb-4"><img width="24" height="24" src="@img/trust_warranty.svg"></div>
+								<div class="trust__icon bg-[#E3F9E0] rounded-lg p-2 w-fit mb-4"><img loading="lazy" width="24" height="24" src="@img/trust_warranty.svg"></div>
 								<div class="trust__text font-semibold leading-[140%] md:text-xl">1-year workmanship warranty on all jobs</div>
 							</div>
 						</div>
 						<div class="trust__list flex gap-6 md:gap-8 max-[992px]:flex-col">
 							<div class="trust__item border-b border-[#A5A5A5] pb-4 w-full">
-								<div class="trust__icon bg-[#E3F9E0] rounded-lg p-2 w-fit mb-4"><img width="24" height="24" src="@img/trust_money.svg"></div>
+								<div class="trust__icon bg-[#E3F9E0] rounded-lg p-2 w-fit mb-4"><img loading="lazy" width="24" height="24" src="@img/trust_money.svg"></div>
 								<div class="trust__text font-semibold leading-[140%] md:text-xl">No hidden fees — full estimate before any work</div>
 							</div>
 							<div class="trust__item border-b border-[#A5A5A5] pb-4 w-full">
-								<div class="trust__icon bg-[#E3F9E0] rounded-lg p-2 w-fit mb-4"><img width="24" height="24" src="@img/trust_id.svg"></div>
+								<div class="trust__icon bg-[#E3F9E0] rounded-lg p-2 w-fit mb-4"><img loading="lazy" width="24" height="24" src="@img/trust_id.svg"></div>
 								<div class="trust__text font-semibold leading-[140%] md:text-xl">ID check and proof of access required — we work only for owners and authorized people</div>
 							</div>
 							<div class="trust__item border-b border-[#A5A5A5] pb-4 w-full">
-								<div class="trust__icon bg-[#E3F9E0] rounded-lg p-2 w-fit mb-4"><img width="24" height="24" src="@img/trust_car.svg"></div>
+								<div class="trust__icon bg-[#E3F9E0] rounded-lg p-2 w-fit mb-4"><img loading="lazy" width="24" height="24" src="@img/trust_car.svg"></div>
 								<div class="trust__text font-semibold leading-[140%] md:text-xl">Strong focus on European cars and smart keys</div>
 							</div>
 						</div>
@@ -338,10 +345,10 @@
 					<div class="trust__partners leading-[140%] md:m-auto md:w-fit md:text-center pt-6 md:pt-8">
 						Trusted by:
 						<div class="partners__icons flex max-[600px]:justify-between min-[600px]:gap-16 pt-2 md:pt-4">
-							<img width="43" height="44" src="@img/google-logo.svg">
-							<img width="72" height="30" src="@img/yelp-logo.svg">
-							<img width="35" height="55" src="@img/Better_Business_Bureau-logo.svg">
-							<img width="44" height="44" src="@img/thumbtack-logo.svg">
+							<img loading="lazy" width="43" height="44" src="@img/google-logo.svg">
+							<img loading="lazy" width="72" height="30" src="@img/yelp-logo.svg">
+							<img loading="lazy" width="35" height="55" src="@img/Better_Business_Bureau-logo.svg">
+							<img loading="lazy" width="44" height="44" src="@img/thumbtack-logo.svg">
 						</div>
 					</div>
 				</div>
@@ -364,45 +371,45 @@
 							<div class="cars__left-title font-semibold text-xl md:text-[28px] leading-[140%] pb-4">What we do</div>
 							<div class="cars__left-list grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
 								<div class="cars__left-item border-b border-[#A5A5A5] pb-4">
-									<div class="cars__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img width="24" height="24" src="@img/emergency_car-icon.svg"></div>
+									<div class="cars__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img loading="lazy" width="24" height="24" src="@img/emergency_car-icon.svg"></div>
 									<div class="cars__left-item-title font-semibold md:text-xl leading-[140%]">Car Lockouts</div>
 									<div class="cars__left-item-subtitle md:text-xl leading-[140%]">Non-destructive car lockouts whenever possible</div>
 								</div>
 								<div class="cars__left-item border-b border-[#A5A5A5] pb-4">
-									<div class="cars__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img width="24" height="24" src="@img/cars_key.svg"></div>
+									<div class="cars__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img loading="lazy" width="24" height="24" src="@img/cars_key.svg"></div>
 									<div class="cars__left-item-title font-semibold md:text-xl leading-[140%]">Lost-All-Keys</div>
 									<div class="cars__left-item-subtitle md:text-xl leading-[140%]">Cut and program new keys when all keys are lost (lost-all-keys)</div>
 								</div>
 								<div class="cars__left-item border-b border-[#A5A5A5] pb-4">
-									<div class="cars__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img width="24" height="24" src="@img/cars_key.svg"></div>
+									<div class="cars__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img loading="lazy" width="24" height="24" src="@img/cars_key.svg"></div>
 									<div class="cars__left-item-title font-semibold md:text-xl leading-[140%]">Key Duplication</div>
 									<div class="cars__left-item-subtitle md:text-xl leading-[140%]">Duplicate original and aftermarket keys and remotes</div>
 								</div>
 								<div class="cars__left-item border-b border-[#A5A5A5] pb-4">
-									<div class="cars__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img width="24" height="24" src="@img/cars_key.svg"></div>
+									<div class="cars__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img loading="lazy" width="24" height="24" src="@img/cars_key.svg"></div>
 									<div class="cars__left-item-title font-semibold md:text-xl leading-[140%]">Smart Keys</div>
 									<div class="cars__left-item-subtitle md:text-xl leading-[140%]">Program smart / proximity / push-to-start keys</div>
 								</div>
 								<div class="cars__left-item border-b border-[#A5A5A5] pb-4">
-									<div class="cars__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img width="24" height="24" src="@img/cars_lock.svg"></div>
+									<div class="cars__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img loading="lazy" width="24" height="24" src="@img/cars_lock.svg"></div>
 									<div class="cars__left-item-title font-semibold md:text-xl leading-[140%]">Lock Repair</div>
 									<div class="cars__left-item-subtitle md:text-xl leading-[140%]">Ignition and door lock repair or replacement</div>
 								</div>
 								<div class="cars__left-item border-b border-[#A5A5A5] pb-4">
-									<div class="cars__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img width="24" height="24" src="@img/emergency_check-icon.svg"></div>
+									<div class="cars__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img loading="lazy" width="24" height="24" src="@img/emergency_check-icon.svg"></div>
 									<div class="cars__left-item-title font-semibold md:text-xl leading-[140%]">Immobilizer</div>
 									<div class="cars__left-item-subtitle md:text-xl leading-[140%]">Immobilizer-related key programming where supported by our tools</div>
 								</div>
 							</div>
 							<div class="cars__left-item border-b border-[#A5A5A5] pb-4 pt-4 md:pt-8">
-								<div class="cars__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img width="24" height="24" src="@img/cars_wrench.svg"></div>
+								<div class="cars__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img loading="lazy" width="24" height="24" src="@img/cars_wrench.svg"></div>
 								<div class="cars__left-item-title font-semibold md:text-2xl leading-[140%]">On-Hand Stock</div>
 								<div class="cars__left-item-subtitle md:text-xl leading-[140%]">Large stock of keys, chips, and remotes in the van</div>
 							</div>
 						</div>
 						<div class="cars__right w-full max-lg:order-1">
 							<div class="cars__right-car w-fit m-auto">
-								<img srcset="img/cars-right-car-637.webp 637w, img/cars-right-car-1032.webp 1032w, img/cars-right-car.webp 1376w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 688px, 1376px" width="688" height="320" class="lg:mb-[22px]" src="img/cars-right-car.webp">
+								<img loading="lazy" srcset="img/cars-right-car-637.webp 637w, img/cars-right-car-1032.webp 1032w, img/cars-right-car.webp 1376w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 688px, 1376px" width="688" height="320" class="lg:mb-[22px]" src="img/cars-right-car.webp">
 							</div>
 							<div class="cars__right-info rounded-lg hidden lg:block pt-2.5">
 								<div class="cars__right-title font-semibold text-2xl leading-[140%] pb-4">Pricing (car)*</div>
@@ -470,30 +477,30 @@
 							<div class="car-brands__right-subtitle font-semibold text-xl leading-[140%] md:text-2xl pb-4">European brands</div>
 							<div class="car-brands__right-list flex gap-8 max-[992px]:flex-col">
 								<div class="car-brands__right-item w-full border-b border-[#A5A5A5] pb-4">
-									<div class="car-brands__right-icon mb-4 max-h-12"><img width="48" height="48" class="max-h-12" src="@img/bmw-logo.svg"></div>
+									<div class="car-brands__right-icon mb-4 max-h-12"><img loading="lazy" width="48" height="48" class="max-h-12" src="@img/bmw-logo.svg"></div>
 									<div class="car-brands__right-text leading-[140%] md:text-xl">BMW – most models up to about 2018–2020, depending on platform</div>
 								</div>
 								<div class="car-brands__right-item w-full border-b border-[#A5A5A5] pb-4">
-									<div class="car-brands__right-icon mb-4 max-h-12"><img width="48" height="48" class="max-h-12" src="@img/mercedes-logo.svg"></div>
+									<div class="car-brands__right-icon mb-4 max-h-12"><img loading="lazy" width="48" height="48" class="max-h-12" src="@img/mercedes-logo.svg"></div>
 									<div class="car-brands__right-text leading-[140%] md:text-xl">Mercedes-Benz – roughly 2000–2014<br><span class="text-[#616161]">(models after 2014 are not supported with current equipment)</span></div>
 								</div>
 								<div class="car-brands__right-item w-full min-[992px]:border-b min-[992px]:border-[#A5A5A5] min-[992px]:pb-4">
 									<div class="car-brands__right-icon mb-4 flex gap-4 max-h-12">
-										<img width="48" height="48" class="max-h-12" src="@img/volkswagen-logo.svg">
-										<img width="87" height="31" class="max-h-12" src="@img/audi-logo.svg">
-										<img width="48" height="48" class="max-h-12" src="@img/skoda-logo.svg">
-										<img width="41" height="37" class="max-h-12" src="@img/seat-logo.svg">
+										<img width="48" height="48" loading="lazy" class="max-h-12" src="@img/volkswagen-logo.svg">
+										<img width="87" height="31" loading="lazy" class="max-h-12" src="@img/audi-logo.svg">
+										<img width="48" height="48" loading="lazy" class="max-h-12" src="@img/skoda-logo.svg">
+										<img width="41" height="37" loading="lazy" class="max-h-12" src="@img/seat-logo.svg">
 									</div>
 									<div class="car-brands__right-text leading-[140%] md:text-xl">VAG group: Volkswagen, Audi, Skoda, SEAT – most models, including push-to-start systems</div>
 								</div>
 							</div>
 							<div class="car-brands__right-subtitle font-semibold text-xl leading-[140%] md:text-2xl pb-4 pt-6 md:pt-8">US and Asian brands</div>
 							<div class="car-brands__right-list flex gap-6 md:gap-16 max-[992px]:overflow-x-auto max-h-[30px] md:max-h-9 max-md:-mr-6">
-								<img width="72" height="36" src="@img/chevrolet-logo.svg">
-								<img width="72" height="29" src="@img/jeep-logo.svg">
-								<img width="175" height="29" src="@img/chrysler-logo.svg">
-								<img width="195" height="29" src="@img/dodge-logo.svg">
-								<img width="53" height="34" class="mr-6" src="@img/toyota-logo.svg">
+								<img width="72" height="36" loading="lazy" src="@img/chevrolet-logo.svg">
+								<img width="72" height="29" loading="lazy" src="@img/jeep-logo.svg">
+								<img width="175" height="29" loading="lazy" src="@img/chrysler-logo.svg">
+								<img width="195" height="29" loading="lazy" src="@img/dodge-logo.svg">
+								<img width="53" height="34" loading="lazy" class="mr-6" src="@img/toyota-logo.svg">
 							</div>
 							<div class="car-brands__right-text leading-[140%] md:text-xl min-[992px]:border-b min-[992px]:border-[#A5A5A5] min-[992px]:pb-4 pt-4">Chevrolet, Jeep, Chrysler, Dodge, Toyota and similar mass-market brands. We focus on 2005 and newer for these makes</div>
 						</div>
@@ -501,25 +508,25 @@
 							<div class="car-brands__right-subtitle font-semibold text-xl leading-[140%] md:text-2xl pb-4">We do not service</div>
 							<div class="car-brands__left-list flex flex-col gap-4">
 								<div class="car-brands__left-item !leading-[140%] md:text-xl flex gap-4 items-center">
-									<div class="car-brands__left-icon bg-[#F9E0E0] p-2 rounded-lg w-fit flex-[0_0_40px]"><img width="24" height="24" src="@img/warning.svg"></div>
+									<div class="car-brands__left-icon bg-[#F9E0E0] p-2 rounded-lg w-fit flex-[0_0_40px]"><img width="24" height="24" loading="lazy" src="@img/warning.svg"></div>
 									Volvo, Saab
 								</div>
 								<div class="car-brands__left-item !leading-[140%] md:text-xl flex gap-4">
-									<div class="car-brands__left-icon bg-[#F9E0E0] p-2 rounded-lg w-fit h-fit flex-[0_0_40px]"><img width="24" height="24" src="@img/warning.svg"></div>
+									<div class="car-brands__left-icon bg-[#F9E0E0] p-2 rounded-lg w-fit h-fit flex-[0_0_40px]"><img width="24" height="24" loading="lazy" src="@img/warning.svg"></div>
 									<div>
 										Motorcycles<br>
 										<span class="text-[#616161]">(no keys, no programming, no diagnostics)</span>
 									</div>
 								</div>
 								<div class="car-brands__left-item !leading-[140%] md:text-xl flex gap-4">
-									<div class="car-brands__left-icon bg-[#F9E0E0] p-2 rounded-lg w-fit h-fit flex-[0_0_40px]"><img width="24" height="24" src="@img/warning.svg"></div>
+									<div class="car-brands__left-icon bg-[#F9E0E0] p-2 rounded-lg w-fit h-fit flex-[0_0_40px]"><img width="24" height="24" loading="lazy" src="@img/warning.svg"></div>
 									<div>
 										RV keys and ignition work<br>
 										<span class="text-[#616161]">(for RVs we only handle lockouts / opening the door)</span>
 									</div>
 								</div>
 								<div class="car-brands__left-item !leading-[140%] md:text-xl flex gap-4">
-									<div class="car-brands__left-icon bg-[#F9E0E0] p-2 rounded-lg w-fit h-fit flex-[0_0_40px]"><img width="24" height="24" src="@img/warning.svg"></div>
+									<div class="car-brands__left-icon bg-[#F9E0E0] p-2 rounded-lg w-fit h-fit flex-[0_0_40px]"><img width="24" height="24" loading="lazy" src="@img/warning.svg"></div>
 									<div>
 										Most non-European cars older than 2005<br>
 										<span class="text-[#616161]">(Chevrolet, Jeep, Chrysler, Dodge, Toyota, etc.)</span>
@@ -545,28 +552,28 @@
 							<div class="residential__left-title font-semibold text-xl md:text-2xl leading-[140%] pb-4">Services</div>
 							<div class="residential__left-list grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
 								<div class="residential__left-item border-b border-[#A5A5A5] pb-4">
-									<div class="residential__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img width="24" height="24" src="@img/cars_lock.svg"></div>
+									<div class="residential__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img width="24" height="24" loading="lazy" src="@img/cars_lock.svg"></div>
 									<div class="residential__left-item-title font-semibold md:text-xl leading-[140%]">Lockouts</div>
 									<div class="residential__left-item-subtitle md:text-xl leading-[140%]">Opening houses and apartments with non-destructive methods first.</div>
 								</div>
 								<div class="residential__left-item border-b border-[#A5A5A5] pb-4">
-									<div class="residential__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img width="24" height="24" src="@img/cars_key.svg"></div>
+									<div class="residential__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img width="24" height="24" loading="lazy" src="@img/cars_key.svg"></div>
 									<div class="residential__left-item-title font-semibold md:text-xl leading-[140%]">Rekeying</div>
 									<div class="residential__left-item-subtitle md:text-xl leading-[140%]">Changing lock pins after moving, tenant turnover, or when keys are lost.</div>
 								</div>
 								<div class="residential__left-item border-b border-[#A5A5A5] pb-4">
-									<div class="residential__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img width="24" height="24" src="@img/emergency_check-icon.svg"></div>
+									<div class="residential__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img width="24" height="24" loading="lazy" src="@img/emergency_check-icon.svg"></div>
 									<div class="residential__left-item-title font-semibold md:text-xl leading-[140%]">Deadbolts</div>
 									<div class="residential__left-item-subtitle md:text-xl leading-[140%]">Installing deadbolts and performing basic door reinforcement.</div>
 								</div>
 								<div class="residential__left-item border-b border-[#A5A5A5] pb-4">
-									<div class="residential__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img width="24" height="24" src="@img/wifi.svg"></div>
+									<div class="residential__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img width="24" height="24" loading="lazy" src="@img/wifi.svg"></div>
 									<div class="residential__left-item-title font-semibold md:text-xl leading-[140%]">Smart locks</div>
 									<div class="residential__left-item-subtitle md:text-xl leading-[140%]">Installing and setting up popular Wi-Fi and Z-Wave smart lock models.</div>
 								</div>
 							</div>
 							<div class="residential__left-item border-b border-[#A5A5A5] pb-4 pt-4 md:pt-8">
-								<div class="residential__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img width="24" height="24" src="@img/post.svg"></div>
+								<div class="residential__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img width="24" height="24" loading="lazy" src="@img/post.svg"></div>
 								<div class="residential__left-item-title font-semibold md:text-xl leading-[140%]">Mailbox & Garage</div>
 								<div class="residential__left-item-subtitle md:text-xl leading-[140%]">Servicing mailbox locks and certain garage door locks that use a key cylinder.</div>
 							</div>
@@ -574,7 +581,7 @@
 						</div>
 						<div class="residential__right w-full max-lg:order-1">
 							<div class="residential__right-home w-fit m-auto">
-								<img srcset="img/residential-home-512.webp 512w, img/residential-home-1032.webp 1032w, img/residential-home.webp 1376w" sizes="(max-width: 1032px) 100vw, 1376px" width="688" height="419" class="lg:mb-6 w-full" src="@img/residential-home.webp">
+								<img loading="lazy" srcset="img/residential-home-512.webp 512w, img/residential-home-1032.webp 1032w, img/residential-home.webp 1376w" sizes="(max-width: 1032px) 100vw, 1376px" width="688" height="419" class="lg:mb-6 w-full" src="@img/residential-home.webp">
 							</div>
 							<div class="residential__right-info rounded-lg hidden lg:block">
 								<div class="residential__right-title font-semibold text-2xl leading-[140%] pb-4">Pricing (home)*</div>
@@ -629,28 +636,28 @@
 							<div class="commercial__left-title font-semibold text-xl md:text-2xl leading-[140%] pb-4">Services</div>
 							<div class="commercial__left-list grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
 								<div class="commercial__left-item border-b border-[#A5A5A5] pb-4">
-									<div class="commercial__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img width="24" height="24" src="@img/cars_lock.svg"></div>
+									<div class="commercial__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img loading="lazy" width="24" height="24" src="@img/cars_lock.svg"></div>
 									<div class="commercial__left-item-title font-semibold md:text-xl leading-[140%]">Commercial access</div>
 									<div class="commercial__left-item-subtitle md:text-xl leading-[140%]">Door opening and lock service for offices, retail, warehouses, restaurants, apartments / HOA.</div>
 								</div>
 								<div class="commercial__left-item border-b border-[#A5A5A5] pb-4">
-									<div class="commercial__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img width="24" height="24" src="@img/cars_key.svg"></div>
+									<div class="commercial__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img loading="lazy" width="24" height="24" src="@img/cars_key.svg"></div>
 									<div class="commercial__left-item-title font-semibold md:text-xl leading-[140%]">Master systems</div>
 									<div class="commercial__left-item-subtitle md:text-xl leading-[140%]">Master key systems and high-security cylinders</div>
 								</div>
 								<div class="commercial__left-item border-b border-[#A5A5A5] pb-4">
-									<div class="commercial__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img width="24" height="24" src="@img/pin.svg"></div>
+									<div class="commercial__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img loading="lazy" width="24" height="24" src="@img/pin.svg"></div>
 									<div class="commercial__left-item-title font-semibold md:text-xl leading-[140%]">Access control</div>
 									<div class="commercial__left-item-subtitle md:text-xl leading-[140%]">Stand-alone access control: PIN pads,<br> card / fob readers.</div>
 								</div>
 								<div class="commercial__left-item border-b border-[#A5A5A5] pb-4">
-									<div class="commercial__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img width="24" height="24" src="@img/door-open.svg"></div>
+									<div class="commercial__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img loading="lazy" width="24" height="24" src="@img/door-open.svg"></div>
 									<div class="commercial__left-item-title font-semibold md:text-xl leading-[140%]">Door hardware</div>
 									<div class="commercial__left-item-subtitle md:text-xl leading-[140%]">Basic work with door hardware (closers, panic bars, electric strikes)</div>
 								</div>
 							</div>
 							<div class="commercial__left-item border-b border-[#A5A5A5] pb-4 pt-4 md:pt-8">
-								<div class="commercial__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img width="24" height="24" src="@img/file-blank.svg"></div>
+								<div class="commercial__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit mb-4"><img loading="lazy" width="24" height="24" src="@img/file-blank.svg"></div>
 								<div class="commercial__left-item-title font-semibold md:text-xl leading-[140%]">Business docs</div>
 								<div class="commercial__left-item-subtitle md:text-xl leading-[140%]">Invoices and COI available for business clients</div>
 							</div>
@@ -658,7 +665,7 @@
 						</div>
 						<div class="commercial__right w-full max-lg:order-1">
 							<div class="commercial__right-home w-fit m-auto">
-								<img srcset="img/office-512.webp 512w, img/office-1032.webp 1032w, img/office.webp 1376w" sizes="(max-width: 1032px) 100vw, 1376px" width="688" height="680" src="@img/office.webp">
+								<img loading="lazy" srcset="img/office-512.webp 512w, img/office-1032.webp 1032w, img/office.webp 1376w" sizes="(max-width: 1032px) 100vw, 1376px" width="688" height="680" src="@img/office.webp">
 							</div>
 						</div>
 					</div>
@@ -678,36 +685,36 @@
 						<div class="prices__left-title font-semibold text-xl md:text-2xl leading-[140%] pb-4">Promise</div>
 						<div class="prices__left-subtitle md:text-xl leading-[140%] pb-4">We give you a clear estimate before we start.</div>
 						<div class="prices__left-yes flex max-md:flex-col gap-4 md:gap-8 font-semibold md:text-xl leading-[140%]">
-							<div class="flex text-[#F6A50E]"><img width="24" height="24" class="pr-2" src="@img/yes.svg">No hidden fees,</div>
-							<div class="flex text-[#F6A50E]"><img width="24" height="24" class="pr-2" src="@img/yes.svg">No bait pricing.</div>
+							<div class="flex text-[#F6A50E]"><img loading="lazy" width="24" height="24" class="pr-2" src="@img/yes.svg">No hidden fees,</div>
+							<div class="flex text-[#F6A50E]"><img loading="lazy" width="24" height="24" class="pr-2" src="@img/yes.svg">No bait pricing.</div>
 						</div>
 					</div>
 					<div class="prices__content flex gap-6 md:gap-8 pt-6 md:pt-8 max-lg:flex-col">
 						<div class="prices__left w-full max-lg:order-2">
 							<div class="prices__left-title font-semibold text-xl md:text-2xl leading-[140%] pb-4">How we charge</div>
 							<div class="prices__left-item flex gap-4">
-								<div class="prices__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit h-fit flex-[0_0_40px]"><img width="24" height="24" src="@img/cars_wrench.svg"></div>
+								<div class="prices__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit h-fit flex-[0_0_40px]"><img loading="lazy" width="24" height="24" src="@img/cars_wrench.svg"></div>
 								<div>
 									<div class="prices__left-item-title font-semibold md:text-xl leading-[140%]">Approval Required</div>
 									<div class="prices__left-item-subtitle md:text-xl leading-[140%]">Any drilling or lock replacement is discussed and approved by you in advance, including the cost of parts and labor.</div>
 								</div>
 							</div>
 							<div class="prices__left-item pt-4 md:pt-8 flex gap-4">
-								<div class="prices__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit h-fit flex-[0_0_40px]"><img width="24" height="24" src="@img/emergency_car-icon.svg"></div>
+								<div class="prices__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit h-fit flex-[0_0_40px]"><img loading="lazy" width="24" height="24" src="@img/emergency_car-icon.svg"></div>
 								<div>
 									<div class="prices__left-item-title font-semibold md:text-xl leading-[140%]">Car Key Policy</div>
 									<div class="prices__left-item-subtitle md:text-xl leading-[140%]">We do not offer returns on car keys — once a key is programmed, it is locked to your vehicle and cannot be reused on another car.</div>
 								</div>
 							</div>
 							<div class="prices__left-item pt-4 md:pt-8 flex gap-4">
-								<div class="prices__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit h-fit flex-[0_0_40px]"><img width="24" height="24" src="@img/phone-call.svg"></div>
+								<div class="prices__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit h-fit flex-[0_0_40px]"><img loading="lazy" width="24" height="24" src="@img/phone-call.svg"></div>
 								<div>
 									<div class="prices__left-item-title font-semibold md:text-xl leading-[140%]">Service Call</div>
 									<div class="prices__left-item-subtitle md:text-xl leading-[140%]">If you decide not to proceed after the technician arrives and explains the price, we charge a non-refundable service call of $19–29 (depending on distance).</div>
 								</div>
 							</div>
 							<div class="prices__left-item pt-4 md:pt-8 flex gap-4">
-								<div class="prices__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit h-fit flex-[0_0_40px]"><img width="24" height="24" src="@img/credit-card.svg"></div>
+								<div class="prices__left-item-icon bg-[#FFF5DF] rounded-lg p-2 w-fit h-fit flex-[0_0_40px]"><img loading="lazy" width="24" height="24" src="@img/credit-card.svg"></div>
 								<div>
 									<div class="prices__left-item-title font-semibold md:text-xl leading-[140%]">Transparent Pricing</div>
 									<div class="prices__left-item-subtitle md:text-xl leading-[140%]">No hidden fees — you get a full estimate before any work starts.</div>
@@ -787,28 +794,28 @@
 						<div class="warranty__conetnt-title font-semibold text-xl md:text-2xl leading-[140%]">Guarantees</div>
 						<div class="warranty__list pt-4 grid grid-cols md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 pb-6 md:pb-8">
 							<div class="warranty__item w-full max-md:flex gap-4">
-								<div class="warranty__item-icon bg-[#E3F9E0] rounded-lg p-2 w-fit h-fit mb-4 flex-[0_0_40px]"><img width="24" height="24" src="@img/check.svg"></div>
+								<div class="warranty__item-icon bg-[#E3F9E0] rounded-lg p-2 w-fit h-fit mb-4 flex-[0_0_40px]"><img loading="lazy" width="24" height="24" src="@img/check.svg"></div>
 								<div class="warranty__text">
 									<div class="warranty__item-title font-semibold leading-[140%] md:text-xl">Warranty</div>
 									<div class="warranty__item-subtitle leading-[140%] md:text-xl">1-year workmanship warranty on all jobs</div>
 								</div>
 							</div>
 							<div class="warranty__item w-full max-md:flex gap-4">
-								<div class="warranty__item-icon bg-[#E3F9E0] rounded-lg p-2 w-fit h-fit mb-4 flex-[0_0_40px]"><img width="24" height="24" src="@img/check.svg"></div>
+								<div class="warranty__item-icon bg-[#E3F9E0] rounded-lg p-2 w-fit h-fit mb-4 flex-[0_0_40px]"><img loading="lazy" width="24" height="24" src="@img/check.svg"></div>
 								<div class="warranty__text">
 									<div class="warranty__item-title font-semibold leading-[140%] md:text-xl">Remote Battery</div>
 									<div class="warranty__item-subtitle leading-[140%] md:text-xl">1-month warranty on remote batteries — after that, battery replacement is a paid service call</div>
 								</div>
 							</div>
 							<div class="warranty__item w-full max-md:flex gap-4">
-								<div class="warranty__item-icon bg-[#E3F9E0] rounded-lg p-2 w-fit h-fit mb-4 flex-[0_0_40px]"><img width="24" height="24" src="@img/check.svg"></div>
+								<div class="warranty__item-icon bg-[#E3F9E0] rounded-lg p-2 w-fit h-fit mb-4 flex-[0_0_40px]"><img loading="lazy" width="24" height="24" src="@img/check.svg"></div>
 								<div class="warranty__text">
 									<div class="warranty__item-title font-semibold leading-[140%] md:text-xl">Warranty Service</div>
 									<div class="warranty__item-subtitle leading-[140%] md:text-xl">If there is a valid warranty issue, we come back and fix it at our expense</div>
 								</div>
 							</div>
 							<div class="warranty__item w-full max-md:flex gap-4">
-								<div class="warranty__item-icon bg-[#E3F9E0] rounded-lg p-2 w-fit h-fit mb-4 flex-[0_0_40px]"><img width="24" height="24" src="@img/check.svg"></div>
+								<div class="warranty__item-icon bg-[#E3F9E0] rounded-lg p-2 w-fit h-fit mb-4 flex-[0_0_40px]"><img loading="lazy" width="24" height="24" src="@img/check.svg"></div>
 								<div class="warranty__text">
 									<div class="warranty__item-title font-semibold leading-[140%] md:text-xl">Programmed Keys</div>
 									<div class="warranty__item-subtitle leading-[140%] md:text-xl">No returns on programmed car keys — once a key is coded to your vehicle, it belongs to that car</div>
@@ -818,28 +825,28 @@
 						<div class="warranty__conetnt-title font-semibold text-xl md:text-2xl leading-[140%]">Safety rules</div>
 						<div class="warranty__list pt-4 grid grid-cols md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
 							<div class="warranty__item w-full max-md:flex gap-4">
-								<div class="warranty__item-icon bg-[#E3F9E0] rounded-lg p-2 w-fit h-fit mb-4 flex-[0_0_40px]"><img width="24" height="24" src="@img/trust_warranty.svg"></div>
+								<div class="warranty__item-icon bg-[#E3F9E0] rounded-lg p-2 w-fit h-fit mb-4 flex-[0_0_40px]"><img loading="lazy" width="24" height="24" src="@img/trust_warranty.svg"></div>
 								<div class="warranty__text">
 									<div class="warranty__item-title font-semibold leading-[140%] md:text-xl">Non-Destructive First</div>
 									<div class="warranty__item-subtitle leading-[140%] md:text-xl">Non-destructive first: we always start with non-drilling methods</div>
 								</div>
 							</div>
 							<div class="warranty__item w-full max-md:flex gap-4">
-								<div class="warranty__item-icon bg-[#E3F9E0] rounded-lg p-2 w-fit h-fit mb-4 flex-[0_0_40px]"><img width="24" height="24" src="@img/trust_warranty.svg"></div>
+								<div class="warranty__item-icon bg-[#E3F9E0] rounded-lg p-2 w-fit h-fit mb-4 flex-[0_0_40px]"><img loading="lazy" width="24" height="24" src="@img/trust_warranty.svg"></div>
 								<div class="warranty__text">
 									<div class="warranty__item-title font-semibold leading-[140%] md:text-xl">Drilling Approval</div>
 									<div class="warranty__item-subtitle leading-[140%] md:text-xl">Drilling and lock replacement only with your approval, and after we explain the risks and costs</div>
 								</div>
 							</div>
 							<div class="warranty__item w-full max-md:flex gap-4">
-								<div class="warranty__item-icon bg-[#E3F9E0] rounded-lg p-2 w-fit h-fit mb-4 flex-[0_0_40px]"><img width="24" height="24" src="@img/trust_warranty.svg"></div>
+								<div class="warranty__item-icon bg-[#E3F9E0] rounded-lg p-2 w-fit h-fit mb-4 flex-[0_0_40px]"><img loading="lazy" width="24" height="24" src="@img/trust_warranty.svg"></div>
 								<div class="warranty__text">
 									<div class="warranty__item-title font-semibold leading-[140%] md:text-xl">ID Verification</div>
 									<div class="warranty__item-subtitle leading-[140%] md:text-xl">ID and proof of access required for cars, homes, and commercial properties</div>
 								</div>
 							</div>
 							<div class="warranty__item w-full max-md:flex gap-4">
-								<div class="warranty__item-icon bg-[#E3F9E0] rounded-lg p-2 w-fit h-fit mb-4 flex-[0_0_40px]"><img width="24" height="24" src="@img/trust_warranty.svg"></div>
+								<div class="warranty__item-icon bg-[#E3F9E0] rounded-lg p-2 w-fit h-fit mb-4 flex-[0_0_40px]"><img loading="lazy" width="24" height="24" src="@img/trust_warranty.svg"></div>
 								<div class="warranty__text">
 									<div class="warranty__item-title font-semibold leading-[140%] md:text-xl">Job Documentation</div>
 									<div class="warranty__item-subtitle leading-[140%] md:text-xl">We may take photos or short videos to document the job; we do not keep your ID data longer than needed to protect both you and us in case of disputes</div>
@@ -1037,11 +1044,11 @@
                                 <div class="testimonials-reviews__slide swiper-slide bg-[#F3F3F3] rounded-lg flex flex-col gap-4 p-4 max-h-[264px] min-[992px]:max-h-[320px] min-[992px]:p-6">
                                     <div class="testimonials-reviews__starblock flex justify-between">
                                         <div class="flex gap-2">
-											<img width="20" height="20" src="@img/star.svg">
-											<img width="20" height="20" src="@img/star.svg">
-											<img width="20" height="20" src="@img/star.svg">
-											<img width="20" height="20" src="@img/star.svg">
-											<img width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
 										</div>
                                         <img width="24" height="24" alt="google icon" src="@img/google-icon.svg" loading="lazy">
                                     </div>
@@ -1053,11 +1060,11 @@
 								<div class="testimonials-reviews__slide swiper-slide bg-[#F3F3F3] rounded-lg flex flex-col gap-4 p-4 max-h-[264px] min-[992px]:max-h-[320px] min-[992px]:p-6">
                                     <div class="testimonials-reviews__starblock flex justify-between">
                                         <div class="flex gap-2">
-											<img width="20" height="20" src="@img/star.svg">
-											<img width="20" height="20" src="@img/star.svg">
-											<img width="20" height="20" src="@img/star.svg">
-											<img width="20" height="20" src="@img/star.svg">
-											<img width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
 										</div>
                                         <img width="24" height="24" alt="google icon" src="@img/google-icon.svg" loading="lazy">
                                     </div>
@@ -1069,11 +1076,11 @@
 								<div class="testimonials-reviews__slide swiper-slide bg-[#F3F3F3] rounded-lg flex flex-col gap-4 p-4 max-h-[264px] min-[992px]:max-h-[320px] min-[992px]:p-6">
                                     <div class="testimonials-reviews__starblock flex justify-between">
                                         <div class="flex gap-2">
-											<img width="20" height="20" src="@img/star.svg">
-											<img width="20" height="20" src="@img/star.svg">
-											<img width="20" height="20" src="@img/star.svg">
-											<img width="20" height="20" src="@img/star.svg">
-											<img width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
 										</div>
                                         <img width="24" height="24" alt="google icon" src="@img/google-icon.svg" loading="lazy">
                                     </div>
@@ -1085,11 +1092,11 @@
 								<div class="testimonials-reviews__slide swiper-slide bg-[#F3F3F3] rounded-lg flex flex-col gap-4 p-4 max-h-[264px] min-[992px]:max-h-[320px] min-[992px]:p-6">
                                     <div class="testimonials-reviews__starblock flex justify-between">
                                         <div class="flex gap-2">
-											<img width="20" height="20" src="@img/star.svg">
-											<img width="20" height="20" src="@img/star.svg">
-											<img width="20" height="20" src="@img/star.svg">
-											<img width="20" height="20" src="@img/star.svg">
-											<img width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
 										</div>
                                         <img width="24" height="24" alt="google icon" src="@img/google-icon.svg" loading="lazy">
                                     </div>
@@ -1101,11 +1108,11 @@
 								<div class="testimonials-reviews__slide swiper-slide bg-[#F3F3F3] rounded-lg flex flex-col gap-4 p-4 max-h-[264px] min-[992px]:max-h-[320px] min-[992px]:p-6">
                                     <div class="testimonials-reviews__starblock flex justify-between">
                                         <div class="flex gap-2">
-											<img width="20" height="20" src="@img/star.svg">
-											<img width="20" height="20" src="@img/star.svg">
-											<img width="20" height="20" src="@img/star.svg">
-											<img width="20" height="20" src="@img/star.svg">
-											<img width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
 										</div>
                                         <img width="24" height="24" alt="google icon" src="@img/google-icon.svg" loading="lazy">
                                     </div>
@@ -1117,11 +1124,11 @@
 								<div class="testimonials-reviews__slide swiper-slide bg-[#F3F3F3] rounded-lg flex flex-col gap-4 p-4 max-h-[264px] min-[992px]:max-h-[320px] min-[992px]:p-6">
                                     <div class="testimonials-reviews__starblock flex justify-between">
                                         <div class="flex gap-2">
-											<img width="20" height="20" src="@img/star.svg">
-											<img width="20" height="20" src="@img/star.svg">
-											<img width="20" height="20" src="@img/star.svg">
-											<img width="20" height="20" src="@img/star.svg">
-											<img width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
 										</div>
                                         <img width="24" height="24" alt="google icon" src="@img/google-icon.svg" loading="lazy">
                                     </div>
@@ -1133,11 +1140,11 @@
 								<div class="testimonials-reviews__slide swiper-slide bg-[#F3F3F3] rounded-lg flex flex-col gap-4 p-4 max-h-[264px] min-[992px]:max-h-[320px] min-[992px]:p-6">
                                     <div class="testimonials-reviews__starblock flex justify-between">
                                         <div class="flex gap-2">
-											<img width="20" height="20" src="@img/star.svg">
-											<img width="20" height="20" src="@img/star.svg">
-											<img width="20" height="20" src="@img/star.svg">
-											<img width="20" height="20" src="@img/star.svg">
-											<img width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
+											<img loading="lazy" width="20" height="20" src="@img/star.svg">
 										</div>
                                         <img width="24" height="24" alt="google icon" src="@img/google-icon.svg" loading="lazy">
                                     </div>
@@ -1151,16 +1158,16 @@
                             <div class="swiper-pagination flex gap-4 justify-center pt-6 min-[992px]:pt-8"></div>
                         </div>
                         <a href class="special-offer__right-button leading-[140%] font-semibold py-3 m-auto mt-4 md:max-w-[327px] w-full flex justify-center gap-2 items-center border border-[#1D1D1D] rounded-lg transition-all ease-in-out duration-300 hover:bg-[#1D1D1D] hover:text-white">
-							<img width="20" height="20" src="@img/google-icon.svg">
+							<img loading="lazy" width="20" height="20" src="@img/google-icon.svg">
 							More reviews
 						</a>
 						<div class="trust__partners leading-[140%] md:m-auto md:w-fit md:text-center pt-6 md:pt-8">
 							Trusted by:
 							<div class="partners__icons flex max-[600px]:justify-between min-[600px]:gap-16 pt-2 md:pt-4">
-								<img width="43" height="44" src="@img/google-logo.svg">
-								<img width="72" height="30" src="@img/yelp-logo.svg">
-								<img width="35" height="55" src="@img/Better_Business_Bureau-logo.svg">
-								<img width="44" height="44" src="@img/thumbtack-logo.svg">
+								<img loading="lazy" width="43" height="44" src="@img/google-logo.svg">
+								<img loading="lazy" width="72" height="30" src="@img/yelp-logo.svg">
+								<img loading="lazy" width="35" height="55" src="@img/Better_Business_Bureau-logo.svg">
+								<img loading="lazy" width="44" height="44" src="@img/thumbtack-logo.svg">
 							</div>
 						</div>
                     </div>
@@ -1242,7 +1249,7 @@
 						<div class="contact-us__right max-[992px]:order-1">
 							<div class="contact-us__right-tilte font-semibold leading-[140%] text-xl">We are available 24/7</div>
 							<a href="tel:4633201080" class="contact-us__right-callbutton max-w-[327px] bg-[#FFBB29] flex items-center justify-center py-3 px-6 rounded-lg w-full gap-2 font-semibold leading-[140%] transition-all ease-in-out duration-300 hover:bg-[#D9961A] mt-2">
-								<img width="24" height="24" src="@img/header/call.svg">
+								<img loading="lazy" width="24" height="24" src="@img/header/call.svg">
 								Call now: (463) 320-1080
 							</a>
 							<div class="contact-us__right-subtilte font-semibold leading-[140%] text-xl pt-8">Tell Us the Problem</div>
@@ -1266,49 +1273,49 @@
 							<div class="faq__item bg-[#F7F7F7] py-3 px-4 md:p-6 rounded-lg w-full hover:bg-[#F2F2F2] transition-all ease-in-out duration-300">
 								<button class="faq__btn w-full flex gap-4 justify-between items-center transition-all duration-500">
 									<span class="leading-[140%] font-semibold md:text-xl text-left">Do you always try to open locks without damage?</span>
-									<img width="24" height="24" class="faq__icon transition-all duration-500 max-md:w-4" src="@img/plus.svg">
+									<img loading="lazy" width="24" height="24" class="faq__icon transition-all duration-500 max-md:w-4" src="@img/plus.svg">
 								</button>
 								<div class="faq__text max-h-0 overflow-hidden transition-all duration-500 leading-[140%] md:text-xl">Yes. We always start with non-destructive methods (picking, decoding, tools like Lishi and long-reach). Drilling is a last resort and only with your approval.</div>
 							</div>
 							<div class="faq__item bg-[#F7F7F7] py-3 px-4 md:p-6 rounded-lg w-full hover:bg-[#F2F2F2] transition-all ease-in-out duration-300">
 								<button class="faq__btn w-full flex gap-4 justify-between items-center transition-all duration-500">
 									<span class="leading-[140%] font-semibold md:text-xl text-left">What documents do I need for a car, home, or business service?</span>
-									<img width="24" height="24" class="faq__icon transition-all duration-500 max-md:w-4" src="@img/plus.svg">
+									<img loading="lazy" width="24" height="24" class="faq__icon transition-all duration-500 max-md:w-4" src="@img/plus.svg">
 								</button>
 								<div class="faq__text max-h-0 overflow-hidden transition-all duration-500 leading-[140%] md:text-xl">For cars, we ask for a driver’s license and, where possible, registration or title. For homes, we ask for ID and some proof of address. For businesses, we may ask for ID and some proof you are authorized to request the work.</div>
 							</div>
 							<div class="faq__item bg-[#F7F7F7] py-3 px-4 md:p-6 rounded-lg w-full hover:bg-[#F2F2F2] transition-all ease-in-out duration-300">
 								<button class="faq__btn w-full flex gap-4 justify-between items-center transition-all duration-500">
 									<span class="leading-[140%] font-semibold md:text-xl text-left">How long does it usually take for you to arrive and finish the job?</span>
-									<img width="24" height="24" class="faq__icon transition-all duration-500 max-md:w-4" src="@img/plus.svg">
+									<img loading="lazy" width="24" height="24" class="faq__icon transition-all duration-500 max-md:w-4" src="@img/plus.svg">
 								</button>
 								<div class="faq__text max-h-0 overflow-hidden transition-all duration-500 leading-[140%] md:text-xl">Average arrival time is 30–45 minutes in Indianapolis and 45–60 minutes in nearby suburbs.<br> Most emergency jobs (lockouts, standard key work) are finished within about 30–60 minutes on site.</div>
 							</div>
 							<div class="faq__item bg-[#F7F7F7] py-3 px-4 md:p-6 rounded-lg w-full hover:bg-[#F2F2F2] transition-all ease-in-out duration-300">
 								<button class="faq__btn w-full flex gap-4 justify-between items-center transition-all duration-500">
 									<span class="leading-[140%] font-semibold md:text-xl text-left">How are you different from a dealership or kiosks like KeyMe?</span>
-									<img width="24" height="24" class="faq__icon transition-all duration-500 max-md:w-4" src="@img/plus.svg">
+									<img loading="lazy" width="24" height="24" class="faq__icon transition-all duration-500 max-md:w-4" src="@img/plus.svg">
 								</button>
 								<div class="faq__text max-h-0 overflow-hidden transition-all duration-500 leading-[140%] md:text-xl">We come to you, so you don’t need a tow. We work faster than most dealerships and are usually cheaper, especially for European cars and smart keys. Kiosks can only copy simple keys — they cannot help with most car keys, immobilizers, or lockouts.</div>
 							</div>
 							<div class="faq__item bg-[#F7F7F7] py-3 px-4 md:p-6 rounded-lg w-full hover:bg-[#F2F2F2] transition-all ease-in-out duration-300">
 								<button class="faq__btn w-full flex gap-4 justify-between items-center transition-all duration-500">
 									<span class="leading-[140%] font-semibold md:text-xl text-left">What does your 1-year warranty cover?</span>
-									<img width="24" height="24" class="faq__icon transition-all duration-500 max-md:w-4" src="@img/plus.svg">
+									<img loading="lazy" width="24" height="24" class="faq__icon transition-all duration-500 max-md:w-4" src="@img/plus.svg">
 								</button>
 								<div class="faq__text max-h-0 overflow-hidden transition-all duration-500 leading-[140%] md:text-xl">It covers our workmanship and the parts we install under normal use. If something we did fails within a year and it’s not due to misuse or physical damage by the customer, we fix it at our expense.</div>
 							</div>
 							<div class="faq__item bg-[#F7F7F7] py-3 px-4 md:p-6 rounded-lg w-full hover:bg-[#F2F2F2] transition-all ease-in-out duration-300">
 								<button class="faq__btn w-full flex gap-4 justify-between items-center transition-all duration-500">
 									<span class="leading-[140%] font-semibold md:text-xl text-left">Are there any hidden fees or extra night charges?</span>
-									<img width="24" height="24" class="faq__icon transition-all duration-500 max-md:w-4" src="@img/plus.svg">
+									<img loading="lazy" width="24" height="24" class="faq__icon transition-all duration-500 max-md:w-4" src="@img/plus.svg">
 								</button>
 								<div class="faq__text max-h-0 overflow-hidden transition-all duration-500 leading-[140%] md:text-xl">We don’t use hidden fees or fake “from $15” ads. Night or long-distance charges, if any, are always included in the estimate we give you before starting the job.</div>
 							</div>
 							<div class="faq__item bg-[#F7F7F7] py-3 px-4 md:p-6 rounded-lg w-full hover:bg-[#F2F2F2] transition-all ease-in-out duration-300">
 								<button class="faq__btn w-full flex gap-4 justify-between items-center transition-all duration-500">
 									<span class="leading-[140%] font-semibold md:text-xl text-left">What payment methods do you accept?</span>
-									<img width="24" height="24" class="faq__icon transition-all duration-500 max-md:w-4" src="@img/plus.svg">
+									<img loading="lazy" width="24" height="24" class="faq__icon transition-all duration-500 max-md:w-4" src="@img/plus.svg">
 								</button>
 								<div class="faq__text max-h-0 overflow-hidden transition-all duration-500 leading-[140%] md:text-xl">We accept major cards, cash, and for business clients we can work with invoices by prior arrangement.</div>
 							</div>

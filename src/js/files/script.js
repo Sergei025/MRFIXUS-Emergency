@@ -42,9 +42,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!btn || !dropdown) return;
 
+    // --- ЛЕНИВАЯ ЗАГРУЗКА ---
+    const defaultCity = "Indianapolis";
+    const defaultSrc = mapLinks[defaultCity];
+
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                iframe.src = defaultSrc;  // загружаем только когда видно
+                obs.disconnect();
+            }
+        });
+    });
+
+    observer.observe(iframe);
+
+    // --- ЛОГИКА ВЫПАДАЮЩЕГО СПИСКА ---
     btn.addEventListener("click", (e) => {
         e.stopPropagation();
         dropdown.classList.toggle("open");
+    });
+
+    options.forEach(option => {
+        option.addEventListener("click", () => {
+            const city = option.dataset.city;
+            selectedLabel.textContent = city;
+            dropdown.classList.remove("open");
+
+            if (mapLinks[city]) {
+                iframe.src = mapLinks[city]; // смена города
+            }
+        });
     });
 
     if (closeInside) {
@@ -54,23 +82,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    options.forEach(option => {
-        option.addEventListener("click", (e) => {
-            const city = option.dataset.city;
-            selectedLabel.textContent = city;
-            dropdown.classList.remove("open");
-
-            if (iframe && mapLinks[city]) {
-                iframe.src = mapLinks[city];
-            }
-        });
-    });
-
     document.addEventListener("click", (e) => {
         if (!btn.contains(e.target) && !dropdown.contains(e.target)) {
             dropdown.classList.remove("open");
         }
     });
+
 });
 
 function initMobileScrollAnimation() {
