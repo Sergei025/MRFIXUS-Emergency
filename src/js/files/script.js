@@ -204,52 +204,56 @@ window.addEventListener("load", () => {
 	document.documentElement.classList.remove('preload')
 })
 document.addEventListener("DOMContentLoaded", () => {
-  // Проверяем, мобильное ли устройство
-  const isMobile = window.matchMedia("(max-width: 768px)").matches;
-  if (!isMobile) return; // выходим, если не мобильное
 
-  const bg = document.getElementById("emergency-bg");
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+    if (!isMobile) return;
 
-  let images = [
-      "img/bg-mobile__image1.webp",
-      "img/bg-mobile__image2.webp",
-      "img/bg-mobile__image3.webp",
-      "img/bg-mobile__image4.webp",
-      "img/bg-mobile__image5.webp",
-      "img/bg-mobile__image6.webp"
-  ];
+    let images = [
+        "img/bg-mobile__image1.webp",
+        "img/bg-mobile__image2.webp",
+        "img/bg-mobile__image3.webp",
+        "img/bg-mobile__image4.webp",
+        "img/bg-mobile__image5.webp",
+        "img/bg-mobile__image6.webp"
+    ];
 
-  function shuffleArray(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [array[i], array[j]] = [array[j], array[i]];
-      }
-  }
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
 
-  shuffleArray(images);
+    shuffleArray(images);
 
-  let index = 0;
-  bg.src = images[0];
-  index = 1;
+    const bg = document.getElementById("background");
+    let index = 0;
 
-  function changeBackground() {
-      bg.style.opacity = 0; // плавное исчезновение
+    // Ставим первое изображение
+    bg.style.backgroundImage = `url(${images[0]})`;
 
-      setTimeout(() => {
-          bg.src = images[index]; // меняем src
-          bg.style.opacity = 1;   // плавное появление
+    // Сдвигаем, чтобы избежать повтора
+    index = 1;
 
-          index++;
-          if (index >= images.length) {
-              shuffleArray(images);
-              index = 0;
-          }
-      }, 400); // совпадает с transition
-  }
+    function changeBackground() {
+        bg.style.opacity = 0;
 
-  setInterval(changeBackground, 5000);
+        setTimeout(() => {
+            bg.style.backgroundImage = `url(${images[index]})`;
+            bg.style.opacity = 1;
+
+            index++;
+
+            if (index >= images.length) {
+                shuffleArray(images);
+                index = 0;
+            }
+
+        }, 400);
+    }
+
+    setInterval(changeBackground, 5000);
 });
-
 window.addEventListener("load", () => {
 
     const swiper = document.querySelector('.cases__slider').swiper;
