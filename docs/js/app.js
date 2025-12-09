@@ -6025,8 +6025,7 @@ PERFORMANCE OF THIS SOFTWARE.
         document.documentElement.classList.remove("preload");
     }));
     document.addEventListener("DOMContentLoaded", (() => {
-        const isMobile = window.matchMedia("(max-width: 768px)").matches;
-        if (!isMobile) return;
+        const bg = document.getElementById("emergency-bg");
         let images = [ "img/bg-mobile__image1.webp", "img/bg-mobile__image2.webp", "img/bg-mobile__image3.webp", "img/bg-mobile__image4.webp", "img/bg-mobile__image5.webp", "img/bg-mobile__image6.webp" ];
         function shuffleArray(array) {
             for (let i = array.length - 1; i > 0; i--) {
@@ -6035,14 +6034,13 @@ PERFORMANCE OF THIS SOFTWARE.
             }
         }
         shuffleArray(images);
-        const bg = document.getElementById("background");
         let index = 0;
-        bg.style.backgroundImage = `url(${images[0]})`;
+        bg.src = images[0];
         index = 1;
         function changeBackground() {
             bg.style.opacity = 0;
             setTimeout((() => {
-                bg.style.backgroundImage = `url(${images[index]})`;
+                bg.src = images[index];
                 bg.style.opacity = 1;
                 index++;
                 if (index >= images.length) {
